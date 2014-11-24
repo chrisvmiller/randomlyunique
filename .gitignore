@@ -60,7 +60,6 @@ target/
 cache/
 output/
 *html
-publish.py
 *.pyc
 feeds/
 theme/
