@@ -54,6 +54,13 @@ docs/_build/
 # PyBuilder
 target/
 
+
 .DS_Store
 .idea/
 cache/
+output/
+*html
+publish.py
+*.pyc
+feeds/
+theme/
