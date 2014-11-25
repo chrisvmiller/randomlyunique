@@ -59,7 +59,7 @@ target/
 .idea/
 cache/
 output/
-*html
+/*.html
 *.pyc
 feeds/
 theme/
