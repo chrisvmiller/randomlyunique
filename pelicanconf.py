@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-THEME = u'pelican-bootstrap3'
+THEME = u'cleanliness'
 
 AUTHOR = u'Chris Miller'
 SITENAME = u'chrisvmiller'
@@ -24,7 +24,7 @@ SOCIAL = (
     (u'github-square', u'https://github.com/chrisvmiller'),
 )
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 5
 
 RELATIVE_URLS = True
 
