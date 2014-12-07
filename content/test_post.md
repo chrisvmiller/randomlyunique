@@ -1,10 +1,7 @@
-Date: 2014-08-11
-Title: test title
-Tagline: testing the tagline
-Slug: test-test
-Category: Blog
-Tags: test
-Summary:  This is the summary
+Date: 2014-12-10
+Title: Test Tile
+Slug: test-tile
+Summary:  This is the summary for test blog
 
 
-Test
+This is a test entry

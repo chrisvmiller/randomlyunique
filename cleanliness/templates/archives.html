@@ -11,13 +11,13 @@
 
 {% block content %}
     <section id="content">
-        <h2>Archives </h2>
+        <h1>Archives </h1>
         <div id="archives">
             {% for article in dates %}
-                <p>
+            <p class="article-text">
                     <span class="categories-timestamp"><time datetime="{{ article.date.strftime('%b %d, %Y')}}">{{ article.date.strftime("%b %d, %Y") }}</time></span>
                     <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}{% if article.subtitle %} - {{ article.subtitle }}{% endif %}</a>
-                </p>
+             </p>
             {% endfor %}
         </div>
     </section>

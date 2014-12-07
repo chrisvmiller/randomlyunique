@@ -1,5 +1,7 @@
+Date: 2014-08-11
 Title: About
-save_as: about_me.html
-url: about_me.html
+Tagline: testing the tagline
+Category: Blog
+Summary:  
 
 I am currently working.
