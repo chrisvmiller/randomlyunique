@@ -5,8 +5,8 @@ from __future__ import unicode_literals
 THEME = u'cleanliness'
 
 AUTHOR = u'Chris Miller'
-SITENAME = u'chrisvmiller'
-SITEURL = u'http://chrisvmiller.github.io'
+SITENAME = u'randomlyunique'
+SITEURL = u'http://randomlyunique.com '
 
 TIMEZONE = u'US/Pacific'
 

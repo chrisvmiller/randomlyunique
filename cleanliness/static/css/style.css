@@ -95,7 +95,6 @@ a, a:hover {
     font-weight: bold;
 }
 
-
 .header-title {
     margin-top: 1px;
     font-weight: 600;
@@ -126,12 +125,10 @@ a, a:hover {
 
 .entry-content a {
     text-decoration: none;
-    border-bottom: 1px dotted;
 }
 
 .entry-content a:hover {
     text-decoration: none;
-    border-bottom: 1px solid;
 }
 
 p {
