@@ -32,7 +32,7 @@ DISQUS_SITENAME = u''
 
 PATH = u'content'
 PROFILE_IMAGE_URL = u''
-STATIC_PATHS = [u'publications']
+STATIC_PATHS = [u'assets']
 
 ARTICLE_URL = u'{date:%Y}/{slug}/'
 ARTICLE_SAVE_AS = u'{date:%Y}/{slug}/index.html'
