@@ -3,8 +3,8 @@ Title: Family Planning for Frugality
 Slug: family-planning
 Summary: Are you beyond extraordinarily cheap? Do you make Scrooge look like Daddy Warbucks? Would you fail the penny test? If so, dim your screen (to save on electricity of course!) and take a gander at this article.  Here, you'll determine the best dates to get your wife knocked up while cheating your children out of birthday presents. 
 
-As I sit here watching my nephew opening all his Christmas presents, I have come to the realization that there are two 
-major things I want out of life: 1) A few cute children 2) Not spending money on stupid crap. Normally there two are 
+As I sit here watching my nephew opening all his Christmas presents, I have come realize that there are two 
+major things I want out of life: 1) A few cute children 2) Not spending money on stupid crap. Normally these two are 
 mutually exclusive, but luckily the perfect loophole just dawned on me! The ideal time to have a child is Christmas! 
 Assuming the standard nine month gestation period, the chart below breaks down the best time to conceive by religion 
 during their most notable present-giving holiday: 
