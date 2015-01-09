@@ -14,10 +14,7 @@
         {% include 'includes/liquid_tags_nb_header.html' %}
     {% endif %}
 
-    {# Favicons are a touchy subject. For reasoning for the following code, see: http://stackoverflow.com/a/23851464/872397 #}
-    {% if FAVICON %}
-    <link href="{{ SITEURL }}/{{ FAVICON }}" rel="icon">
-    {% endif %}
+    <link href="/assets/favicon.ico" rel="icon">
     {% if FAVICON_IE %}
     <!--[if IE]><link rel="shortcut icon" href="{{ SITEURL }}/{{ FAVICON_IE }}"><![endif]-->
     {% endif %}
@@ -60,7 +57,7 @@
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.paper.min.css" type="text/css"/>
     <link href="{{ SITEURL }}/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="{{ SITEURL }}/theme/css/pygments/solarizedlight.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/theme/css/pygments/friendly.css" rel="stylesheet">
     {% if 'tipue_search' in PLUGINS %}
     <link href="{{ SITEURL}}/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
     {% endif %}

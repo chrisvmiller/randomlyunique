@@ -10,10 +10,10 @@ perfect wife and pretty darn good life! If you want to contact me for any reason
 
 Hope you enjoy my data blog! 
  
-####Professional Interests:
+####**Professional Interests**:
 Data Analysis, Machine Learning, Cluster Computing, Backend Work, Python   
  
-####Non-Professional Interests:
+####**Non-Professional Interests**:
 Board Games, Hiking, Badminton, Road Cycling, Cooking, Crafting, Puffs
   
 <div class="text-center">
