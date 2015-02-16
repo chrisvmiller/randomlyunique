@@ -24,7 +24,7 @@ SOCIAL = (
     (u'github-square', u'https://github.com/chrisvmiller'),
 )
 
-DEFAULT_PAGINATION = 5
+DEFAULT_PAGINATION = 4
 
 RELATIVE_URLS = True
 
