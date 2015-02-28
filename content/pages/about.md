@@ -8,13 +8,13 @@ big data, making data-driven decisions, pushing the needle and an excessive use 
 In addition to being incredibly witty, I pride myself with my positive and upbeat attitude. I also have an absolutely 
 perfect wife and pretty darn good life! If you want to contact me for any reason, feel free to send a message :-D  
 
-Hope you enjoy my data blog! 
+Hope you enjoy my data blog! I post monthly updates on my google-plus account, so be sure to follow me!
  
 ####**Professional Interests**:
-Data Analysis, Machine Learning, Cluster Computing, Backend Work, Python   
+Data Analysis, Machine Learning, Backend Engineering, Optics, Python
  
 ####**Non-Professional Interests**:
-Board Games, Hiking, Badminton, Road Cycling, Cooking, Crafting, Puffs
+Board Games, Hiking, Road Biking, Culinary Adventuring, Esoteric Coffee
   
 <div class="text-center">
  <a class="nounderline" href="https://linkedin.com/in/chrisvmiller/"><i class="fa fa-linkedin-square fa-4x" style="color:blue"></i></a>
