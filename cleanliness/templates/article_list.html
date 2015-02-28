@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
+    {% include 'includes/pagination.html' %}
+
     {% if articles %}
         {% for article in (articles_page.object_list if articles_page else articles) %}
             <article>
@@ -21,5 +23,4 @@
         {% endfor %}
     {% endif %}
 
-    {% include 'includes/pagination.html' %}
 {% endblock content %}
