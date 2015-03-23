@@ -20,6 +20,11 @@ body {
 }
 
 
+.table td {
+    text-align: center;
+}
+
+
 /* for list-groups nested within a list-group-item, reset the bottom margin */
 .list-group-item > .list-group {
     margin-bottom: 0px;

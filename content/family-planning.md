@@ -6,7 +6,7 @@ Summary: Are you beyond extraordinarily cheap? Do you make Scrooge look like Dad
 As I sit here watching my nephew opening all his Christmas presents, I have come to realize that there are two 
 major things I want out of life: 1) A few cute children 2) Not spending money on stupid crap. Normally these two are 
 mutually exclusive, but luckily the perfect loophole just dawned on me! The ideal time to have a child is Christmas! 
-Assuming the standard nine month gestation period, the chart below breaks down the best time to conceive by religion 
+Assuming the standard nine month gestation period, the tab-list below breaks down the best time to conceive by religion
 during their most notable present-giving holiday: 
 
 <div class="row"><div class="col-md-7 col-md-offset-3">
