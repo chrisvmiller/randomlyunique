@@ -83,7 +83,7 @@ market price for the most popular crops in Calfornia:
 </table>
 
 Let's now determine the best crop(s) that will minimize water usage, generate 10 billion dollars in revenue and will provide all
-40 million Californians with a 2000 Calorie diet. Oh wait, this sounds like our good ol' friend. Mr. Linear Programming problem.
+40 million Californians with a 2000 Calorie diet. Oh wait, this sounds like our good ol' friend Mr. Linear Programming problem.
 The solution is quite disturbing:
 
 <table class="table-bordered" style="margin: 0 auto; text-align: center;">
