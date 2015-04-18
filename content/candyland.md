@@ -1,7 +1,7 @@
 Date: 2015-04-18
 Title: A Low Carb Candyland
 Slug: candyland
-Summary: Candyland, a boardgame targeted at adolescents, has been beloved by children for generations.  However, this game is incredibly socially irresponsible nowadays and requires an update!
+Summary: Candyland, a board game targeted at adolescents, has been beloved by children for generations.  However, this game is incredibly socially irresponsible nowadays and requires an update!
  
 Candyland, a game where a group of children take a convoluted path through a diabetes filled utopia, needs a revision.
 Children should not be exposed to such a gluttonous journey at such a early age given the ongoing childhood obesity epidemic.
