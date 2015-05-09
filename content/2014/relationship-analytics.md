@@ -12,7 +12,7 @@ Luckily, I used Google Voice when I met my wife and this allowed me to play with
 of text messages. It took an hour or so to write a hacky parser that counted the number of "<3's" and the word "love" 
 per person per week. I also normalized by the total number of text messages with the hopes of sending the data in the *correct*  direction, 
 yet the results weren't too favorable: 
-<img src="/assets/relationship_analytics/relationship_analytics.png" style='margin-top:10px'>
+<img src="/assets/2014/relationship_analytics/relationship_analytics.png" style='margin-top:10px'>
 Wow, she clearly loves me more.  I was planning to forecast my 'greater love' for her into the future with 
 some sort of regression, but screw it!  I need to pretend this chart never existed and hope she never reads this post.  
 

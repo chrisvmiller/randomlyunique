@@ -38,37 +38,37 @@ during their most notable present-giving holiday:
 <div class="row"><div class="col-md-7 col-md-offset-3"><div class="tab-content">
 
 <div role="tabpanel" class="tab-pane active" id="christian">
-<img src="/assets/family_planning/christian.png" style='float:left;width:125px;height:125px;margin-right:10px;margin-top:10px'>
+<img src="/assets/2014/family_planning/christian.png" style='float:left;width:125px;height:125px;margin-right:10px;margin-top:10px'>
 <div class='text-center'><h4><strong>End of March</strong></h4></div>
 <p>Christmas is an annual festival commemorating the birth of Jesus Christ, observed most commonly on December 25.</p>
 </div>
 
 <div role="tabpanel" class="tab-pane" id="jewish">
-<img src="/assets/family_planning/jewish.png" style='float:left;width:125px;height:125px;margin-right:10px;margin-top:10px'>
+<img src="/assets/2014/family_planning/jewish.png" style='float:left;width:125px;height:125px;margin-right:10px;margin-top:10px'>
 <div class='text-center'><h4><strong>Middle of March</strong></h4></div>
 <p>In early Decemeber, Hanukkah celebrates the rededication of the Holy Temple in Jerusalem at the time of the Maccabean Revolt.</p>  
 </div>
 
 <div role="tabpanel" class="tab-pane" id="hindu">
-<img src="/assets/family_planning/hindu.png" style='float:left;width:125px;height:125px;margin-right:10px;margin-top:10px'>
+<img src="/assets/2014/family_planning/hindu.png" style='float:left;width:125px;height:125px;margin-right:10px;margin-top:10px'>
 <div class='text-center'><h4><strong>Start of February</strong></h4></div>
 <p> Diwali is a Hindu festival marking the last harvest of the year, observed around the start of November.</p>
 </div>
 
 <div role="tabpanel" class="tab-pane" id="islam">
-<img src="/assets/family_planning/islam.png" style='float:left;width:125px;height:125px;margin-right:10px;margin-top:10px'>
+<img src="/assets/2014/family_planning/islam.png" style='float:left;width:125px;height:125px;margin-right:10px;margin-top:10px'>
 <div class='text-center'><h4><strong>Sometime in September</strong></h4></div>
 <p> Eid al-Fitr marks the end of Ramadan, the Islamic holy month of fasting, during the ninth month of the Islamic calendar (May-July-ish).</p>  
 </div>
 
 <div role="tabpanel" class="tab-pane" id="taoism">
-<img src="/assets/family_planning/taoism.png" style='float:left;width:125px;height:125px;margin-right:10px;margin-top:10px'>
+<img src="/assets/2014/family_planning/taoism.png" style='float:left;width:125px;height:125px;margin-right:10px;margin-top:10px'>
 <div class='text-center'><h4><strong>Start of May</strong></h4></div>
 <p> Chinese New Year celebrates the turn of the Chinese calendar usually at beginning of February.</p> 
 </div>
 
 <div role="tabpanel" class="tab-pane" id="buddism">
-<img src="/assets/family_planning/buddism.png" style='float:left;width:125px;height:125px;margin-right:10px;margin-top:10px'>
+<img src="/assets/2014/family_planning/buddism.png" style='float:left;width:125px;height:125px;margin-right:10px;margin-top:10px'>
 <div class='text-center'><h4><strong>Anytime!</strong></h4></div>
 <p>Rohatsu commemorates Buddha's enlightenment at the start of December. No gifts are ever exchanged: Jackpot!</p>
 </div>

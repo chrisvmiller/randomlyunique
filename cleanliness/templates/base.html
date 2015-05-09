@@ -50,9 +50,6 @@
     {% endblock %}
     {% endif %}
 
-    {# Twitter Cards tags #}
-    {% include 'includes/twitter_cards.html' %}
-
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.paper.min.css" type="text/css"/>
     <link href="{{ SITEURL }}/theme/css/font-awesome.min.css" rel="stylesheet">
@@ -129,7 +126,6 @@
     <script src="{{ SITEURL }}/theme/js/bodypadding.js"></script>
 {% endif %}
 {% include 'includes/github-js.html' %}
-{% include 'includes/disqus_script.html' %}
 
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
