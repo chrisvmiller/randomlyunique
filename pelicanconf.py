@@ -28,9 +28,9 @@ DEFAULT_PAGINATION = 5
 
 RELATIVE_URLS = True
 
-DISQUS_SITENAME = u''
-
 PATH = u'content'
+# ARTICLE_EXCLUDES = (('pages'))
+
 PROFILE_IMAGE_URL = u''
 STATIC_PATHS = [u'assets']
 

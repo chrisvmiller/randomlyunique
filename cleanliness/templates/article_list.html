@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-
     {% include 'includes/google_adwords.html' %}
 
     {% include 'includes/pagination.html' %}
@@ -9,7 +8,6 @@
     {% if articles %}
 <div class="centered-div">
         {% for article in (articles_page.object_list if articles_page else articles) %}
-
             <article>
                 <h5 class="header-date">{{ article.date.strftime("%b %d, %Y") }},</h5>
                 <h1 class="header-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
@@ -23,7 +21,6 @@
                     <!--<a class="btn btn-default btn-xs" href="{{ SITEURL }}/{{ article.url }}">more ...</a>-->
                 </div>
             </article>
-
         {% endfor %}
     {% endif %}
 
