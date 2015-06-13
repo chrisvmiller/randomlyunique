@@ -7,7 +7,6 @@ big data, making data-driven decisions, pushing the needle and an excessive use 
    
 In addition to being incredibly witty and humble, I pride myself with my positive and upbeat attitude. I also have an 
 absolutely perfect wife and pretty darn good life! If you want to contact me for any reason, feel free to send a message!
-And, if you want $20 of free <a href="https://www.uber.com/">Uber</a> rides, use this promotion code: AFSRK
 
 Hope you enjoy my data blog! I post all updates on twitter, so be sure to follow me!
  
