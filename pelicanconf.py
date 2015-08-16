@@ -6,7 +6,7 @@ THEME = u'cleanliness'
 
 AUTHOR = u'Chris Miller'
 SITENAME = u'randomlyunique'
-SITEURL = u'http://randomlyunique.com '
+SITEURL = u'http://www.randomlyunique.com'
 
 TIMEZONE = u'US/Pacific'
 
