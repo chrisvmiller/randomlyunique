@@ -14,6 +14,7 @@ DEFAULT_LANG = u'en'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
+FEED_MAX_ITEMS = 1
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
@@ -36,3 +37,6 @@ STATIC_PATHS = [u'assets']
 
 ARTICLE_URL = u'{date:%Y}/{slug}/'
 ARTICLE_SAVE_AS = u'{date:%Y}/{slug}/index.html'
+
+PLUGIN_PATHS = ['cleanliness/plugins']
+PLUGINS = ['urlabsolutifier']
