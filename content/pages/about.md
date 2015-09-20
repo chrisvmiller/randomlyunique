@@ -1,20 +1,20 @@
 Date: 2014-12-14
-Title: About
+Title: About 
 
-Hi, I'm Chris and I'm a Data Scientist/Engineer in San Francisco. I hold a PhD in Physics with a
-background in modeling the optoelectronic properties of nanowires. My interests include anything from 
-big data, making data-driven decisions, pushing the needle and an excessive use of meaningless jargon.
+<img src="/assets/pages/photo.jpg" width="225" style="float:left;margin-right: 10px;margin-bottom: 2px">
+Hi, I'm Chris and I'm a Data Scientist in San Francisco. I hold a PhD in Physics with a background in modeling the 
+optoelectronic properties of nanomaterials. My professional interests include anything from real-world modeling, 
+clean/simple analysis, and bringing data products to life.      
    
-In addition to being incredibly witty and humble, I pride myself with my positive and upbeat attitude. I also have an 
-absolutely perfect wife and pretty darn good life! If you want to contact me for any reason, feel free to send a message!
-
-Hope you enjoy my data blog!
+In addition to being incredibly humble, I pride myself with my positive and upbeat attitude.  It's extremely difficult
+for someone to catch me in a bad mood, which is directly correlated to my amazing wife. If you want to contact me for 
+any reason, feel free to send a message! Hope you enjoy my data blog!
  
 ####**Professional Interests**:
-Data Analysis, Machine Learning, Backend Engineering, Optics, Python
+Data Analysis, Machine Learning, Engineering Data Products, Optics, Python
  
 ####**Non-Professional Interests**:
-Board Games, Road Biking, Culinary Adventuring, Esoteric Single Origin Drip Coffee
+Board Games, Road Biking, Spontaneous Adventuring, Single Origin Esoteric Coffee
   
 <div class="text-center">
  <a class="nounderline" href="http://twitter.com/chrisvmil"><i class="fa fa-twitter-square fa-4x" style="color:#55ACEE"></i></a>
