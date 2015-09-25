@@ -1,7 +1,7 @@
 Date: 2014-12-14
 Title: About 
 
-<img src="/assets/pages/photo.jpg" width="225" style="float:left;margin-right: 10px;margin-bottom: 2px">
+<img src="/assets/pages/photo.jpg" width="225" style="float:left;margin-right: 12px;margin-bottom: 1px">
 Hi, I'm Chris and I'm a Data Scientist in San Francisco. I hold a PhD in Physics with a background in modeling the 
 optoelectronic properties of nanomaterials. My professional interests include anything from real-world modeling, 
 clean/simple analysis, and bringing data products to life.      

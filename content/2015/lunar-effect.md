@@ -1,5 +1,5 @@
 Date: 2015-02-15
-Title: "Lunar Effect"
+Title: Lunar Effect
 Slug: lunar-effect
 Summary: As a child, my mother always warned me about the number of active mischievians during the full moon. Is there a correlation between devious behavior and the phases of the moon or did my mother just enjoy scaring me? Let's find out!
 
