@@ -40,5 +40,35 @@
             </div>
         </article>
     </section>
+    
+    <br>
+    <h2 class="random-title"></h2> <div class="summary"></div>
+
+    <script>
+        var all_articles = [
+              {% set recent = articles if not all_articles else all_articles %}
+              {% for a in recent %}
+                      { "url": "{{ SITEURL }}/{{ a.url }}",
+                        "title": "{{ a.title }}",
+                        "summary": "{{ a.summary }}"
+                      } {% if not loop.last %},
+                      {% endif %}
+              {% endfor %}
+          ];
+
+        var current = "{{ article.title}}"
+        for(var i = all_articles.length - 1; i >= 0; i--) {
+            if(all_articles[i].title === current) {
+                all_articles.splice(i, 1);
+            }
+        }
+
+        var random_article = all_articles[Math.floor(Math.random()*all_articles.length)];
+
+        document.querySelector('.random-title').innerHTML = 'Random Article: <a href=' + random_article.url + '>' + random_article.title + '</a>';
+        document.querySelector('.summary').innerHTML = random_article.summary;
+    </script>
+
+
 
 {% endblock %}
