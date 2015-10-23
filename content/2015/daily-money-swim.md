@@ -6,8 +6,8 @@ Summary: If you're disgustingly rich, interested in liquid commodities and looki
 Why are people so incredibly greedy? At what point does a CEO choose a multi-million dollar bonus over employee 
 healthcare?  What the hell do you even do with a net worth of over 10 million dollars anyways?  You can easily afford a few 
 houses, frequent extravagant vacations, rooms upon rooms of new toys and a near endless supply of fancy food. 
-Well, this is only one logical answer: Scrooge McDuck's money tower. There is no better way to make your fellow 
-billionaire friends jealous than an Olympics sized pool filled with gold coins.  
+Well, there is only one logical answer: Scrooge McDuck's Money Tower. There is no better way to make your fellow 
+billionaire friends jealous than an Olympic sized pool filled with gold coins.  
 
 Now, let's find the height of gold, silver, and copper coins for a five square meter money-tower! Assuming a simple closed packed 
 lattice and a net value of one billion per tower, I calculated:
