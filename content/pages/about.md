@@ -8,7 +8,9 @@ and designing data products.
    
 In addition to my unparalleled humbleness, I pride myself with my positive and upbeat attitude.  It's extremely difficult
 for someone to catch me in a bad mood and I kinda have my amazing wife to blame for that. If you want to contact me for 
-any reason, feel free to send a message.  Hope you enjoy my data blog!
+any reason, feel free to send a message.
+
+Hope you enjoy my blog! :-D
  
 ####**Professional Interests**:
 Data Analysis, Machine Learning, Engineering Data Products, Optics, Python
