@@ -7,3 +7,5 @@ A video game, badminton racket or French press are undoubtedly wonderful present
 Below, I've listed some of my favorite imagination tools: 
 
 <img src="/assets/2015/pillars-of-creativity/pillars-of-creativity.jpg" style='margin-top:10px;display:block;margin:auto;'>
+
+<p style='text-align:center'>*cough..chelsea..cough cough*</p>
