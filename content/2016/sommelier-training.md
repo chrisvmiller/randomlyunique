@@ -1,7 +1,7 @@
-Date: 2016-03-06
+Date: 2016-03-10
 Title: Sommelier Training
 Slug: sommelier-training
-Summary: My unsophisticated palate doesn't understand professional wine connoisseuring. Luckily, with the help of TensorFlow, I'll suggest a path to turn any wine newb into a 3-Star Michelin Oenologist.  
+Summary: My unsophisticated palate doesn't understand professional wine connoisseuring. Luckily, with the help of TensorFlow, I'll suggest a path to transform any wine newb into a 3-Star Michelin Oenologist.  
  
 What's the best way to refine my wine intelligence? Since nothing immediately comes to mind, I'll take the fallback 
 algorithmic approach and brute-force a solution: sampling lots and lots of wine! So, let's determine the amount 
