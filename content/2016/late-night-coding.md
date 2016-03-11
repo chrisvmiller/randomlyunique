@@ -9,6 +9,6 @@ dive into this question with a simple natural language processing script!
 With the help of Apache Spark, I regexed out alphanumerics, removed stopwords, lemmatized, then binned unigrams
 into daytime (9am to 9pm) and nighttime buckets. After this separation, 
 I found the more common daytime(/nighttime) words by subtracting nighttime(/daytime) word frequencies from daytime(/nighttime) 
-word frequencies, which are highlighted in the word clouds below: 
+word frequencies. The word clouds below highlight these most common commit words: 
   
 <img src="/assets/2016/late-night-coding/late-night-coding.jpg" style='margin-top:10px;display:block;margin:auto;'>
