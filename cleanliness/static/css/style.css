@@ -317,3 +317,13 @@ figure.floatcenter, .align-center {
     text-align: center;
     font-size:12pt;
 }
+
+.fb_iframe_widget > span {
+    display: inline-block;
+    position: relative;
+    text-align: justify;
+    height: 23px !important;
+}
+
+#___plusone_0 iframe {margin-bottom: -2px !important;}
+
