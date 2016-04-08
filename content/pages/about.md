@@ -20,7 +20,6 @@ Board Games, Road Biking, Spontaneous Adventuring, Single Origin Esoteric Coffee
   
 <div class="text-center">
 <a class="nounderline" href="http://linkedin.com/in/chrisvmiller/"><i class="fa fa-linkedin-square fa-4x" style="color:blue"></i></a>
-<a class="nounderline" type="application/atom+xml" href="http://randomlyunique.com/feeds/chris-miller.atom.xml"><i class="fa fa-rss-square fa-4x" style="color:orange"></i></a>
-<a class="nounderline" href="http://twitter.com/chrisvmil"><i class="fa fa-twitter-square fa-4x" style="color:#55ACEE"></i></a>
 <a class="nounderline" href="http://github.com/chrisvmiller"><i class="fa fa-github-square fa-4x" style="color:purple"></i></a>
+<a class="nounderline" type="application/atom+xml" href="http://randomlyunique.com/feeds/chris-miller.atom.xml"><i class="fa fa-rss-square fa-4x" style="color:orange"></i></a>
 </div>
