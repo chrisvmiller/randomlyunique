@@ -1,20 +1,12 @@
-Date: 2016-05-14
-Title: Arnold-C
-Slug: arnold
-Summary: You don't like a good esoteric language.  In this post, I'll do a palidrome in Arnold-C: alanguage from the sayings
+Date: 2016-05-2
+Title: Hasta la Palindrome
+Slug: hasta-la-palindrome
+Summary: An esoteric programming language is like a pet rock - kinda pointless, but I'll still walk it every once in awhile. In this post, I'll check for palindromes in an Arnold Schwarzenegger themed programming language!
  
- 
- 
-Check if a palidrome in anroldC
-http://lhartikk.github.io/ArnoldC/
- 
- 
-a data scientist would doesn't know quick sort at the top of their head is useless as very one knows
-(doesn't make a good engineer if you doesn't debate meaningless and equal coding styles nonstop)
-
-
-
-
+As a tech worker, I can unequivocally state that the only thing more important than debating coding 
+styles or following Agile methodologies is the ability to rapidly whiteboard algorithms. So, if
+you're ever asked to write a palindrome detector during a tech screen, be sure to impress 
+the interviewer with this beauty, written in <a href=http://lhartikk.github.io/ArnoldC/>ArnoldC</a>:
 
 <div class="highlight">
 <pre>
@@ -73,6 +65,4 @@ a data scientist would doesn't know quick sort at the top of their head is usele
   <span class="ni">I'LL BE BACK</span> isPalindrome
 <span class="k">HASTA LA VISTA, BABY</span>
 </pre>
-
 </div>
-
