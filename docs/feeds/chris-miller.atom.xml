@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>randomlyunique</title><link href="http://www.randomlyunique.com/" rel="alternate"></link><link href="http://www.randomlyunique.com/feeds/chris-miller.atom.xml" rel="self"></link><id>http://www.randomlyunique.com/</id><updated>2016-07-03T00:00:00-07:00</updated><entry><title>A Token of Tolkien</title><link href="http://www.randomlyunique.com/2016/a-token-of-tolkien/" rel="alternate"></link><updated>2016-07-03T00:00:00-07:00</updated><author><name>Chris Miller</name></author><id>tag:www.randomlyunique.com,2016-07-03:2016/a-token-of-tolkien/</id><summary type="html">&lt;p&gt;The Hobbit and The Lord of the Rings are undeniably great books, with rich complex characters and a deep thoughtful story. 
+So, this seems like an ideal case to apply an autosummary algorithm meant for tasks like factual news articles!&lt;/p&gt;
+&lt;p&gt;The &lt;a href=https://github.com/chrisvmiller/analytics/blob/master/autosummarizer/summarize.py&gt;method&lt;/a&gt; I programmed is pretty straightforward,
+where I find the most representative sentence within a given blob of text. This is accomplished by tokenizing each sentence, converting to a 
+tf-idf matrix, multiplying this matrix by it's transpose to get a similarity between sentences, mapping to a graph where each node is a sentence
+and each edge is its similarity, then PageRanking to determine the 'best' sentence. &lt;/p&gt;
+&lt;p&gt;The 'ok, these seems reasonable, I guess' results are shown below:&lt;/p&gt;
+&lt;table class="table table-bordered"&gt;
+    &lt;thead&gt;
+      &lt;tr class="text-center"&gt;
+        &lt;th class="text-center"&gt;Book&lt;/th&gt;
+        &lt;th class="text-center"&gt;AutoSummary&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;The Hobbit&lt;/td&gt;
+          &lt;td&gt;Having made up his mind he crept along as cleverly as he could.&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+          &lt;td class="active"&gt;Fellowship of the Ring&lt;/td&gt;
+          &lt;td class="active"&gt;If any of the Wise should with this Ring overthrow the Lord of Mordor, using his own arts, he would then set himself on Saurons throne, and yet another Dark Lord would appear.&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+          &lt;td&gt;The Two Towers&lt;/td&gt;
+          &lt;td&gt;All Isengard must be emptied; and Saruman has armed the wild hillmen and herd-folk of Dunland beyond the rivers, and these also he loosed upon us.&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+          &lt;td class="active"&gt;The Return of the King&lt;/td&gt;
+          &lt;td class="active"&gt;He (Frodo) felt that if once he went beyond the crown of the pass and took one step veritably down into the land of Mordor, that step would be irrevocable.&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;span style="color:blue; font-weight: bold;"&gt;Special Bonus:&lt;/span&gt; When I apply this autosummary to sentences that contain the word "Sam" throughout The Lord of the Rings trilogy, I get: &lt;/p&gt;
+&lt;table class="table table-bordered"&gt;
+    &lt;thead&gt;
+      &lt;tr class="text-center"&gt;
+        &lt;th class="text-center"&gt;Character&lt;/th&gt;
+        &lt;th class="text-center"&gt;AutoSummary&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td text-center"&gt;Sam&lt;/td&gt;
+          &lt;td&gt;And Sam had another growing anxiety.&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</summary></entry></feed>
