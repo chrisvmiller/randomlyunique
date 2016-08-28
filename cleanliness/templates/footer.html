@@ -1,0 +1,17 @@
+{% set next_index = (articles.index(article) + 1) % articles.__len__() %}
+{% set next_article = articles[next_index] %}
+
+
+<div class="container">
+    <div class="col-md-10">
+        <h1 class="header-title"><a
+        href="{{ SITEURL }}/{{ next_article.url }}">{{ next_article.title }}</a>
+        </h1>
+        <div class="summary">
+            <h5 class="header-summary"> {{ next_article.summary }}</h5>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <a href="{{ SITEURL }}/archives">Archives</a>
+    </div>
+</div>

@@ -1,80 +1,52 @@
 <!DOCTYPE html>
-<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock %}"
-      {% if USE_OPEN_GRAPH %}
-      xmlns:og="http://ogp.me/ns#"
-      xmlns:fb="https://www.facebook.com/2008/fbml"{% endif %}>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock %}">
+
+
 <head>
     <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
-    <!-- Using the latest rendering mode for IE -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {% if 'liquid_tags.notebook' in PLUGINS %}
-        {% include 'includes/liquid_tags_nb_header.html' %}
-    {% endif %}
-
-    <link href="/assets/favicon.ico" rel="icon">
-    {% if FAVICON_IE %}
-    <!--[if IE]><link rel="shortcut icon" href="{{ SITEURL }}/{{ FAVICON_IE }}"><![endif]-->
-    {% endif %}
-    {% if TOUCHICON %}
-    <link rel="apple-touch-icon" href="{{ SITEURL }}/{{ TOUCHICON }}">
-    {% endif %}
-
-    {% block canonical_rel %}{% endblock %}
-
-    {% block meta %}
-        <meta name="author" content="{{ AUTHOR }}" />
-    {% endblock %}
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.paper.min.css" type="text/css"/>
-    <link href="{{ SITEURL }}/theme/css/font-awesome.min.css" rel="stylesheet">
-
-    <link href="{{ SITEURL }}/theme/css/pygments/friendly.css" rel="stylesheet">
-    {% if 'tipue_search' in PLUGINS %}
-    <link href="{{ SITEURL}}/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
-    {% endif %}
-    {% if DOCUTIL_CSS %}
-        <link href="{{ SITEURL }}/theme/css/html4css1.css" rel="stylesheet">
-    {% endif %}
-    {% if TYPOGRIFY %}
-        <link href="{{ SITEURL }}/theme/css/typogrify.css" rel="stylesheet">
-    {% endif %}
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css" type="text/css"/>
+    <link rel="icon" href="{{ SITEURL }}/assets/favicon.ico">
+    <link rel="stylesheet"
+          href="{{ SITEURL }}/theme/css/bootstrap.paper.min.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments-friendly.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css">
 </head>
 <body>
 
-<div class="{% if BOOTSTRAP_NAVBAR_INVERSE %}navbar-inverse{% else %}navbar-default{% endif %} navbar-static-top" role="navigation">
+<div class="{% if BOOTSTRAP_NAVBAR_INVERSE %}navbar-inverse{% else %}navbar-default{% endif %} navbar-static-top"
+     role="navigation">
     <div class="container">
         <div class="col-md-12">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <button type="button" class="navbar-toggle"
+                        data-toggle="collapse"
+                        data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
                 <a href="{{ SITEURL }}/" class="navbar-brand">
-                    {% if SITELOGO %}<img src="{{ SITEURL }}/{{ SITELOGO }}" width="{{ SITELOGO_SIZE }}"/> {% endif %}
+                    {% if SITELOGO %}<img src="{{ SITEURL }}/{{ SITELOGO }}"
+                                          width="{{ SITELOGO_SIZE }}"/> {% endif %}
                     {% if not HIDE_SITENAME %}Randomly<span style="color: #0a7bff">Unique</span>{% endif %}
                 </a>
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <!--<li><a href="{{ SITEURL }}/{{ ARCHIVES_URL }}">Projects</a></li>-->
                     {% if DISPLAY_PAGES_ON_MENU %}
                         {% for p in PAGES[::-1] %}
-                    
-                        <li>
-                            <a href="{{ SITEURL }}/{{ p.url }}">
-                                {{ p.menulabel|default(p.title) }}
-                            </a>
-                        </li>
+                            <li>
+                                <a href="{{ SITEURL }}/{{ p.url }}">
+                                    {{ p.menulabel|default(p.title) }}
+                                </a>
+                            </li>
                         {% endfor %}
                     {% endif %}
-                    
+
                 </ul>
             </div>
 
@@ -86,23 +58,13 @@
     </div>
 </div>
 {% include 'includes/social-media.html' %}
+{% include 'includes/ga.html' %}
 </body>
-
-{% include 'includes/footer.html' %}
 
 
 <script src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
-
 <script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
-<script src="{{ SITEURL }}/theme/js/respond.min.js"></script>
 
 
-{% include 'includes/ga.html' %}
-
-{% block scripts %}{% endblock %}
-
-<footer class="footer">
-
-</footer>
 </body>
 </html>

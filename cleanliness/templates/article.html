@@ -1,74 +1,11 @@
 {% extends "base.html" %}
 {% block title %}{{ article.title|striptags }} - {{ SITENAME }}{% endblock %}
 {% block html_lang %}{{ article.lang }}{% endblock %}
-{% block meta %}
-    {% if article.author %}
-        <meta name="author" content="{{ article.author }}" />
-    {% else %}
-        <meta name="author" content="{{ AUTHOR }}" />
-    {% endif %}
-    {% if article.tags %}
-        <meta name="keywords" content="{{ article.tags|join(',')|striptags }}" />
-    {% endif %}
-    {% if article.summary %}
-        <meta name="description" content="{{ article.summary|striptags|escape }}" />
-    {% endif %}
-{% endblock %}
 
 {% block canonical_rel %}
-<link rel="canonical" href="{{ SITEURL }}/{{ article.url }}">
+    <link rel="canonical" href="{{ SITEURL }}/{{ article.url }}">
 {% endblock %}
 
 {% block content %}
-    <section id="content">
-        <article>
-            <h1 class="header-title">
-                <h1>
-                    <a href="{{ SITEURL }}/{{ article.url }}"
-                       rel="bookmark"
-                       title="Permalink to {{ article.title|striptags }}">
-                        {{ article.title }}
-                    </a>
-                </h1>
-            </h1>
-            <div class="entry-content">
-                {% include "includes/article_info.html" %}
-                <div class="panel">
-
-                </div>
-                {{ article.content }}
-            </div>
-        </article>
-    </section>
-
-    <br>
-    <h2 class="random-title"></h2> <div class="summary"></div>
-
-    <script>
-        var all_articles = [
-              {% set recent = articles if not all_articles else all_articles %}
-              {% for a in recent %}
-                      { "url": "{{ SITEURL }}/{{ a.url }}",
-                        "title": "{{ a.title }}",
-                        "summary": "{{ a.summary }}"
-                      } {% if not loop.last %},
-                      {% endif %}
-              {% endfor %}
-          ];
-
-        var current = "{{ article.title}}"
-        for(var i = all_articles.length - 1; i >= 0; i--) {
-            if(all_articles[i].title === current) {
-                all_articles.splice(i, 1);
-            }
-        }
-
-        var random_article = all_articles[Math.floor(Math.random()*all_articles.length)];
-
-        document.querySelector('.random-title').innerHTML = 'Random Article: <a href=' + random_article.url + '>' + random_article.title + '</a>';
-        document.querySelector('.summary').innerHTML = random_article.summary;
-    </script>
-
-
-
+    {% include 'article_content.html' %}
 {% endblock %}
