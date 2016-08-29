@@ -1,5 +1,6 @@
 Date: 2015-12-14
 Title: Pillars of Creativity
+Category: bored
 Slug: pillars-of-creativity
 Summary: With the Holidays around the corner, I'll provide recommendations for the best kind of gifts - ones that foster creativity! 
 

@@ -1,5 +1,6 @@
 Date: 2015-01-24
 Title: Goal Goalie Girth
+Category: bored
 Slug: goal-goalie-girth
 Summary: Looking to be a star athlete even though you lack any physical talent? Stop going to the boring gym and slowly scooter to the nearest fast food joint to become the ideal goaltender. 
 

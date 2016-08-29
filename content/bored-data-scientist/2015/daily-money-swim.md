@@ -1,5 +1,6 @@
 Date: 2015-10-23
 Title: Daily Money Swim
+Category: bored
 Slug: daily-money-swim
 Summary: If you're disgustingly rich, interested in liquid commodities and looking to burn a few extra calories, then save that pivot-table and vlookup the value-scale of the following proposition.  
 

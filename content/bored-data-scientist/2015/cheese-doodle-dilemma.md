@@ -1,5 +1,6 @@
 Date: 2015-09-24
 Title: The Cheese Doodle Dilemma
+Category: bored
 Slug: cheese-doodle-dilemma
 Summary: Some have claimed cheese doodles, the ambrosia of the modern world, are directly linked with nightmares. In this post, I will finally shed light on the age-old question: Do cheese doodle molecules negatively interfere with neurotransmitters while sleeping? 
  

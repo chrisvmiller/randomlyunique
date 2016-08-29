@@ -1,5 +1,6 @@
 Date: 2015-04-18
 Title: A Low Carb Candyland
+Category: bored
 Slug: candyland
 Summary: Candyland, a board game cherished by children for generations, is incredibly socially irresponsible. My proposed update to this classic game is super simple and could fix the ongoing childhood obesity epidemic.
  

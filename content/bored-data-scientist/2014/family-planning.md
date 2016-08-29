@@ -1,5 +1,6 @@
 Date: 2014-12-25
 Title: Family Planning for Frugality
+Category: bored
 Slug: family-planning
 Summary: Are you beyond extraordinarily cheap? Do you make Scrooge look like Daddy Warbucks? If so, dim your screen (to save on electricity of course!) and take a gander at this article.  Here, you'll determine the best dates to get your wife knocked up while cheating your children out of birthday presents. 
 

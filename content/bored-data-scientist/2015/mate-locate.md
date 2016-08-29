@@ -1,5 +1,6 @@
 Date: 2015-11-23
 Title: Mate Locate 
+Category: bored
 Slug: mate-locate 
 Summary: A lost spouse in a crowded mall without a phone is a stressful situation. It may be tempting to search the entire mall, but is it better to stay put? 
  

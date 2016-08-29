@@ -1,7 +1,9 @@
 Date: 2016-07-03
 Title: A Token of Tolkien
+Category: bored
 Slug: a-token-of-tolkien
 Summary:  If you're searching for a horrible book report generator, then look no further! In this post, I will create one sentence synopses for The Hobbit and The Lord of the Rings.
+
 
 The Hobbit and The Lord of the Rings are undeniably great books, with rich complex characters and a deep thoughtful story. 
 So, this seems like an ideal case to apply an autosummary algorithm meant for tasks like factual news articles!

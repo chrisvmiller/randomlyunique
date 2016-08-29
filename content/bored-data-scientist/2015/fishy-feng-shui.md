@@ -1,5 +1,6 @@
 Date: 2015-07-18
 Title: Fishy Feng Shui
+Category: bored
 Slug: fishy-feng-shui
 Summary: What does my fish do all day while I'm at work?  Does he nap on the sand, exercise against the filter's current, or just swim around randomly? The pressing answers to these questions and many more are answered within!
 

@@ -1,5 +1,6 @@
 Date: 2015-05-13
 Title: Date Rates
+Category: bored
 Slug: date-rates
 Summary: Don't be foolish and go to the movies on your next date night! This post breaks down every amazing (and not so amazing) excursion with my wife over the last few years.
 

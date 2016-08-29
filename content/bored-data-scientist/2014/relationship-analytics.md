@@ -1,5 +1,6 @@
 Date: 2014-11-18
 Title: Relationship Analytics
+Category: bored
 Slug: relationship-analytics
 Summary: The key to a successful relationship is proving your partner wrong and shoving those results in their face. This article explores my data driven approach to showing that I love my wife way more than she love's me.
 

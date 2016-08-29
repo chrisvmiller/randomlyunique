@@ -1,5 +1,6 @@
 Date: 2016-01-18
 Title: Late Night Coding
+Category: bored
 Slug: late-night-coding
 Summary:  If I'm coding after-hours, I'm usually working on a relaxing personal project or angrily fighting some bug. Are these late night emotional extremes typical? Let's poll the public Github API and find out!
  

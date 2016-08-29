@@ -1,5 +1,6 @@
 Date: 2016-03-10
 Title: Sommelier Training
+Category: bored
 Slug: sommelier-training
 Summary: My unsophisticated palate doesn't understand professional wine connoisseuring. Luckily, with the help of TensorFlow, I'll suggest a path to transform any wine newb into a 3-Star Michelin Oenologist.  
  

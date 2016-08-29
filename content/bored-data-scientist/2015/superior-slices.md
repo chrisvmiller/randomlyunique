@@ -1,5 +1,6 @@
 Date: 2015-08-16
 Title: Superior Slices
+Category: bored
 Slug: superior-slices
 Summary: Curious if the pizza you just ordered will be good? If so, sit back and grab a regular kah-fee while this New Yorker gives you the definitive guide to awesome pizza.
  

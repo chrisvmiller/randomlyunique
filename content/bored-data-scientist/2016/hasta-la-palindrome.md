@@ -1,5 +1,6 @@
 Date: 2016-05-2
 Title: Hasta la Palindrome
+Category: bored
 Slug: hasta-la-palindrome
 Summary: An esoteric programming language is like a pet rock - kinda pointless, but I'll still walk it every once in awhile. In this post, I'll check for palindromes in an Arnold Schwarzenegger themed programming language!
  

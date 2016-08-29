@@ -30,23 +30,30 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="{{ SITEURL }}/" class="navbar-brand">
-                    {% if SITELOGO %}<img src="{{ SITEURL }}/{{ SITELOGO }}"
-                                          width="{{ SITELOGO_SIZE }}"/> {% endif %}
                     {% if not HIDE_SITENAME %}Randomly<span style="color: #0a7bff">Unique</span>{% endif %}
                 </a>
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    {% if DISPLAY_PAGES_ON_MENU %}
-                        {% for p in PAGES[::-1] %}
-                            <li>
-                                <a href="{{ SITEURL }}/{{ p.url }}">
-                                    {{ p.menulabel|default(p.title) }}
-                                </a>
-                            </li>
-                        {% endfor %}
+
+                    {% if article %}
+                        {% set current_cat = article.category %}
+                    {% else %}
+                        {% if 'bored' in page_name or 'index' in page_name %}
+                            {% set current_cat = 'bored' %}
+                        {% endif %}
+                        {% if 'plancky' in page_name %}
+                            {% set current_cat = 'plancky' %}
+                        {% endif %}
                     {% endif %}
 
+                    {% for category, arts in categories %}
+                        <li {% if category._name == current_cat %} class="active"{% endif %}>
+                            <a href="{{ SITEURL }}/{{ arts[0].url }}">
+                                {{ category}}
+                            </a>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
 
@@ -61,10 +68,8 @@
 {% include 'includes/ga.html' %}
 </body>
 
-
 <script src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
 <script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
-
 
 </body>
 </html>

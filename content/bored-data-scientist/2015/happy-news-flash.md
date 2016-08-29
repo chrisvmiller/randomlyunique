@@ -1,5 +1,6 @@
 Date: 2015-06-13
 Title: Happy News Flash
+Category: bored
 Slug: happy-news-flash
 Summary: As an extreme optimist, I wholeheartedly believe life is better today than anytime in history.  This is contrary to popular opinion, but most people are little whiners.  Hopefully, this article will tilt your viewpoint in my direction.
 
