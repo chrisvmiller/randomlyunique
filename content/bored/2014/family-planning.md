@@ -10,7 +10,7 @@ mutually exclusive, but luckily the perfect loophole just dawned on me! The idea
 Assuming the standard nine month gestation period, the infograph below breaks down the best time to conceive by religion
 during their most notable present-giving holiday:
 
-<img src="/assets/2014/family_planning/family_planning.png" style='margin-top:10px;display:block;margin:auto;'>
+![Photo]({attach}/assets/bored/2014/family_planning.png){.image_center_style}
 
 I can't say following this advice would 'technically' make you a bad parent, but you will have enough money saved up for
 that mid-life crisis Porsche.  And, believe me, you'll need it after dealing with your extremely rebellious teenager 

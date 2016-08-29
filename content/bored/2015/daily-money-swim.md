@@ -13,7 +13,7 @@ billionaire friends jealous than an Olympic sized pool filled with gold coins.
 Now, let's find the height of gold, silver, and copper coins for a five square meter money-tower! Assuming a simple closed packed 
 lattice and a net value of one billion per tower (estimated from Gold Buffalo, Silver Eagle, and Copper Round coins), I calculated:
 
-<img src="/assets/2015/daily-money-swim/daily-money-swim.png" style='margin-top:10px;display:block;margin:auto;max-height:500px'>
+![Photo]({attach}/assets/bored/2015/daily-money-swim.png){.image_center_style}
 
 As you can clearly see, money towers ain't cheap. You will never impress anyone with a kiddie pool of gold coins 
 or a skyscrapper of lameass copper - 20 billion dollars is the bare minimum for an adequate golden swim.   

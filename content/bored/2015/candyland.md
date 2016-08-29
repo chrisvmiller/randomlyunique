@@ -14,4 +14,4 @@ involve a quick closed-loop tour of Candyland that does NOT end at King Candy's 
 So, what is the best route that visits all the wonders of Candyland while minimizing the total distance traveled. Well,
 this is just the famous traveling salesman problem! Using a <a href='https://github.com/chrisvmiller/analytics/blob/master/candyland_route/find_best_path.py'> simulated annealing approach</a>, my proposed path is:
 
-<img src="/assets/2015/candyland/candyland.png" style='margin-top:10px;display:block;margin:auto;'>
+![Photo]({attach}/assets/bored/2015/candyland.png){.image_center_style}

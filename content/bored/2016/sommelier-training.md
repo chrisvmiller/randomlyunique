@@ -14,7 +14,7 @@ with a fancy-pants <a href=https://github.com/chrisvmiller/analytics/blob/master
 The converged prediction iteration count, after normalizing by the amount of wine it takes to blindfoldedly distinguish 
 between red and white, is shown in the chart below: 
  
-<img src="/assets/2016/sommelier-training/sommelier-training.png" style='margin-top:10px;display:block;margin:auto;'>
+![Photo]({attach}/assets/bored/2016/sommelier-training.png){.image_center_style}
 
 Now, I only need to convince my wife that purchasing 7 Balthazars of pink bubbly wine is intended for research 
 and my life will be fantastic.

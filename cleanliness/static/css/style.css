@@ -327,3 +327,8 @@ figure.floatcenter, .align-center {
 
 #___plusone_0 iframe {margin-bottom: -2px !important;}
 
+.image_center_style{
+    margin-top:10px;
+    display:block;
+    margin:auto;
+}

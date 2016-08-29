@@ -9,7 +9,7 @@ Does the lunar cycle affect behavior in animals?  Of course not. But, to appease
 let's compare crimes in San Francisco with the phases of the moon! The plot below counts every crime during the new or
 full moon in San Francisco for the year 2014 between the hours of 9pm and 5am:
 
-<img src="/assets/2015/lunar-effect/lunar-effect.png" style='margin-top:10px;display:block;margin:auto;'>
+![Photo]({attach}/assets/bored/2015/lunar-effect.png){.image_center_style}
 
 Well, this certainly makes sense. If I'm a dude about to commit a crime, I would wait until it's really dark out -
 that's like day one of ninja school.

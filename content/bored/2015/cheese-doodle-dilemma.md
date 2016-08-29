@@ -9,7 +9,7 @@ a ridiculous allegation, but luckily the line between sensible and silly is extr
 this mindset, I decided to run a three-week experiment, where I would eat a handful of cheese doodles before falling 
 asleep each night. Here's the result: 
 
-<img src="/assets/2015/cheese-doodle/cheese-doodle.jpg" style='margin-top:10px;display:block;margin:auto;'>
+![Photo]({attach}/assets/bored/2015/cheese-doodle.jpg){.image_center_style}
 
 Before jumping to any conclusions, let's run a simple one-sample test-of-proportions hypothesis test. 
 

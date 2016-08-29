@@ -2,7 +2,7 @@ Date: 2014-12-14
 Title: About 
 Category: About
 
-<img src="/assets/pages/photo.jpg" width="225" style="float:left;margin-right: 12px;margin-bottom: 1px">
+![Photo]({attach}/assets/about/photo.jpg){.image_center_style}
 Hi, I'm Chris and I'm a Data Scientist in San Francisco. I hold a PhD in Physics with a background in modeling the 
 optoelectronic properties of nanomaterials. My professional interests include real-world modeling, clean+simple analysis, 
 and designing data products.      
@@ -24,3 +24,5 @@ Board Games, Road Biking, Spontaneous Adventuring, Single Origin Esoteric Coffee
 <a class="nounderline" href="http://github.com/chrisvmiller"><i class="fa fa-github-square fa-4x" style="color:purple"></i></a>
 <a class="nounderline" type="application/atom+xml" href="http://randomlyunique.com/feeds/chris-miller.atom.xml"><i class="fa fa-rss-square fa-4x" style="color:orange"></i></a>
 </div>
+
+

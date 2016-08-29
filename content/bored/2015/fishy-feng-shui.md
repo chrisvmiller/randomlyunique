@@ -16,7 +16,7 @@ I wrote a simple image analysis algorithm that records the fish's location. (Thi
 filtering and a computationally intensive "Laplacian of Gaussian" blob detection.) The heatmap below shows the most
 frequented areas during this time frame:
 
-<img src="/assets/2015/fishy-feng-shui/fishy-feng-shui.png" style='margin-top:10px;display:block;margin:auto;'>
+![Photo]({attach}/assets/bored/2015/fishy-feng-shui.png){.image_center_style}
 
 Wow, my fish really enjoys hanging out near driftwood and dislikes the edges of the tank.  I should definitely consider
 buying a bigger tank with plenty of driftwood, while I prepare for stage three: a bunny rabbit!

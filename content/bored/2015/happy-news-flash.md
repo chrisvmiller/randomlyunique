@@ -14,7 +14,7 @@ As a hint of this positiveness, I performed a rudimentary sentiment analysis on 
 Using the New York Times API, I extracted a random sample of top news stories on a weekly basis since 1900. The plot
 below shows this estimated sentiment under a three year exponential moving average:
 
-<img src="/assets/2015/happy-news-flash/happy-news-flash.png" style='margin-top:10px;display:block;margin:auto;'>
+![Photo]({attach}/assets/bored/2015/happy-news-flash.png){.image_center_style}
 
 As you can see, we're sightly more happier nowadays. If you're completely convinced otherwise, please keep your 
 complaining to yourself.  I'm too busy singing along to my Carly Rae Jepsen and Taylor Swift playlist anyways.

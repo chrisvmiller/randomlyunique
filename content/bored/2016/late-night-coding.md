@@ -12,4 +12,4 @@ into daytime (9am to 9pm) and nighttime buckets. After this separation,
 I found the more common daytime(/nighttime) words by subtracting nighttime(/daytime) word frequencies from daytime(/nighttime) 
 word frequencies. The word clouds below highlight these most common commit words: 
   
-<img src="/assets/2016/late-night-coding/late-night-coding.jpg" style='margin-top:10px;display:block;margin:auto;'>
+![Photo]({attach}/assets/bored/2016/late-night-coding.jpg){.image_center_style}

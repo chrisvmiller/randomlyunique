@@ -20,7 +20,7 @@ around 2) One person remains stationary, until representative total-distance ave
 
 The diagram below shows a typical example for each scenario:
 
-<img src="/assets/2015/mate-locate/mate-locate.png" style='margin-top:10px;display:block;margin:auto;'>
+![Photo]({attach}/assets/bored/2015/mate-locate.png){.image_center_style}
 
 After running this simulation for a few different sized grids, I confirmed that two people randomly walking around is 
 approximately 1.6x faster! Now, I would typically follow this result, but my wife already found me like 45 minutes ago and 
