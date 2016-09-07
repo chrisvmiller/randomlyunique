@@ -1,19 +1,34 @@
 <section id="content">
     <article>
-        <h1 class="header-title">
-            <h1>
-                <a href="{{ SITEURL }}/{{ article.url }}"
-                   rel="bookmark"
-                   title="Permalink to {{ article.title|striptags }}">
-                    {{ article.title }}
-                </a>
-            </h1>
-        </h1>
-        <div class="entry-content">
-            {% include "includes/article_info.html" %}
+        <h2 class="header-title text-center">
+            <a href="{{ SITEURL }}/{{ article.url }}"
+               rel="bookmark"
+               title="Permalink to {{ article.title|striptags }}">
+                {{ article.title }}
+            </a>
+        </h2>
+
+        <div class="entry-content ">
+            {% if article.title != 'About' %}
+            <h5 class="article-date text-center">
+                <time datetime="{{ article.date.strftime('%b %d, %Y') }}"> {{ article.date.strftime("%b %d, %Y") }}&nbsp;</time>
+
+            <span class="fb-share-button" style="height:22px;"
+                  data-href="http://randomlyunique.com/{{ article.url }}"
+                  data-layout="button"
+                  data-action="like"
+                  data-show-faces="false"
+                  data-width="15"
+                  data-share="false">
+            </span>
+
+            <span class="g-plusone" data-size="medium" data-annotation="none"
+                  data-width="250"></span>
+            </h5>
+            {% endif %}
             {{ article.content }}
         </div>
     </article>
-</section>
 
-{% include "footer.html" %}
+    {% include "footer.html" %}
+</section>
