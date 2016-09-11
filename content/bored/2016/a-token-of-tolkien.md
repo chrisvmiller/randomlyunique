@@ -45,7 +45,7 @@ The 'ok, these seems reasonable, I guess' results are shown below:
     </tbody>
 </table>
 
-<span style="color:blue; font-weight: bold;">Special Bonus:</span> When I apply this autosummary to sentences that contain the word "Sam" throughout The Lord of the Rings trilogy, I get: 
+<span style="color:green; font-weight: bold;">Special Bonus:</span> When I apply this autosummary to sentences that contain the word "Sam" throughout The Lord of the Rings trilogy, I get: 
 
 <table class="table table-bordered">
     <thead>

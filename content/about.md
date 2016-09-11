@@ -14,15 +14,17 @@ for someone to catch me in a bad mood and I kinda have my amazing wife to blame 
 any reason, feel free to send a message. </p>
  
 <div class="text-center">
-<a class="nounderline" href="http://linkedin.com/in/chrisvmiller/"><i class="fa fa-linkedin-square fa-4x" style="color:blue"></i></a>
-<a class="nounderline" href="http://github.com/chrisvmiller"><i class="fa fa-github-square fa-4x" style="color:purple"></i></a>
+<a class="nounderline" href="http://linkedin.com/in/chrisvmiller/"><i class="fa fa-linkedin-square fa-5x" style="color:blue"></i></a>
+<a class="nounderline" href="http://github.com/chrisvmiller"><i class="fa fa-github-square fa-5x" style="color:purple"></i></a>
+<a class="nounderline" type="application/atom+xml" href="http://randomlyunique.com/feeds/chris-miller.atom.xml"><i class="fa fa-rss-square fa-5x" style="color:orange"></i></a>
+<br><br>
 </div>
 
 </div>
 <div class="col-md-6">
 <h2 class="text-center">Projects</h2>
 <p class="article-text">
-1) <a class="nounderline" href="https://play.google.com/store/apps/details?id=com.shapenado&hl=en">Shapenado: </a>This is a simple arcade game I made completely in React Native
+1) <a class="nounderline" href="https://play.google.com/store/apps/details?id=com.shapenado&hl=en">Shapenado: </a>A simple arcade android game - made with React Native
 <img src="/assets/common/shapenado.png" width="300" class="image_center_style" >
 </p>
 
