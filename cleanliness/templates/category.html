@@ -3,8 +3,8 @@
 
 {% block content %}
     <section id="content">
-        <h2 class="header-title text-center">Archives</h2>
-        {% include 'includes/google_adwords.html' %}
+        <h2 class="header-title text-center">{{ articles.0.category|title }} Archives</h2>
+{#        {% include 'includes/google_adwords.html' %}#}
         <div id="archives">
             {% set previous_year = 2014 %}
             {% for article in articles %}
