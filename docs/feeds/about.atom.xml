@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>randomlyunique</title><link href="http://www.randomlyunique.com/" rel="alternate"></link><link href="http://www.randomlyunique.com/feeds/about.atom.xml" rel="self"></link><id>http://www.randomlyunique.com/</id><updated>2014-12-14T00:00:00-08:00</updated><entry><title>About</title><link href="http://www.randomlyunique.com/about/2014/about/" rel="alternate"></link><updated>2014-12-14T00:00:00-08:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2014-12-14:about/2014/about/</id><summary type="html">&lt;div class="col-md-6"&gt;
+&lt;img src="/assets/common/photo.jpg" width="300" class="image_center_style" &gt;
+&lt;p&gt;Hi, I'm Chris and I'm a Data Scientist in San Francisco. I hold a PhD in Physics, where I spent the better part of the 20s modeling the 
+optoelectronic properties of nanomaterials. Nowadays, my interests include analytics, machine learning,  
+engineering data products and optics.&lt;/p&gt;
+
+&lt;p&gt;During my free time, I enjoy all sorts of gaming, biking, playing the piano, and single origin esoteric coffee. 
+I also pride myself with my positive and upbeat attitude - it's extremely difficult
+for someone to catch me in a bad mood and I kinda have my amazing wife to blame for that. If you want to contact me for 
+any reason, feel free to send a message. &lt;/p&gt;
+
+&lt;div class="text-center"&gt;
+&lt;a class="nounderline" href="http://linkedin.com/in/chrisvmiller/"&gt;&lt;i class="fa fa-linkedin-square fa-5x" style="color:blue"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a class="nounderline" href="http://github.com/chrisvmiller"&gt;&lt;i class="fa fa-github-square fa-5x" style="color:purple"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a class="nounderline" type="application/atom+xml" href="http://randomlyunique.com/feeds/chris-miller.atom.xml"&gt;&lt;i class="fa fa-rss-square fa-5x" style="color:orange"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div class="col-md-6"&gt;
+&lt;h2 class="text-center"&gt;Projects&lt;/h2&gt;
+&lt;p class="article-text"&gt;
+1) &lt;a class="nounderline" href="https://play.google.com/store/apps/details?id=com.shapenado&amp;hl=en"&gt;Shapenado: &lt;/a&gt;A simple arcade android game - made with React Native
+&lt;img src="/assets/common/shapenado.png" width="300" class="image_center_style" &gt;
+&lt;/p&gt;
+
+&lt;p class="article-text"&gt;
+2) &lt;a class="nounderline" href="https://github.com/chrisvmiller/analytics/blob/master/millnotes/millnotes.pdf"&gt;Millnotes: &lt;/a&gt;This formula sheet covers all the frequently used mathematical tidbits that I've encountered in physics.
+&lt;img src="/assets/common/millnotes.jpg" width="300" class="image_center_style" &gt;    
+&lt;/p&gt;
+&lt;/div&gt;</summary></entry></feed>

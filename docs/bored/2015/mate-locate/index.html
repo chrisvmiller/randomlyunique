@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>randomlyunique</title>
+    <title>Mate Locate - randomlyunique</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -53,15 +53,15 @@
 <section id="content">
     <article>
         <h2 class="header-title text-center">
-            Reinforcement Sort
+            Mate Locate
         </h2>
 
         <div class="entry-content ">
             <h5 class="article-date text-center">
-                <time datetime="Sep 15, 2016"> Sep 15, 2016&nbsp;</time>
+                <time datetime="Nov 23, 2015"> Nov 23, 2015&nbsp;</time>
 
             <span class="fb-share-button" style="height:22px;"
-                  data-href="http://randomlyunique.com/bored/2016/reinforcement-sort/"
+                  data-href="http://randomlyunique.com/bored/2015/mate-locate/"
                   data-layout="button"
                   data-action="like"
                   data-show-faces="false"
@@ -72,35 +72,22 @@
             <span class="g-plusone" data-size="medium" data-annotation="none"
                   data-width="250"></span>
             </h5>
-            <p align="center">
-You know Quicksort and Merge sort and Timsort and Shell sort <br>
-Heapsort and Bubble sort and Insertion sort and Selection sort <br>
-But do you recall the most god-awful sort of all? 
-</p>
-
-<p>A Reinforcement Sort (a sort done through reinforcement(ish) learning) is the Nickelback of sorting 
-algorithms - a perfect superposition of horrible and awesome. This rockstar was developed using an 
-epsilon greedy <a href=https://en.wikipedia.org/wiki/Q-learning>Q-learning</a> approach
-with the aim of generating the best python sorting script. This mainly involved combining code 
-fragments together and giving rewards based on how well these scripts sort a list. The exact setup is 
-summarized as follows:</p>
-<p>1) <a href=https://github.com/chrisvmiller/analytics/blob/master/reinforcement_sort/action.py#L50>State</a>: A binary array chad-kroegered from a md5 hash of the python code string <br>
-2) <a href=https://github.com/chrisvmiller/analytics/blob/master/reinforcement_sort/action.py#L8>Actions</a>: 
-I figured sorting will require some looping, swapping and probably a conditional or two, so I made these actions on a state<br>
-3) <a href=https://github.com/chrisvmiller/analytics/blob/master/reinforcement_sort/reward.py>Reward</a>: 
-The state receives a score of -1 if the python code doesn't run, -10 is the code is over 300 characters or +1000 if the list is correctly sorted. <br></p>
-<p>After <a href=https://github.com/chrisvmiller/analytics/blob/master/reinforcement_sort/learn_sort.py>training</a> up a neural net, 
-I received this optimal sort: </p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">unsorted_list</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">unsorted_list</span><span class="p">):</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">unsorted_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">unsorted_list</span><span class="p">[</span><span class="n">j</span><span class="p">]):</span>
-            <span class="n">unsorted_list</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">unsorted_list</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">unsorted_list</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">unsorted_list</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-</pre></div>
-
-
-<p>Now you may be telling yourself that this looks exactly like a Bubble Sort, but I assure you it's not. 
-A Bubble Sort has a reasonable time complexity of O(n^2), but a Reinforcement Sort 
-runs in O(oh god, why am I doing this).</p>
+            <p>As I write this, I'm taking a break from searching for my recently wandered off and phoneless wife. I wish to find her as 
+quickly as possible, but I'm currently experiencing some inner turmoil. Should I continue on this wife-hunt or is it 
+more time-efficient to remain stationary and wait until she walks by? Do two confined random-walks meet quicker
+than a single random-walk finding a stationary point? Wait a second, I can write a script 
+(<a href="https://github.com/chrisvmiller/analytics/blob/master/mate_locate/locate.py">click here!</a>) that simulates 
+finding my lost and (presumingly) scared wife!  </p>
+<p>In order to keep things simple, I'll assume this mall is a bounded square grid where my wife and I are initially assigned 
+to a random location. Then, during each iteration, a non-stationary person walks a single square in any 
+horizontal, vertical or diagonal direction. Whenever my wife and I are in the same square, I will record the total number of squares 
+traveled and reset the simulation. This process repeats for two scenarios: 1) We're both randomly moving 
+around 2) One person remains stationary, until representative total-distance averages are reached.     </p>
+<p>The diagram below shows a typical example for each scenario:</p>
+<p><img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/bored/2015/mate-locate/mate-locate.png" /></p>
+<p>After running this simulation for a few different sized grids, I confirmed that two people randomly walking around is 
+approximately 1.6x faster! Now, I would typically follow this result, but my wife already found me like 45 minutes ago and 
+she's been patiently waiting for me to finish this blog post.</p>
         </div>
     </article>
 
@@ -108,8 +95,8 @@ runs in O(oh god, why am I doing this).</p>
 
             <div class="row vertical-align">
                 <div class="col-xs-4 text-center">
-                        <a href="http://www.randomlyunique.com/bored/2016/a-token-of-tolkien/">
-                            <i class="fa fa-caret-left fa-4x" aria-hidden="true"></i><br>A Token of Tolkien
+                        <a href="http://www.randomlyunique.com/bored/2015/daily-money-swim/">
+                            <i class="fa fa-caret-left fa-4x" aria-hidden="true"></i><br>Daily Money Swim
                         </a>
                 </div>
                 <div class="col-xs-4 text-center">
@@ -118,12 +105,14 @@ runs in O(oh god, why am I doing this).</p>
                     </a>
                 </div>
                 <div class="col-xs-4 text-center">
+                        <a href="http://www.randomlyunique.com/bored/2015/pillars-of-creativity/">
+                            <i class="fa fa-caret-right fa-4x" aria-hidden="true"></i><br>Pillars of Creativity
+                        </a>
                 </div>
             </div>
 
         
-</section>
-</div>
+</section></div>
 
 <div id="fb-root" ></div>
 <script>(function (d, s, id) {

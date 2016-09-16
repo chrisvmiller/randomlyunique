@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>randomlyunique</title>
+    <title>Relationship Analytics - randomlyunique</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -53,15 +53,15 @@
 <section id="content">
     <article>
         <h2 class="header-title text-center">
-            Reinforcement Sort
+            Relationship Analytics
         </h2>
 
         <div class="entry-content ">
             <h5 class="article-date text-center">
-                <time datetime="Sep 15, 2016"> Sep 15, 2016&nbsp;</time>
+                <time datetime="Nov 18, 2014"> Nov 18, 2014&nbsp;</time>
 
             <span class="fb-share-button" style="height:22px;"
-                  data-href="http://randomlyunique.com/bored/2016/reinforcement-sort/"
+                  data-href="http://randomlyunique.com/bored/2014/relationship-analytics/"
                   data-layout="button"
                   data-action="like"
                   data-show-faces="false"
@@ -72,35 +72,18 @@
             <span class="g-plusone" data-size="medium" data-annotation="none"
                   data-width="250"></span>
             </h5>
-            <p align="center">
-You know Quicksort and Merge sort and Timsort and Shell sort <br>
-Heapsort and Bubble sort and Insertion sort and Selection sort <br>
-But do you recall the most god-awful sort of all? 
-</p>
-
-<p>A Reinforcement Sort (a sort done through reinforcement(ish) learning) is the Nickelback of sorting 
-algorithms - a perfect superposition of horrible and awesome. This rockstar was developed using an 
-epsilon greedy <a href=https://en.wikipedia.org/wiki/Q-learning>Q-learning</a> approach
-with the aim of generating the best python sorting script. This mainly involved combining code 
-fragments together and giving rewards based on how well these scripts sort a list. The exact setup is 
-summarized as follows:</p>
-<p>1) <a href=https://github.com/chrisvmiller/analytics/blob/master/reinforcement_sort/action.py#L50>State</a>: A binary array chad-kroegered from a md5 hash of the python code string <br>
-2) <a href=https://github.com/chrisvmiller/analytics/blob/master/reinforcement_sort/action.py#L8>Actions</a>: 
-I figured sorting will require some looping, swapping and probably a conditional or two, so I made these actions on a state<br>
-3) <a href=https://github.com/chrisvmiller/analytics/blob/master/reinforcement_sort/reward.py>Reward</a>: 
-The state receives a score of -1 if the python code doesn't run, -10 is the code is over 300 characters or +1000 if the list is correctly sorted. <br></p>
-<p>After <a href=https://github.com/chrisvmiller/analytics/blob/master/reinforcement_sort/learn_sort.py>training</a> up a neural net, 
-I received this optimal sort: </p>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">unsorted_list</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">unsorted_list</span><span class="p">):</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">unsorted_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">unsorted_list</span><span class="p">[</span><span class="n">j</span><span class="p">]):</span>
-            <span class="n">unsorted_list</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">unsorted_list</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">unsorted_list</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">unsorted_list</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-</pre></div>
-
-
-<p>Now you may be telling yourself that this looks exactly like a Bubble Sort, but I assure you it's not. 
-A Bubble Sort has a reasonable time complexity of O(n^2), but a Reinforcement Sort 
-runs in O(oh god, why am I doing this).</p>
+            <p>I love my wife so much.  However, for whatever reason, she's under the impression that she loves me more.  This has 
+been the <em>most</em> contested issue between us for quite some time.  In fact, every time one of us says "I love you," the 
+other always responds with "I love you more."  So, like any sensible husband with an analytical background, I needed 
+to quantitatively prove her wrong.</p>
+<p>Luckily, I used Google Voice when I met my wife and this allowed me to play with approximately a year's worth 
+of text messages. It took an hour or so to write a hacky parser that counted the number of "&lt;3's" and the word "love" 
+per person per week. I also normalized by the total number of text messages with the hopes of sending the data in the <em>correct</em>  direction, 
+yet the results weren't too favorable: 
+<img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/bored/2014/relationship-analytics/relationship_analytics.png" />
+Wow, she clearly loves me more.  I was planning to forecast my 'greater love' for her into the future with 
+some sort of regression, but screw it!  I need to pretend this chart never existed and hope she never reads this post.  </p>
+<p>Bonus points: Guess when I conceived the idea of this plot? </p>
         </div>
     </article>
 
@@ -108,9 +91,6 @@ runs in O(oh god, why am I doing this).</p>
 
             <div class="row vertical-align">
                 <div class="col-xs-4 text-center">
-                        <a href="http://www.randomlyunique.com/bored/2016/a-token-of-tolkien/">
-                            <i class="fa fa-caret-left fa-4x" aria-hidden="true"></i><br>A Token of Tolkien
-                        </a>
                 </div>
                 <div class="col-xs-4 text-center">
                     <a href="http://www.randomlyunique.com/category/bored.html">
@@ -118,12 +98,14 @@ runs in O(oh god, why am I doing this).</p>
                     </a>
                 </div>
                 <div class="col-xs-4 text-center">
+                        <a href="http://www.randomlyunique.com/bored/2014/family-planning/">
+                            <i class="fa fa-caret-right fa-4x" aria-hidden="true"></i><br>Family Planning for Frugality
+                        </a>
                 </div>
             </div>
 
         
-</section>
-</div>
+</section></div>
 
 <div id="fb-root" ></div>
 <script>(function (d, s, id) {
