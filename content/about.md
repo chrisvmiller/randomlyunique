@@ -13,11 +13,10 @@ I also pride myself with my positive and upbeat attitude - it's extremely diffic
 for someone to catch me in a bad mood and I kinda have my amazing wife to blame for that. If you want to contact me for 
 any reason, feel free to send a message. </p>
  
-<div class="text-center">
+<div class="text-center" style="padding-bottom:10px">
 <a class="nounderline" href="http://linkedin.com/in/chrisvmiller/"><i class="fa fa-linkedin-square fa-5x" style="color:blue"></i></a>
 <a class="nounderline" href="http://github.com/chrisvmiller"><i class="fa fa-github-square fa-5x" style="color:purple"></i></a>
-<a class="nounderline" type="application/atom+xml" href="http://randomlyunique.com/feeds/chris-miller.atom.xml"><i class="fa fa-rss-square fa-5x" style="color:orange"></i></a>
-<br><br>
+<a class="nounderline" type="application/atom+xml" href="http://randomlyunique.com/feeds/all.atom.xml"><i class="fa fa-rss-square fa-5x" style="color:orange"></i></a>
 </div>
 
 </div>
@@ -25,11 +24,11 @@ any reason, feel free to send a message. </p>
 <h2 class="text-center">Projects</h2>
 <p class="article-text">
 1) <a class="nounderline" href="https://play.google.com/store/apps/details?id=com.shapenado&hl=en">Shapenado: </a>A simple arcade android game - made with React Native
-<img src="/assets/common/shapenado.png" width="300" class="image_center_style" >
+<a class="nounderline" href="https://play.google.com/store/apps/details?id=com.shapenado&hl=en"> <img src="/assets/common/shapenado.png" width="300" class="image_center_style" > </a>
 </p>
 
 <p class="article-text">
 2) <a class="nounderline" href="https://github.com/chrisvmiller/analytics/blob/master/millnotes/millnotes.pdf">Millnotes: </a>This formula sheet covers all the frequently used mathematical tidbits that I've encountered in physics.
-<img src="/assets/common/millnotes.jpg" width="300" class="image_center_style" >    
+<a class="nounderline" href="https://github.com/chrisvmiller/analytics/blob/master/millnotes/millnotes.pdf"><img src="/assets/common/millnotes.jpg" width="300" class="image_center_style"></a>  
 </p>
 </div>

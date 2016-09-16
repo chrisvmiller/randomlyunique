@@ -1,6 +1,6 @@
 body {
     padding-top: 10px;
-    font-family:  "Avenir", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial";
+    font-family: "Avenir", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial";
 }
 
 .centered-div {
@@ -39,7 +39,6 @@ nav li {
 
 nav li:hover {
     background: #2196f3;
-    color:red;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
@@ -121,6 +120,26 @@ hr.fading {
 }
 
 @media (max-width: 767px) {
+    .entry-content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #archives {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .header-title {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .col-md-6 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
     .row.vertical-align {
         display: block; /* turn off the flexible box layout */
     }
