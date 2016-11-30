@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>randomlyunique</title><link href="http://www.randomlyunique.com/" rel="alternate"></link><link href="http://www.randomlyunique.com/feeds/bored.atom.xml" rel="self"></link><id>http://www.randomlyunique.com/</id><updated>2016-09-15T00:00:00-07:00</updated><entry><title>Reinforcement Sort</title><link href="http://www.randomlyunique.com/bored/2016/reinforcement-sort/" rel="alternate"></link><updated>2016-09-15T00:00:00-07:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2016-09-15:bored/2016/reinforcement-sort/</id><summary type="html">&lt;p align="center"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>randomlyunique</title><link href="http://www.randomlyunique.com/" rel="alternate"></link><link href="http://www.randomlyunique.com/feeds/bored.atom.xml" rel="self"></link><id>http://www.randomlyunique.com/</id><updated>2016-11-30T00:00:00-08:00</updated><entry><title>Bay Area Heatmap</title><link href="http://www.randomlyunique.com/bored/2016/bay-area-heatmap/" rel="alternate"></link><updated>2016-11-30T00:00:00-08:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2016-11-30:bored/2016/bay-area-heatmap/</id><summary type="html">&lt;p&gt;After a few years in the Bay Area, my wife (she's lived in SF for over 20 years!)
+and I decided to move to the almost literal greener pasture of Seattle. While sitting 
+in my 1994 SF-priced downtown Seattle apartment (with a frigging washer/dryer and dishwasher),
+I decided to aggregate my phones location data. The heatmap below filters out where I lived 
+and worked, while plotting the logarithm of my phones recorded location count:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/bored/2016/bay-area-heatmap/bay-area-heatmap.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Cool observations: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can clearly see my morning Embarcadero coffee walk into work&lt;/li&gt;
+&lt;li&gt;This common conversation: "ok, it's Saturday night at 10pm - where should we go?" "Umm, pretty sure the Mission is the only place open at those late hours"&lt;/li&gt;
+&lt;li&gt;My incredibly beloved BART ride to where I lived in Berkeley (I can still hear BARTs melodic banshee wail in my dreams) &lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>Reinforcement Sort</title><link href="http://www.randomlyunique.com/bored/2016/reinforcement-sort/" rel="alternate"></link><updated>2016-09-15T00:00:00-07:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2016-09-15:bored/2016/reinforcement-sort/</id><summary type="html">&lt;p align="center"&gt;
 You know Quicksort and Merge sort and Timsort and Shell sort &lt;br&gt;
 Heapsort and Bubble sort and Insertion sort and Selection sort &lt;br&gt;
 But do you recall the most god-awful sort of all? 
@@ -192,7 +203,4 @@ asleep each night. Here's the result: &lt;/p&gt;
 &lt;strong&gt;Alternative Hypothesis:&lt;/strong&gt; Lucifer is here on earth in cheese doodle form &lt;/p&gt;
 &lt;p&gt;After some number crunching, I calculated a t-statistic of 10.1, which is quite a bit bigger than it's critical value of 2.8 
 (&amp;alpha;=0.01). So, I'm forced to reject the null hypothesis and recommend that everyone AVOID EATING CHEESE DOODLES 
-AT ALL COST BEFORE BED!!! &lt;/p&gt;</summary></entry><entry><title>Superior Slices</title><link href="http://www.randomlyunique.com/bored/2015/superior-slices/" rel="alternate"></link><updated>2015-08-16T00:00:00-07:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2015-08-16:bored/2015/superior-slices/</id><summary type="html">&lt;p&gt;As a native New Yorker, I take my pizza seriously and I always feel obliged to (unannoyingly) share this passion with
-anyone in my vicinity. So, as a community service, I created this handy-dandy map for my world-wide recommendations for great pizza.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/bored/2015/superior-slices/superior-slices.png" /&gt;&lt;/p&gt;
-&lt;p&gt;Yeah, so if you aren't in New York (this obviously doesn't include upstate New York), then just Fuhgedaboudit.&lt;/p&gt;</summary></entry></feed>
+AT ALL COST BEFORE BED!!! &lt;/p&gt;</summary></entry></feed>

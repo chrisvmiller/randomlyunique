@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>randomlyunique</title><link href="http://www.randomlyunique.com/" rel="alternate"></link><link href="http://www.randomlyunique.com/feeds/about.atom.xml" rel="self"></link><id>http://www.randomlyunique.com/</id><updated>2014-12-14T00:00:00-08:00</updated><entry><title>About</title><link href="http://www.randomlyunique.com/about/2014/about/" rel="alternate"></link><updated>2014-12-14T00:00:00-08:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2014-12-14:about/2014/about/</id><summary type="html">&lt;div class="col-md-6"&gt;
 &lt;img src="/assets/common/photo.jpg" width="300" class="image_center_style" &gt;
-&lt;p&gt;Hi, I'm Chris and I'm a Data Scientist in San Francisco. I hold a PhD in Physics, where I spent the better part of the 20s modeling the 
+&lt;p&gt;Hi, I'm Chris and I'm a Data Scientist who recently moved to Seattle from San Francisco. I hold a PhD in Physics, where I spent the better part of the 20s modeling the 
 optoelectronic properties of nanomaterials. Nowadays, my interests include analytics, machine learning,  
 engineering data products and optics.&lt;/p&gt;
 
-&lt;p&gt;During my free time, I enjoy all sorts of gaming, biking, playing the piano, and single origin esoteric coffee. 
+&lt;p&gt;During my free time, I enjoy all sorts of gaming, biking, and single origin esoteric coffee. 
 I also pride myself with my positive and upbeat attitude - it's extremely difficult
 for someone to catch me in a bad mood and I kinda have my amazing wife to blame for that. If you want to contact me for 
 any reason, feel free to send a message. &lt;/p&gt;
