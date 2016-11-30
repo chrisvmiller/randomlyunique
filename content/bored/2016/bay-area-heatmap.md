@@ -6,7 +6,7 @@ Summary: As a recent Bay Area transplant, I decided to summarize my time in Fris
  
 After a few years in the Bay Area, my wife (she's lived in SF for over 20 years!)
 and I decided to move to the almost literal greener pasture of Seattle. While sitting 
-in my 1994 SF-priced downtown Seattle apartment (with a frigging washer/dryer and dishwasher),
+in my circa 1998 SF-priced downtown Seattle apartment (with a frigging washer/dryer and dishwasher),
 I decided to aggregate my phones location data. The heatmap below filters out where I lived 
 and worked, while plotting the logarithm of my phones recorded location count:
   

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>randomlyunique</title><link href="http://www.randomlyunique.com/" rel="alternate"></link><link href="http://www.randomlyunique.com/feeds/bored.atom.xml" rel="self"></link><id>http://www.randomlyunique.com/</id><updated>2016-11-30T00:00:00-08:00</updated><entry><title>Bay Area Heatmap</title><link href="http://www.randomlyunique.com/bored/2016/bay-area-heatmap/" rel="alternate"></link><updated>2016-11-30T00:00:00-08:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2016-11-30:bored/2016/bay-area-heatmap/</id><summary type="html">&lt;p&gt;After a few years in the Bay Area, my wife (she's lived in SF for over 20 years!)
 and I decided to move to the almost literal greener pasture of Seattle. While sitting 
-in my 1994 SF-priced downtown Seattle apartment (with a frigging washer/dryer and dishwasher),
+in my circa 1998 SF-priced downtown Seattle apartment (with a frigging washer/dryer and dishwasher),
 I decided to aggregate my phones location data. The heatmap below filters out where I lived 
 and worked, while plotting the logarithm of my phones recorded location count:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/bored/2016/bay-area-heatmap/bay-area-heatmap.png" /&gt;&lt;/p&gt;
