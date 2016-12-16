@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="icon" href="http://www.randomlyunique.com/assets/favicon.ico">
-    <link rel="stylesheet"
-          href="http://www.randomlyunique.com/theme/css/bootstrap.paper.min.css">
+    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/bootstrap.paper.min.css">
     <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/pygments-friendly.css">
     <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/style.css">
@@ -16,63 +15,46 @@
 <body>
 
 <nav class="navbar-default navbar-static-top">
+    <hr class="line">
     <div class="container">
-        <div class="col-md-12">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle pull-left"
-                        data-toggle="collapse"
-                        data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="http://www.randomlyunique.com/" class="navbar-brand">
-                    Randomly<span style="color: #0a7bff">Unique</span>
-                </a>
+
+            <div class="navbar-header pull-left">
+                <div class="logo-header ">
+                        <a href="http://www.randomlyunique.com/">Randomly<span class="unique-color">Unique</span></a> > The Bored Data Scientist
+                </div>
             </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
 
-
-                    <li  class="active">
-                        <a href="http://www.randomlyunique.com/bored/2016/bay-area-heatmap/">The Bored Data Scientist</a>
-                    </li>
-
-                    <li >
-                        <a href="http://www.randomlyunique.com/about/2014/about/">
-                            About
-                        </a>
-                    </li>
-            </ul>
-        </div>
-        <hr class="fading">
+            <div  class="collapse navbar-collapse" >
+                <div class="navbar-header pull-right logo-header clearfix hidden-sm-up ">
+                    <span>musings by <a href="http://www.randomlyunique.com/misc/2014/about/">Chris Miller </a> </span>
+                </div>
+            </div>
     </div>
 </nav>
 
 <div class="container">
-<section id="content">
-    <article>
-        <h2 class="header-title text-center">
-            A Token of Tolkien
-        </h2>
+<article>
+    <h2 class="header-title text-center">
+          A Token of Tolkien
+    </h2>
 
-        <div class="entry-content ">
-            <h5 class="article-date text-center">
-                <time datetime="Jul 03, 2016"> Jul 03, 2016&nbsp;</time>
+    <div class="entry-content">
+        <h5 class="article-date text-center">
+            <time datetime="Jul 03, 2016"> Jul 03, 2016&nbsp;</time>
 
-            <span class="fb-share-button" style="height:22px;"
-                  data-href="http://randomlyunique.com/bored/2016/a-token-of-tolkien/"
-                  data-layout="button"
-                  data-action="like"
-                  data-show-faces="false"
-                  data-width="15"
-                  data-share="false">
-            </span>
+        <span class="fb-share-button" style="height:22px;"
+              data-href="http://randomlyunique.com/bored/2016/a-token-of-tolkien/"
+              data-layout="button"
+              data-action="like"
+              data-show-faces="false"
+              data-width="15"
+              data-share="false">
+        </span>
 
-            <span class="g-plusone" data-size="medium" data-annotation="none"
-                  data-width="250"></span>
-            </h5>
-            <p>The Hobbit and The Lord of the Rings are undeniably great books, with rich complex characters and a deep thoughtful story. 
+        <span class="g-plusone" data-size="medium" data-annotation="none"
+              data-width="250"></span>
+        </h5>
+        <p>The Hobbit and The Lord of the Rings are undeniably great books, with rich complex characters and a deep thoughtful story. 
 So, this seems like an ideal case to apply an autosummary algorithm meant for tasks like factual news articles!</p>
 <p>The <a href=https://github.com/chrisvmiller/analytics/blob/master/autosummarizer/summarize.py>method</a> I programmed is pretty straightforward,
 where I find the most representative sentence within a given blob of text. This is accomplished by tokenizing each sentence, converting to a 
@@ -124,8 +106,8 @@ and each edge is its similarity, then PageRanking to determine the 'best' senten
         </tr>
     </tbody>
 </table>
-        </div>
-    </article>
+    </div>
+</article>
 
 
             <div class="row vertical-align">
@@ -145,9 +127,8 @@ and each edge is its similarity, then PageRanking to determine the 'best' senten
                         </a>
                 </div>
             </div>
-
-        
-</section></div>
+            
+</div>
 
 <div id="fb-root" ></div>
 <script>(function (d, s, id) {
