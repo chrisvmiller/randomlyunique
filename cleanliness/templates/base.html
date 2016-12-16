@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="icon" href="{{ SITEURL }}/assets/favicon.ico">
-    <link rel="stylesheet"
-          href="{{ SITEURL }}/theme/css/bootstrap.paper.min.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.paper.min.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments-friendly.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css">
@@ -19,17 +18,17 @@
     <hr class="line">
     <div class="container">
 
-            <div class="navbar-header pull-left header-title">
-                <div class="aboutme-header ">
+            <div class="navbar-header pull-left">
+                <div class="logo-header ">
                 {% if category %}
                     {% if 'bored' in category._name %}
-                        <a href="{{ SITEURL }}/">Randomly<span class="unique-color">Unique</span></a>    > Bored Data Scientist
+                        <a href="{{ SITEURL }}/">Randomly<span class="unique-color">Unique</span></a> > The Bored Data Scientist
                     {% endif %}
                     {% if 'plancky' in category._name %}
-                        <a href="{{ SITEURL }}/">Randomly<span class="unique-color">Unique</span></a>  > Plancky Explains
+                        <a href="{{ SITEURL }}/">Randomly<span class="unique-color">Unique</span></a> > Plancky Explains
                     {% endif %}
                     {% if 'misc' in category._name %}
-                        <a href="{{ SITEURL }}/">Randomly<span class="unique-color">Unique</span></a>  > About
+                        <a href="{{ SITEURL }}/">Randomly<span class="unique-color">Unique</span></a> > About
                     {% endif %}
                 {% else %}
                     <a href="{{ SITEURL }}/">Randomly<span class="unique-color">Unique</span></a>
@@ -38,12 +37,10 @@
             </div>
 
             <div {% if category %} class="collapse navbar-collapse" {% endif %}>
-                <div class="navbar-header pull-right aboutme-header clearfix hidden-sm-up ">
+                <div class="navbar-header pull-right logo-header clearfix hidden-sm-up ">
                     <span>musings by <a href="{{ SITEURL }}/misc/2014/about/">Chris Miller </a> </span>
                 </div>
             </div>
-
-
     </div>
 </nav>
 

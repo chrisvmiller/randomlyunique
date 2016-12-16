@@ -3,7 +3,7 @@ Title: About
 
 <div class="col-md-6" style="padding-left:0px;padding-right:7px">
 <img src="/assets/common/photo.jpg" width="300" class="image_center_style" >
-<p>Hi, I'm Chris and I'm a Data Scientist who recently moved to Seattle from San Francisco. I hold a PhD in Physics, where I spent the better part of the 20s modeling the 
+<p>Hi, I'm Chris and I'm a Data Scientist who recently moved to Seattle from San Francisco. I hold a PhD in Physics, where I spent the better part of my 20s modeling the 
 optoelectronic properties of nanomaterials. Nowadays, my interests include analytics, machine learning,  
 engineering data products and optics.</p>      
    

@@ -19,8 +19,14 @@ body {
     max-width: 900px;
 }
 
+h2, h3 {
+    margin-top: 5px;
+    margin-bottom: 11.5px;
+}
+
+
 ul, ol {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 125%;
 }
 
@@ -46,8 +52,9 @@ hr.line {
     background-color: #0a7bff;
 }
 
-.aboutme-header {
+.logo-header {
     padding: 20.5px 15px;
+    font-size: 20px;
 }
 
 .unique-color {
@@ -55,7 +62,8 @@ hr.line {
 }
 
 .header-title {
-    font-weight: 600;
+    font-weight: bold;
+    font-size: 36px;
     color: #333;
 }
 
@@ -81,7 +89,7 @@ hr.line {
 }
 
 p {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 125%;
 }
 
@@ -138,14 +146,28 @@ p {
         padding-right: 10px;
     }
 
-    .row.vertical-align {
-        display: block; /* turn off the flexible box layout */
+    .logo-header {
+        font-size: 16px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
-    nav li {
-        display: inline-block;
-        transition: background 0.2s;
-        transform: skew(0deg);
+    .header-title {
+        font-weight: bold;
+        font-size: 28px;
+        color: #333;
+    }
+
+    ul, ol {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .row.vertical-align {
+        display: block;
     }
 
     .navbar-nav {
