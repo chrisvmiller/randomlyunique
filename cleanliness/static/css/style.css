@@ -1,5 +1,5 @@
 body {
-    padding-top: 10px;
+    padding-top: 0px;
     font-family: "Avenir", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial";
 }
 
@@ -36,22 +36,22 @@ a:hover {
     font-weight: bold;
 }
 
-nav li {
-    display: inline-block;
-    transition: background 0.2s;
-    transform: skew(-20deg);
-}
-
-nav li:hover {
-    background: #2196f3;
-}
-
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    background-color: #d6d6d6;
-}
-
 nav ul {
-    font-size: 16px;
+    font-size: 20px;
+}
+
+hr.line {
+    height: 7px;
+    margin: 0px;
+    background-color: #0a7bff;
+}
+
+.aboutme-header {
+    padding: 20.5px 15px;
+}
+
+.unique-color {
+    color: #0a7bff;
 }
 
 .header-title {
@@ -109,17 +109,6 @@ p {
     margin: auto;
 }
 
-/*horizontal rule style*/
-hr.fading {
-    border: 0;
-    height: 2px;
-    margin: 0px;
-    background-image: -webkit-linear-gradient(left, #FFFFFF, #0a7bff, #FFFFFF);
-    background-image: -moz-linear-gradient(left, #FFFFFF, #0a7bff, #FFFFFF);
-    background-image: -ms-linear-gradient(left, #FFFFFF, #0a7bff, #FFFFFF);
-    background-image: -o-linear-gradient(left, #FFFFFF, #0a7bff, #FFFFFF);
-}
-
 /*needed for the footer*/
 .vertical-align {
     display: flex;
@@ -145,8 +134,8 @@ hr.fading {
     }
 
     .col-md-6 {
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .row.vertical-align {

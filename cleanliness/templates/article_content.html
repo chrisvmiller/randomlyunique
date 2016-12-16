@@ -1,29 +1,27 @@
-<section id="content">
-    <article>
-        <h2 class="header-title text-center">
-            {{ article.title }}
-        </h2>
+<article>
+    <h2 class="header-title text-center">
+          {{ article.title }}
+    </h2>
 
-        <div class="entry-content ">
-            {% if article.title != 'About' %}
-            <h5 class="article-date text-center">
-                <time datetime="{{ article.date.strftime('%b %d, %Y') }}"> {{ article.date.strftime("%b %d, %Y") }}&nbsp;</time>
+    <div class="entry-content ">
+        {% if article.title != 'About' %}
+        <h5 class="article-date text-center">
+            <time datetime="{{ article.date.strftime('%b %d, %Y') }}"> {{ article.date.strftime("%b %d, %Y") }}&nbsp;</time>
 
-            <span class="fb-share-button" style="height:22px;"
-                  data-href="http://randomlyunique.com/{{ article.url }}"
-                  data-layout="button"
-                  data-action="like"
-                  data-show-faces="false"
-                  data-width="15"
-                  data-share="false">
-            </span>
+        <span class="fb-share-button" style="height:22px;"
+              data-href="http://randomlyunique.com/{{ article.url }}"
+              data-layout="button"
+              data-action="like"
+              data-show-faces="false"
+              data-width="15"
+              data-share="false">
+        </span>
 
-            <span class="g-plusone" data-size="medium" data-annotation="none"
-                  data-width="250"></span>
-            </h5>
-            {% endif %}
-            {{ article.content }}
-        </div>
-    </article>
-    {% include "footer.html" %}
-</section>
+        <span class="g-plusone" data-size="medium" data-annotation="none"
+              data-width="250"></span>
+        </h5>
+        {% endif %}
+        {{ article.content }}
+    </div>
+</article>
+{% include "footer.html" %}

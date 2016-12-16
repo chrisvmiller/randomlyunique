@@ -1,8 +1,7 @@
-Date: 2014-12-14
+Date: 2014
 Title: About 
-Category: About
 
-<div class="col-md-6">
+<div class="col-md-6" style="padding-left:0px;padding-right:7px">
 <img src="/assets/common/photo.jpg" width="300" class="image_center_style" >
 <p>Hi, I'm Chris and I'm a Data Scientist who recently moved to Seattle from San Francisco. I hold a PhD in Physics, where I spent the better part of the 20s modeling the 
 optoelectronic properties of nanomaterials. Nowadays, my interests include analytics, machine learning,  
@@ -20,7 +19,7 @@ any reason, feel free to send a message. </p>
 </div>
 
 </div>
-<div class="col-md-6">
+<div class="col-md-6" style="padding-left:0px;padding-right:0px">
 <h2 class="text-center">Projects</h2>
 <p class="article-text">
 1) <a class="nounderline" href="https://play.google.com/store/apps/details?id=com.shapenado&hl=en">Shapenado: </a>A simple arcade android game - made with React Native

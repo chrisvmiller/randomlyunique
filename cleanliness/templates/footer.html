@@ -1,12 +1,49 @@
-{% for category, arts in categories %}
-    {% if category == article.category %}
-        {% set next_index = (arts.index(article) - 1) % arts.__len__() %}
-        {% set next_article = arts[next_index] %}
+{% if (page_name == 'index') %}
+    <div class="entry-content">
+        <div class="row">
+            {% for category, articles in categories %}
+                {% if (category._name == 'bored') or (category._name == 'plancky') %}
+                    <div class="col-md-6 ">
+                        <div class='text-center'>
+                            <h3 style="text-decoration: underline;">
+                                {% if (category._name == 'bored') %}
+                                    The Bored Data Scientist
+                                {% endif %}
 
-        {% set previous_index = (arts.index(article) + 1) % arts.__len__() %}
-        {% set previous_article = arts[previous_index] %}
+                                {% if (category._name == 'plancky') %}
+                                    Plancky Explains
+                                {% endif %}
+                            </h3>
+                        </div>
+                        {% for art in articles[:3] %}
+                            {% if articles_page.object_list[0].title != art.title  %}
+                                <p class="article-text">
+                                    <a href="{{ SITEURL }}/{{ art.url }}">{{ art.title }}</a>: {{ art.summary|striptags }}
+                                </p>
+                            {% endif %}
+                        {% endfor %}
 
-        {% if next_article.title != 'About' %}
+                        <div class='text-center'>
+                            <a href="{{ SITEURL }}/category/{{ category._name }}.html">
+                                <i class="fa fa-archive fa-4x" aria-hidden="true"></i><br> Archive
+                            </a>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+{% else %}
+    {% for category, arts in categories %}
+        {% if (category._name == 'bored') or (category._name == 'plancky') %}
+        {% if category == article.category %}
+            {% set next_index = (arts.index(article) - 1) % arts.__len__() %}
+            {% set next_article = arts[next_index] %}
+
+            {% set previous_index = (arts.index(article) + 1) % arts.__len__() %}
+            {% set previous_article = arts[previous_index] %}
+
             <div class="row vertical-align">
                 <div class="col-xs-4 text-center">
                     {% if previous_index != 0 %}
@@ -28,9 +65,8 @@
                     {% endif %}
                 </div>
             </div>
+            {{ break }}
         {% endif %}
-
-        {{ break }}
-    {% endif %}
-{% endfor %}
-
+        {% endif %}
+    {% endfor %}
+{% endif %}

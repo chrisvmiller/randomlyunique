@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-    {% set article = articles_page.object_list[0] %}
-    {% include 'article_content.html' %}
-
+    <section id="content">
+        {% set article = articles_page.object_list[0] %}
+        {% include 'article_content.html' %}
+    </section>
 {% endblock content %}

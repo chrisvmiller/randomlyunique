@@ -16,54 +16,34 @@
 <body>
 
 <nav class="navbar-default navbar-static-top">
+    <hr class="line">
     <div class="container">
-        <div class="col-md-12">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle pull-left"
-                        data-toggle="collapse"
-                        data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="{{ SITEURL }}/" class="navbar-brand">
-                    Randomly<span style="color: #0a7bff">Unique</span>
-                </a>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
 
-                {% if article %}
-                    {% set current_cat = article.category %}
+            <div class="navbar-header pull-left header-title">
+                <div class="aboutme-header ">
+                {% if category %}
+                    {% if 'bored' in category._name %}
+                        <a href="{{ SITEURL }}/">Randomly<span class="unique-color">Unique</span></a>    > Bored Data Scientist
+                    {% endif %}
+                    {% if 'plancky' in category._name %}
+                        <a href="{{ SITEURL }}/">Randomly<span class="unique-color">Unique</span></a>  > Plancky Explains
+                    {% endif %}
+                    {% if 'misc' in category._name %}
+                        <a href="{{ SITEURL }}/">Randomly<span class="unique-color">Unique</span></a>  > About
+                    {% endif %}
                 {% else %}
-                    {% if 'bored' in page_name or 'index' in page_name %}
-                        {% set current_cat = 'bored' %}
-                    {% endif %}
-                    {% if 'plancky' in page_name %}
-                        {% set current_cat = 'plancky' %}
-                    {% endif %}
+                    <a href="{{ SITEURL }}/">Randomly<span class="unique-color">Unique</span></a>
                 {% endif %}
+                </div>
+            </div>
 
-                {% for category, arts in categories %}
-                    {% if category._name  == 'bored' %}
-                    <li {% if category._name == current_cat %} class="active"{% endif %}>
-                        <a href="{{ SITEURL }}/{{ arts[0].url }}">The Bored Data Scientist</a>
-                    </li>
-                    {% endif %}
-                {% endfor %}
+            <div {% if category %} class="collapse navbar-collapse" {% endif %}>
+                <div class="navbar-header pull-right aboutme-header clearfix hidden-sm-up ">
+                    <span>musings by <a href="{{ SITEURL }}/misc/2014/about/">Chris Miller </a> </span>
+                </div>
+            </div>
 
-                {% for category, arts in categories %}
-                    {% if category._name  == 'About' %}
-                    <li {% if category._name == current_cat %} class="active"{% endif %}>
-                        <a href="{{ SITEURL }}/{{ arts[0].url }}">
-                            About
-                        </a>
-                    </li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        </div>
-        <hr class="fading">
+
     </div>
 </nav>
 
