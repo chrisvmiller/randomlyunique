@@ -15,12 +15,17 @@
                                 {% endif %}
                             </h3>
                         </div>
-                        {% for art in articles[:3] %}
-                            {% if articles_page.object_list[0].title != art.title  %}
-                                <p class="article-text">
-                                    <a href="{{ SITEURL }}/{{ art.url }}">{{ art.title }}</a>: {{ art.summary|striptags }}
-                                </p>
-                            {% endif %}
+
+                        {% if articles_page.object_list[0].category  == category._name  %}
+                            {% set last_few_articles = articles[1:4] %}
+                        {% else %}
+                            {% set last_few_articles = articles[0:3] %}
+                        {% endif %}
+
+                        {% for art in last_few_articles  %}
+                            <p class="article-text">
+                                <a href="{{ SITEURL }}/{{ art.url }}">{{ art.title }}</a>: {{ art.summary|striptags }}
+                            </p>
                         {% endfor %}
 
                         <div class='text-center'>
