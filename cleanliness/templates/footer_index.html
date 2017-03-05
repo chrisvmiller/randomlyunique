@@ -1,5 +1,5 @@
 <div class="text-center" style="padding-bottom:10px">
-      <button type="button" onclick="location.href='http://randomlyunique.com/feeds/all.atom.xml'" class="btn btn-primary btn-lg btn-warning">Subscribe</button>
+    <a class="nounderline" type="application/atom+xml" href="http://randomlyunique.com/feeds/all.atom.xml"><i class="fa fa-rss-square fa-5x" style="color:orange"></i></a>
 </div>
 
 <div class="entry-content">
@@ -8,7 +8,7 @@
             {% if (category._name == 'bored') or (category._name == 'plancky') %}
                 <div class="col-md-6 ">
                     <div class='text-center'>
-                        <h3 class="header-title" style="text-decoration: underline;font-weight: 300;">
+                        <h3 class="header-title" style="font-weight: 600;">
                             {% if (category._name == 'bored') %}
                                 The Bored Data Scientist
                             {% endif %}

@@ -13,8 +13,8 @@ Title: About
 
 <div class="col-xs-8">
 <p>Hi, I'm Chris and I'm a Data Scientist living in Seattle with my wonderful wife and occasionally-wonderful Shih Tzu, Bubba. 
-I'm always on the lookout for amazing new experiences - as along as it doesn't involve pursing a second PhD (lol), paying San Fransisco rent (lolol), 
-or endorsing pizza places outside of my homestate of New York (lololol). So, if you do have something amazing, feel free to send a message:  
+I'm always on the lookout for amazing new experiences - as along as it doesn't involve pursing a second PhD, paying San Fransisco rent again, 
+or endorsing pizza places outside of my homestate of New York. So, if you do have something amazing, feel free to send a message:  
  
 <p class="text-center">donotbugchris@gmail.com</p> 
  
