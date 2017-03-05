@@ -24,4 +24,8 @@
         {{ article.content }}
     </div>
 </article>
-{% include "footer.html" %}
+{% if (page_name == 'index') %}
+    {% include "footer_index.html" %}
+{% else %}
+    {% include "footer_article.html" %}
+{% endif %}

@@ -1,0 +1,43 @@
+<div class="text-center" style="padding-bottom:10px">
+      <button type="button" onclick="location.href='http://randomlyunique.com/feeds/all.atom.xml'" class="btn btn-primary btn-lg btn-warning">Subscribe</button>
+</div>
+
+<div class="entry-content">
+    <div class="row">
+        {% for category, articles in categories %}
+            {% if (category._name == 'bored') or (category._name == 'plancky') %}
+                <div class="col-md-6 ">
+                    <div class='text-center'>
+                        <h3 class="header-title" style="text-decoration: underline;font-weight: 300;">
+                            {% if (category._name == 'bored') %}
+                                The Bored Data Scientist
+                            {% endif %}
+
+                            {% if (category._name == 'plancky') %}
+                                Plancky Explains
+                            {% endif %}
+                        </h3>
+                    </div>
+
+                    {% if articles_page.object_list[0].category  == category._name  %}
+                        {% set last_few_articles = articles[1:4] %}
+                    {% else %}
+                        {% set last_few_articles = articles[0:3] %}
+                    {% endif %}
+
+                    {% for art in last_few_articles  %}
+                        <p class="article-text">
+                            <a href="{{ SITEURL }}/{{ art.url }}">{{ art.title }}</a>: {{ art.summary|striptags }}
+                        </p>
+                    {% endfor %}
+
+                    <div class='text-center'>
+                        <a href="{{ SITEURL }}/category/{{ category._name }}.html">
+                            <i class="fa fa-archive fa-4x" aria-hidden="true"></i><br> Archive
+                        </a>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
