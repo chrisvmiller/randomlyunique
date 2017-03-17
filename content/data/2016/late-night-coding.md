@@ -1,6 +1,6 @@
 Date: 2016-01-18
 Title: Late Night Coding
-Category: bored
+Category: data
 Slug: late-night-coding
 Summary:  If I'm coding after-hours, I'm usually working on a relaxing personal project or angrily fighting some bug. Are these late night emotional extremes typical? Let's poll the public Github API and find out!
  
@@ -12,4 +12,4 @@ into daytime (9am to 9pm) and nighttime buckets. After this separation,
 I found the more common daytime(/nighttime) words by subtracting nighttime(/daytime) word frequencies from daytime(/nighttime) 
 word frequencies. The word clouds below highlight these most common commit words: 
   
-![Photo]({attach}/assets/bored/2016/late-night-coding.jpg){.image_center_style}
+![Photo]({attach}/assets/data/2016/late-night-coding.jpg){.image_center_style}

@@ -1,6 +1,6 @@
 Date: 2016-07-03
 Title: A Token of Tolkien
-Category: bored
+Category: data
 Slug: a-token-of-tolkien
 Summary:  If you're searching for a horrible book report generator, then look no further! In this post, I will create one sentence synopses for The Hobbit and The Lord of the Rings.
 

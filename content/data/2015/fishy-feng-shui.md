@@ -1,6 +1,6 @@
 Date: 2015-07-18
 Title: Fishy Feng Shui
-Category: bored
+Category: data
 Slug: fishy-feng-shui
 Summary: What does my fish do all day while I'm at work?  Does he nap on the sand, exercise against the filter's current, or just swim around randomly? The pressing answers to these questions and many more are answered within!
 
@@ -16,7 +16,7 @@ I wrote a simple image analysis algorithm that records the fish's location. (Thi
 filtering and a computationally intensive "Laplacian of Gaussian" blob detection.) The heatmap below shows the most
 frequented areas during this time frame:
 
-![Photo]({attach}/assets/bored/2015/fishy-feng-shui.png){.image_center_style}
+![Photo]({attach}/assets/data/2015/fishy-feng-shui.png){.image_center_style}
 
 Wow, my fish really enjoys hanging out near driftwood and dislikes the edges of the tank.  I should definitely consider
 buying a bigger tank with plenty of driftwood, while I prepare for stage three: a bunny rabbit!

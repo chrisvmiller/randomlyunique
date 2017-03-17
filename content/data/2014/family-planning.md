@@ -1,6 +1,6 @@
 Date: 2014-12-25
 Title: Family Planning for Frugality
-Category: bored
+Category: data
 Slug: family-planning
 Summary: Are you beyond extraordinarily cheap? Do you make Scrooge look like Daddy Warbucks? If so, dim your screen (to save on electricity of course!) and take a gander at this article.  Here, you'll determine the best dates to get your wife knocked up while cheating your children out of birthday presents. 
 
@@ -10,7 +10,7 @@ mutually exclusive, but luckily the perfect loophole just dawned on me! The idea
 Assuming the standard nine month gestation period, the infograph below breaks down the best time to conceive by religion
 during their most notable present-giving holiday:
 
-![Photo]({attach}/assets/bored/2014/family_planning.png){.image_center_style}
+![Photo]({attach}/assets/data/2014/family_planning.png){.image_center_style}
 
 I can't say following this advice would 'technically' make you a bad parent, but you will have enough money saved up for
 that mid-life crisis Porsche.  And, believe me, you'll need it after dealing with your extremely rebellious teenager 

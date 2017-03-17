@@ -1,6 +1,6 @@
 Date: 2015-03-22
 Title: The Broccalypse
-Category: bored
+Category: data
 Slug: broccalypse
 Summary: California is currently in a drought and we use 10% of our water supply on almonds. I love a good almond biscotti as much as the next dude, but that seems kinda wasteful. Couldn't we grow     better water conserving crops?
 

@@ -1,6 +1,6 @@
 Date: 2015-10-23
 Title: Daily Money Swim
-Category: bored
+Category: data
 Slug: daily-money-swim
 Summary: If you're disgustingly rich, interested in liquid commodities and looking to burn a few extra calories, then save that pivot-table and vlookup the value-scale of the following proposition.  
 
@@ -13,7 +13,7 @@ billionaire friends jealous than an Olympic sized pool filled with gold coins.
 Now, let's find the height of gold, silver, and copper coins for a five square meter money-tower! Assuming a simple closed packed 
 lattice and a net value of one billion per tower (estimated from Gold Buffalo, Silver Eagle, and Copper Round coins), I calculated:
 
-![Photo]({attach}/assets/bored/2015/daily-money-swim.png){.image_center_style}
+![Photo]({attach}/assets/data/2015/daily-money-swim.png){.image_center_style}
 
 As you can clearly see, money towers ain't cheap. You will never impress anyone with a kiddie pool of gold coins 
 or a skyscrapper of lameass copper - 20 billion dollars is the bare minimum for an adequate golden swim.   

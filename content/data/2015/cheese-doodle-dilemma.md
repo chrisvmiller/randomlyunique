@@ -1,6 +1,6 @@
 Date: 2015-09-24
 Title: The Cheese Doodle Dilemma
-Category: bored
+Category: data
 Slug: cheese-doodle-dilemma
 Summary: Some have claimed cheese doodles, the ambrosia of the modern world, are directly linked with nightmares. In this post, I will finally shed light on the age-old question: Do cheese doodle molecules negatively interfere with neurotransmitters while sleeping? 
  
@@ -9,7 +9,7 @@ a ridiculous allegation, but luckily the line between sensible and silly is extr
 this mindset, I decided to run a three-week experiment, where I would eat a handful of cheese doodles before falling 
 asleep each night. Here's the result: 
 
-![Photo]({attach}/assets/bored/2015/cheese-doodle.jpg){.image_center_style}
+![Photo]({attach}/assets/data/2015/cheese-doodle.jpg){.image_center_style}
 
 Before jumping to any conclusions, let's run a simple one-sample test-of-proportions hypothesis test. 
 

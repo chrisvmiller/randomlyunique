@@ -1,6 +1,6 @@
 Date: 2014-11-18
 Title: Relationship Analytics
-Category: bored
+Category: data
 Slug: relationship-analytics
 Summary: The key to a successful relationship is proving your partner wrong and shoving those results in their face. This article explores my data driven approach to showing that I love my wife way more than she love's me.
 
@@ -13,7 +13,7 @@ Luckily, I used Google Voice when I met my wife and this allowed me to play with
 of text messages. It took an hour or so to write a hacky parser that counted the number of "<3's" and the word "love" 
 per person per week. I also normalized by the total number of text messages with the hopes of sending the data in the *correct*  direction, 
 yet the results weren't too favorable: 
-![Photo]({attach}/assets/bored/2014/relationship_analytics.png){.image_center_style}
+![Photo]({attach}/assets/data/2014/relationship_analytics.png){.image_center_style}
 Wow, she clearly loves me more.  I was planning to forecast my 'greater love' for her into the future with 
 some sort of regression, but screw it!  I need to pretend this chart never existed and hope she never reads this post.  
 

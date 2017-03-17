@@ -1,6 +1,6 @@
 Date: 2016-09-15 
 Title: Reinforcement Sort 
-Category: bored
+Category: data
 Slug: reinforcement-sort 
 Summary: Are concise and highly effective sorting algorithms better than a bloated imprecise sort done through reinforcement learning? Of course they are - duh
 

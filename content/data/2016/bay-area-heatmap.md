@@ -1,6 +1,6 @@
 Date: 2016-11-30
 Title: Bay Area Heatmap
-Category: bored
+Category: data
 Slug: bay-area-heatmap
 Summary: As a recent Bay Area transplant, I decided to summarize my time in Frisco with a nifty frequently-visited Heatmap.  
  
@@ -10,7 +10,7 @@ in my circa 1998 SF-priced downtown Seattle apartment (with a frigging washer/dr
 I decided to aggregate my phones location data. The heatmap below filters out where I lived 
 and worked, while plotting the logarithm of my phones recorded location count:
   
-![Photo]({attach}/assets/bored/2016/bay-area-heatmap.png){.image_center_style}
+![Photo]({attach}/assets/data/2016/bay-area-heatmap.png){.image_center_style}
 
 Cool observations: 
 

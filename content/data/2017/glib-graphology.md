@@ -1,6 +1,6 @@
 Date: 2017-03-17
 Title: Glib Graphology
-Category: bored
+Category: data
 Slug: glib-graphology
 Summary: In this entry, I continue my pursuit of inappropriately using algorithms by comparing my signature with famous celebrity autographs!   
 
@@ -13,4 +13,4 @@ Feature Transform (SIFT), followed by a simple pixel-wise Manhattan distance com
 between my keypoints (it's actually a small normalized neighbourhood around each keypoint) and each celeb.   
 The chart below is my purposed celebrity mixture: 
 
-![Photo]({attach}/assets/bored/2017/glib-graphology.png){.image_center_style}
+![Photo]({attach}/assets/data/2017/glib-graphology.png){.image_center_style}

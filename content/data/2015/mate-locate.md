@@ -1,6 +1,6 @@
 Date: 2015-11-23
 Title: Mate Locate 
-Category: bored
+Category: data
 Slug: mate-locate 
 Summary: A lost spouse in a crowded mall without a phone is a stressful situation. It may be tempting to search the entire mall, but is it better to stay put? 
  
@@ -20,7 +20,7 @@ around 2) One person remains stationary, until representative total-distance ave
 
 The diagram below shows a typical example for each scenario:
 
-![Photo]({attach}/assets/bored/2015/mate-locate.png){.image_center_style}
+![Photo]({attach}/assets/data/2015/mate-locate.png){.image_center_style}
 
 After running this simulation for a few different sized grids, I confirmed that two people randomly walking around is 
 approximately 1.6x faster! Now, I would typically follow this result, but my wife already found me like 45 minutes ago and 

@@ -1,6 +1,6 @@
 Date: 2015-06-13
 Title: Happy News Flash
-Category: bored
+Category: data
 Slug: happy-news-flash
 Summary: As an extreme optimist, I wholeheartedly believe life is better today than anytime in history.  This is contrary to popular opinion, but most people are little whiners.  Hopefully, this article will tilt your viewpoint in my direction.
 
@@ -14,7 +14,7 @@ As a hint of this positiveness, I performed a rudimentary sentiment analysis on 
 Using the New York Times API, I extracted a random sample of top news stories on a weekly basis since 1900. The plot
 below shows this estimated sentiment under a three year exponential moving average:
 
-![Photo]({attach}/assets/bored/2015/happy-news-flash.png){.image_center_style}
+![Photo]({attach}/assets/data/2015/happy-news-flash.png){.image_center_style}
 
 As you can see, we're sightly more happier nowadays. If you're completely convinced otherwise, please keep your 
 complaining to yourself.  I'm too busy singing along to my Carly Rae Jepsen and Taylor Swift playlist anyways.
