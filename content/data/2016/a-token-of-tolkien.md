@@ -15,50 +15,8 @@ and each edge is its similarity, then PageRanking to determine the 'best' senten
 
 The 'ok, these seems reasonable, I guess' results are shown below:
 
-<table class="table table-bordered">
-    <thead>
-      <tr class="text-center">
-        <th class="text-center">Book</th>
-        <th class="text-center">AutoSummary</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>The Hobbit</td>
-          <td>Having made up his mind he crept along as cleverly as he could.</td>
-        </tr>
-    
-        <tr>
-          <td class="active">Fellowship of the Ring</td>
-          <td class="active">If any of the Wise should with this Ring overthrow the Lord of Mordor, using his own arts, he would then set himself on Saurons throne, and yet another Dark Lord would appear.</td>
-        </tr>
-    
-        <tr>
-          <td>The Two Towers</td>
-          <td>All Isengard must be emptied; and Saruman has armed the wild hillmen and herd-folk of Dunland beyond the rivers, and these also he loosed upon us.</td>
-        </tr>
-    
-        <tr>
-          <td class="active">The Return of the King</td>
-          <td class="active">He (Frodo) felt that if once he went beyond the crown of the pass and took one step veritably down into the land of Mordor, that step would be irrevocable.</td>
-        </tr>
-    </tbody>
-</table>
+![Photo]({attach}/assets/data/2016/a-token-of-tolkien_part1.png){.image_center_style}
 
 <span style="color:green; font-weight: bold;">Special Bonus:</span> When I apply this autosummary to sentences that contain the word "Sam" throughout The Lord of the Rings trilogy, I get: 
 
-<table class="table table-bordered">
-    <thead>
-      <tr class="text-center">
-        <th class="text-center">Character</th>
-        <th class="text-center">AutoSummary</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td text-center">Sam</td>
-          <td>And Sam had another growing anxiety.</td>
-        </tr>
-    </tbody>
-</table>
-  
+![Photo]({attach}/assets/data/2016/a-token-of-tolkien_part2.png){.image_center_style}

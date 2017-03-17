@@ -26,11 +26,7 @@ The state receives a score of -1 if the python code doesn't run, -10 is the code
 After <a href=https://github.com/chrisvmiller/analytics/blob/master/reinforcement_sort/learn_sort.py>training</a> up a neural net, 
 I received this optimal sort: 
  
-    :::python
-    for i, _ in enumerate(unsorted_list):
-	    for j, _ in enumerate(unsorted_list):
-		    if(unsorted_list[i] < unsorted_list[j]):
-		        unsorted_list[i], unsorted_list[j] = unsorted_list[j], unsorted_list[i];
+![Photo]({attach}/assets/data/2016/reinforcement-sort.png){.image_center_style}
 
 Now you may be telling yourself that this looks exactly like a Bubble Sort, but I assure you it's not. 
 A Bubble Sort has a reasonable time complexity of O(n^2), but a Reinforcement Sort 
