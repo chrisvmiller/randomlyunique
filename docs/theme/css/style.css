@@ -98,18 +98,6 @@ p {
     height: auto;
 }
 
-/*aligns facebook and googleplus icons */
-.fb_iframe_widget > span {
-    display: inline-block;
-    position: relative;
-    text-align: justify;
-    height: 23px !important;
-}
-
-#___plusone_0 iframe {
-    margin-bottom: -2px !important;
-}
-
 /*center each image*/
 .image_center_style {
     margin-top: 10px;
@@ -123,6 +111,18 @@ p {
     align-items: center;
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+.category-tag{
+	font-weight:bold;
+	padding:0 10px;
+	height: auto;
+	display:inline-block;
+	text-align:center;
+	background-color:#dcdcdc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 }
 
 @media (max-width: 767px) {
