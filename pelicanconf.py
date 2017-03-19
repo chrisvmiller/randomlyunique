@@ -20,6 +20,9 @@ DEFAULT_PAGINATION = False
 AUTHOR_SAVE_AS = False
 TAG_SAVE_AS = False
 
+CATEGORY_FEED_ATOM = None
+TRANSLATION_FEED_ATOM = None
+
 DIRECT_TEMPLATES = ['index']
 
 PLUGIN_PATHS = ['cleanliness/plugins']
