@@ -1,39 +1,24 @@
 <div class="entry-content">
-    <div class="row">
-        {% for category, articles in categories %}
-            {% if (category._name == 'data') or (category._name == 'plancky') %}
-                <div class="col-md-6 ">
-                    <div class='text-center'>
-                        <h3 class="header-title" style="font-weight: 600;">
-                            {% if (category._name == 'data') %}
-                                The Bored Data Scientist
-                            {% endif %}
+    <br>
+    <h3 style="font-weight: 600;">
+        Recent Articles:
+    </h3>
+    {% for article in articles[1:6] %}
+        <p class="article-text">
+            <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>: <span class="category-tag">{{ article.category }}</span>
+            {{ article.summary|striptags }}
+        </p>
+    {% endfor %}
 
-                            {% if (category._name == 'plancky') %}
-                                Plancky Explains
-                            {% endif %}
-                        </h3>
-                    </div>
-
-                    {% if articles_page.object_list[0].category  == category._name  %}
-                        {% set last_few_articles = articles[1:4] %}
-                    {% else %}
-                        {% set last_few_articles = articles[0:3] %}
-                    {% endif %}
-
-                    {% for art in last_few_articles  %}
-                        <p class="article-text">
-                            <a href="{{ SITEURL }}/{{ art.url }}">{{ art.title }}</a>: {{ art.summary|striptags }}
-                        </p>
-                    {% endfor %}
-
-                    <div class='text-center'>
-                        <a href="{{ SITEURL }}/category/{{ category._name }}.html">
-                            <i class="fa fa-archive fa-4x" aria-hidden="true"></i><br> Archive
-                        </a>
-                    </div>
-                </div>
-            {% endif %}
-        {% endfor %}
+<div class="row vertical-align">
+    <div class="col-xs-6 text-center">
+        <a href="{{ SITEURL }}/category/data.html">
+            <i class="fa fa-archive fa-4x" aria-hidden="true"></i><br> Data Archive
+        </a>
+    </div>
+    <div class="col-xs-6 text-center">
+        <a href="{{ SITEURL }}/category/plancky.html">
+            <i class="fa fa-archive fa-4x" aria-hidden="true"></i><br> Plancky Archive
+        </a>
     </div>
 </div>
