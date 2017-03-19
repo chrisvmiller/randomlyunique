@@ -7,6 +7,8 @@
         {% if article.title != 'About' %}
         <h5 class="article-date text-center">
             <time datetime="{{ article.date.strftime('%b %d, %Y') }}"> {{ article.date.strftime("%b %d, %Y") }}&nbsp;</time>
+            <span class="category-tag">{{ article.category }}</span>
+
         </h5>
         {% endif %}
 
