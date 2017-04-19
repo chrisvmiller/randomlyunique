@@ -10,7 +10,7 @@ too objective, but - hey - I'll still take a crack at it!  Using a set of
 
 The algorithm in a nutshell involved calculating image keypoints via a Scale-Invariant 
 Feature Transform (SIFT), followed by a simple pixel-wise Manhattan distance comparison 
-between my keypoints (it's actually a small normalized neighbourhood around each keypoint) and each celeb.   
+between my keypoints (it's actually a small normalized neighbourhood around these keypoint) and each celeb. 
 The chart below is my purposed celebrity mixture: 
 
 ![Photo]({attach}/assets/data/2017/glib-graphology.png){.image_center_style}
