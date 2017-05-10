@@ -6,14 +6,14 @@ Title: About
 </div>
 
 <div class="col-xs-8">
-<p>Hi, I'm Chris and I'm a Data Scientist living in Seattle with my wonderful wife and occasionally-wonderful Shih Tzu, Bubba. 
+<p>Hi, I'm Chris and I'm a Data Scientist living in Seattle with my wonderful wife and occasionally wonderful Shih Tzu, Bubba. 
 I'm always on the lookout for amazing new experiences - as along as it doesn't involve pursing a second PhD, paying San Fransisco rent again, 
-or endorsing pizza places outside of my homestate of New York. So, if you do have something amazing, feel free to send a message:  
+or endorsing pizza places outside of my homestate of New York - so, feel free to send a message!
  
 <p class="text-center">donotbugchris@gmail.com</p> 
  
-<p><span style="font-weight: bold;">Professional Interests</span>:  Data Analytics, Machine Learning, Engineering Products, Optics </p> 
-<p><span style="font-weight: bold;">Personal Interests</span>: Video/ Board Games, Biking, Piano, Single Origin Esoteric Coffee</p> 
+<p><span style="font-weight: bold;">Professional Interests</span>: Data Analytics, Machine Learning, Programming, Optics</p> 
+<p><span style="font-weight: bold;">Personal Interests</span>: Video/Board Games, Biking, Piano, Single Origin Esoteric Coffee</p> 
 <p><span style="font-weight: bold;">Cookie Interests</span>: Chocolate Chip, Crackle, Gingersnap</p> 
  
  
