@@ -17,5 +17,4 @@ Before jumping to any conclusions, let's run a simple one-sample test-of-proport
 **Alternative Hypothesis:** Lucifer is here on earth in cheese doodle form 
 
 After some number crunching, I calculated a t-statistic of 10.1, which is quite a bit bigger than it's critical value of 2.8 
-(&alpha;=0.01). So, I'm forced to reject the null hypothesis and recommend that everyone AVOID EATING CHEESE DOODLES 
-AT ALL COST BEFORE BED!!! 
+(&alpha;=0.01). So, I'm forced to reject the null hypothesis and recommend that everyone avoid these cheesy little puffs!

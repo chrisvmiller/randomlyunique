@@ -46,7 +46,7 @@ I received this optimal sort: &lt;/p&gt;
 &lt;p&gt;Now you may be telling yourself that this looks exactly like a Bubble Sort, but I assure you it's not. 
 A Bubble Sort has a reasonable time complexity of O(n^2), but a Reinforcement Sort 
 runs in O(oh god, why am I doing this).&lt;/p&gt;</summary></entry><entry><title>A Token of Tolkien</title><link href="http://www.randomlyunique.com/data/2016/a-token-of-tolkien/" rel="alternate"></link><updated>2016-07-03T00:00:00-07:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2016-07-03:data/2016/a-token-of-tolkien/</id><summary type="html">&lt;p&gt;The Hobbit and The Lord of the Rings are undeniably great books, with rich complex characters and a deep thoughtful story. 
-So, this seems like an ideal case to apply an autosummary algorithm meant for tasks like factual news articles!&lt;/p&gt;
+So, this seems like an ideal case to apply an autosummary algorithm!&lt;/p&gt;
 &lt;p&gt;The &lt;a href=https://github.com/chrisvmiller/analytics/blob/master/autosummarizer/summarize.py&gt;method&lt;/a&gt; I programmed is pretty straightforward,
 where I find the most representative sentence within a given blob of text. This is accomplished by tokenizing each sentence, converting to a 
 tf-idf matrix, multiplying this matrix by it's transpose to get a similarity between sentences, mapping to a graph where each node is a sentence

@@ -6,7 +6,7 @@ Summary:  If you're searching for a horrible book report generator, then look no
 
 
 The Hobbit and The Lord of the Rings are undeniably great books, with rich complex characters and a deep thoughtful story. 
-So, this seems like an ideal case to apply an autosummary algorithm meant for tasks like factual news articles!
+So, this seems like an ideal case to apply an autosummary algorithm!
 
 The <a href=https://github.com/chrisvmiller/analytics/blob/master/autosummarizer/summarize.py>method</a> I programmed is pretty straightforward,
 where I find the most representative sentence within a given blob of text. This is accomplished by tokenizing each sentence, converting to a 
