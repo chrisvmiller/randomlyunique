@@ -11,7 +11,7 @@ I'm always on the lookout for amazing new experiences, so feel free to send a me
  
 <p><span style="font-weight: bold;">Professional Interests</span>: Data Analytics, Machine Learning, Programming, Optics</p> 
 <p><span style="font-weight: bold;">Personal Interests</span>: Video & Board Games, Biking, Piano, Single Origin Esoteric Coffee</p> 
-<p><span style="font-weight: bold;">General Disinterests</span>: Pursing a second PhD, paying San Fransisco rent (again), endorsing pizza places outside of my homestate of New York</p> 
+<p><span style="font-weight: bold;">General Disinterests</span>: Pursing a second PhD, Paying San Fransisco rent (again), Endorsing pizza places outside of my homestate of New York</p> 
 <p><span style="font-weight: bold;">Cookie Interests</span>: Chocolate Chip, Crackle, Gingersnap</p>  
  
 </div>

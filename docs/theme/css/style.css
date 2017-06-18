@@ -42,10 +42,6 @@ a:hover {
     font-weight: bold;
 }
 
-nav ul {
-    font-size: 20px;
-}
-
 hr.line {
     height: 7px;
     margin: 0px;
@@ -63,7 +59,7 @@ hr.line {
 
 .header-title {
     font-weight: bold;
-    font-size: 36px;
+    font-size: 32px;
     color: #333;
 }
 
@@ -115,7 +111,7 @@ p {
 
 .category-tag{
 	font-weight:bold;
-	padding:0 10px;
+	padding: 2px 7px;
 	height: auto;
 	display:inline-block;
 	text-align:center;
@@ -146,15 +142,9 @@ p {
         padding-right: 10px;
     }
 
-    .logo-header {
-        font-size: 16px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
     .header-title {
         font-weight: bold;
-        font-size: 28px;
+        font-size: 30px;
         color: #333;
     }
 
@@ -168,9 +158,5 @@ p {
 
     .row.vertical-align {
         display: block;
-    }
-
-    .navbar-nav {
-        text-align: left;
     }
 }

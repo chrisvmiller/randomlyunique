@@ -1,24 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>randomlyunique</title><link href="http://www.randomlyunique.com/" rel="alternate"></link><link href="http://www.randomlyunique.com/feeds/misc.atom.xml" rel="self"></link><id>http://www.randomlyunique.com/</id><updated>2014-02-21T00:00:00-08:00</updated><entry><title>About</title><link href="http://www.randomlyunique.com/misc/2014/about/" rel="alternate"></link><updated>2014-02-21T00:00:00-08:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2014-02-21:misc/2014/about/</id><summary type="html">&lt;div class="col-xs-4" style="padding-left:0px;padding-right:7px;padding-bottom:7px"&gt;
-&lt;img src="/assets/common/chelsea-and-me.jpg" width="300" class="image_center_style" &gt;
-
-&lt;div class="text-center" style="padding-bottom:10px"&gt;
-&lt;a class="nounderline" href="http://linkedin.com/in/chrisvmiller/"&gt;&lt;i class="fa fa-linkedin-square fa-5x" style="color:blue"&gt;&lt;/i&gt;&lt;/a&gt;
-&lt;a class="nounderline" href="http://github.com/chrisvmiller"&gt;&lt;i class="fa fa-github-square fa-5x" style="color:purple"&gt;&lt;/i&gt;&lt;/a&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;div class="col-xs-8"&gt;
-&lt;p&gt;Hi, I'm Chris and I'm a Data Scientist living in Seattle with my wonderful wife and occasionally-wonderful Shih Tzu, Bubba. 
-I'm always on the lookout for amazing new experiences - as along as it doesn't involve pursing a second PhD (lol), paying San Fransisco rent (lolol), 
-or endorsing pizza places outside of my homestate of New York (lololol). So, if you do have something amazing, feel free to send a message:
-
-&lt;p class="text-center"&gt;donotbugchris@gmail.com&lt;/p&gt; 
-
-&lt;p&gt;&lt;span style="font-weight: bold;"&gt;Professional Interests&lt;/span&gt;:  Data Analytics, Machine Learning, Engineering Products, Optics &lt;/p&gt; 
-&lt;p&gt;&lt;span style="font-weight: bold;"&gt;Personal Interests&lt;/span&gt;: Video/ Board Games, Biking, Piano, Single Origin Esoteric Coffee&lt;/p&gt; 
-&lt;p&gt;&lt;span style="font-weight: bold;"&gt;Cookie Interests&lt;/span&gt;: Chocolate Chip, Crackle, Gingersnap&lt;/p&gt; 
-
-
-&lt;/div&gt;</summary></entry></feed>
