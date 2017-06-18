@@ -1,0 +1,71 @@
+.header-clean{
+	padding: 20px 40px;
+	height: 80px;
+}
+
+.header-clean .header-limiter {
+	max-width: 1200px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/* Logo */
+
+.header-clean .header-limiter h1{
+	float: left;
+	line-height: 40px;
+	font-size: 24px;
+	margin: 0;
+}
+
+.header-clean .header-limiter h1 span {
+	color: #0a7bff;
+}
+
+.header-clean .header-limiter nav{
+	line-height: 40px;
+	float: right;
+}
+
+.header-clean .header-limiter nav a{
+	display: inline-block;
+	padding: 6px ;
+	opacity: 0.9;
+	text-decoration:none;
+	color: #5c616a;
+	line-height:1;
+}
+
+.header-clean .header-limiter nav a.selected {
+	background-color: #0a7bff;
+	color: #ffffff;
+	border-radius: 3px;
+	padding: 6px 10px;
+}
+
+@media all and (max-width: 600px) {
+
+	.header-clean {
+		padding: 20px 0;
+		height: 85px;
+		margin-bottom: 10px;
+	}
+
+	.header-clean .header-limiter h1 {
+		float: none;
+		margin: -8px 0 10px;
+		text-align: center;
+		font-size: 24px;
+		line-height: 1;
+	}
+
+	.header-clean .header-limiter nav {
+		line-height: 1;
+		float:none;
+	}
+
+	.header-clean .header-limiter nav a {
+		font-size: 14px;
+	}
+
+}

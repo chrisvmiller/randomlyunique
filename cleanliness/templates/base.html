@@ -9,6 +9,7 @@
 
     <link rel="icon" href="{{ SITEURL }}/assets/favicon.ico">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.paper.min.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/header-clean.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments-friendly.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/rrssb.css">
@@ -16,21 +17,23 @@
 </head>
 <body>
 
-<nav class="navbar-default navbar-static-top">
-    <hr class="line">
+<header class="header-clean">
     <div class="container">
-
-            <div class="navbar-header pull-left">
-                <div class="logo-header ">
-                    <a href="{{ SITEURL }}/">Randomly<span class="unique-color">Unique</span></a>
-                </div>
-            </div>
-
-            <div class="navbar-header pull-right logo-header clearfix hidden-sm-up ">
-                <span>by <a href="{{ SITEURL }}/misc/2014/about/">Chris Miller</a> </span>
-            </div>
+	<div class="header-limiter">
+		<h1> <a href="{{ SITEURL }}/">Randomly<span class="unique-color">Unique</span></a></h1>
+		<nav>
+            {% for nav_category, nav_articles in dict(categories)|dictsort() %}
+                {% if (nav_category._name != 'misc') %}
+                    <a {% if (nav_category._name == category) %} class="selected" {% endif %} href="{{ SITEURL }}/{{ nav_articles|map(attribute='url')|first }}">
+                        {{ nav_category|title}}
+                    </a>
+                {% endif %}
+            {% endfor %}
+            <a {% if (category|string == 'misc') %} class="selected" {% endif %} href="{{ SITEURL }}/misc/2014/about/">About</a>
+		</nav>
+	</div>
     </div>
-</nav>
+</header>
 
 <div class="container">
     {% block content %}
@@ -41,7 +44,6 @@
 </body>
 
 <script src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
-<script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
 <script src="{{ SITEURL }}/theme/js/rrssb.min.js"></script>
 
 </body>
