@@ -1,5 +1,6 @@
-Date: 2014
 Title: About 
+
+<h2 class="header-title text-center">About</h2>
 
 <div class="col-xs-4" style="padding-left:0px;padding-right:7px;padding-bottom:7px">
     <img src="/assets/common/chelsea-and-me.jpg" width="300" class="image_center_style" >

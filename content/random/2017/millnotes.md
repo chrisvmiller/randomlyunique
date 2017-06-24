@@ -10,5 +10,5 @@ sheet!
 
 ![Photo]({attach}/assets/random/2017/millnotes.jpg){.image_center_style}
 <h3 class="text-center" >
---> <a class="nounderline" href="https://github.com/chrisvmiller/analytics/blob/master/millnotes/millnotes.pdf"> Download </a> <--
+<i class="fa fa-arrow-right" aria-hidden="true"></i><a class="nounderline" href="https://github.com/chrisvmiller/analytics/blob/master/millnotes/millnotes.pdf"> Download </a> <i class="fa fa-arrow-left" aria-hidden="true"></i>
 </h3>

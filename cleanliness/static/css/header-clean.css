@@ -9,6 +9,12 @@
 	margin: 0 auto;
 }
 
+.header-clean .header-limiter a:hover {
+    color: #0a7bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 /* Logo */
 
 .header-clean .header-limiter h1{
@@ -40,7 +46,6 @@
 	background-color: #0a7bff;
 	color: #ffffff;
 	border-radius: 3px;
-	padding: 6px 10px;
 }
 
 @media all and (max-width: 600px) {
