@@ -2,7 +2,7 @@ Date: 2017-09-08
 Title: Web Visit Breakdown
 Category: data
 Slug: web-visit-breakdown
-Summary: Are you like me and sometimes wonder about where your time is spent online? If so, let me just skip to the punchline and suggest closing this window and venturing outside for a walk.
+Summary: Are you like me and sometimes wonder where your time is spent online? If so, let me just skip to the punchline and suggest closing this window and venturing outside for a walk.
 
 After unconsciously visiting gmail two dozen times within the last hour, I acquired the urge 
 to quantify my web usage behaviour. Surely, checking websites at this frequency wasn't normal - right? 
