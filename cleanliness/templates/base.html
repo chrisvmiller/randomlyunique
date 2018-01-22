@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/header-clean.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments-friendly.css">
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/rrssb.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css">
 </head>
 <body>
@@ -23,11 +22,10 @@
 		<h1> <a href="{{ SITEURL }}/">Randomly<span class="unique-color">Unique</span></a></h1>
 		<nav>
             {% for nav_category, nav_articles in dict(categories)|dictsort() %}
-                <a {% if (nav_category._name == category) %} class="selected" {% endif %} href="{{ SITEURL }}/{{ nav_articles|map(attribute='url')|first }}">
+                <a {% if (nav_category._name == category) %} class="selected" {% endif %} href="{{ SITEURL }}/category/{{nav_category}}.html">
                     {{ nav_category|title}}
                 </a>
             {% endfor %}
-            <a {% if ('pages/about' in page|string) %} class="selected" {% endif %} href="{{ SITEURL }}/pages/about.html">About</a>
 		</nav>
 	</div>
     </div>

@@ -3,13 +3,14 @@
 
     <div class="entry-content">
         <h5 class="article-date text-center">
-            <time datetime="{{ article.date.strftime('%b %d, %Y') }}"> {{ article.date.strftime("%b %d, %Y") }}&nbsp;</time>
-            <span class="category-tag">{{ article.category }}</span>
+            {% if (page_name == 'index') %}
+                <span class="category-newtag"> new </span>
+            {% else %}
+                <time datetime="{{ article.date.strftime('%b %d, %Y') }}"> {{ article.date.strftime("%b %d, %Y") }}&nbsp;</time>
+            {% endif %}
+            <span class="category-tag"> {{ article.category }} </span>
         </h5>
-
         {{ article.content }}
-        <br>
-        {% include 'includes/social_media.html' %}
     </div>
 </article>
 

@@ -7,19 +7,14 @@
         {% set previous_article = arts[previous_index] %}
 
         <div class="row vertical-align">
-            <div class="col-xs-4 text-center">
+            <div class="col-xs-6 text-center">
                 {% if previous_index != 0 %}
                     <a href="{{ SITEURL }}/{{ previous_article.url }}">
                         <i class="fa fa-caret-left fa-4x" aria-hidden="true"></i><br>{{ previous_article.title }}
                     </a>
                 {% endif %}
             </div>
-            <div class="col-xs-4 text-center">
-                <a href="{{ SITEURL }}/category/{{ article.category }}.html">
-                    <i class="fa fa-archive fa-4x" aria-hidden="true"></i><br>{{ category._name|title }} Archive
-                </a>
-            </div>
-            <div class="col-xs-4 text-center">
+            <div class="col-xs-6 text-center">
                 {% if next_index != arts.__len__() - 1 %}
                     <a href="{{ SITEURL }}/{{ next_article.url }}">
                         <i class="fa fa-caret-right fa-4x" aria-hidden="true"></i><br>{{ next_article.title }}

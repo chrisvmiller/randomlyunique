@@ -4,7 +4,14 @@
 {% block content %}
     <section id="content">
         <h3 class="header-title text-center">{{ category._name|title }} Archives</h3>
+
+        {% if (category._name == 'data') %}
+            <h6 class="text-center">A Data Analytics Inspired Series Capitalising on my Ample Free Weekends</h6>
+        {% else %}
+            <h6 class="text-center">A Web Comic Series Explaining Physics, Math, and Devices with a Bit of Vigor</h6>
+        {% endif %}
         <br>
+
         <div id="archives">
             {% for article in articles %}
                 <p class="article-text">
