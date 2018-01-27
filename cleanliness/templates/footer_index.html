@@ -1,6 +1,6 @@
 <div class="entry-content">
+    <h2 class="header-title text-center">Recent Articles</h2>
 
-    <h3> Recent Articles: </h3>
     {% for article in articles[1:8] %}
         <p class="article-text">
             <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>: <span class="category-tag">{{ article.category }}</span>
@@ -8,18 +8,26 @@
         </p>
     {% endfor %}
 
-    <h3> About: </h3>
+    <h2 class="header-title text-center">About</h2>
     <div class="col-xs-4" style="padding-left:0px;padding-right:7px;padding-bottom:7px">
         <img src="/assets/common/chelsea-and-me.jpg" width="300" class="image_center_style">
     </div>
 
     <div class="col-xs-8">
         <p>Hi, I'm Chris and I'm a Data Scientist living in Vancouver, BC with my wonderful wife and occasionally wonderful Shih Tzu, Bubba.
-        I'm always on the lookout for amazing new experiences, so feel free to send a message! Email: donotbugchris@gmail.com
+        I'm always on the lookout for amazing new experiences, so feel free to send a message!
 
-        <p><span style="font-weight: bold;">Professional Interests</span>: Data Analytics, Machine Learning, Programming, Optics</p>
+        <div class="text-center">
+        <a class="nounderline" href="http://linkedin.com/in/chrisvmiller/"><i class="fa fa-linkedin-square fa-4x" style="color:blue"></i></a>
+        <a class="nounderline" href="http://github.com/chrisvmiller"><i class="fa fa-github-square fa-4x" style="color:purple"></i></a>
+        <a class="nounderline" type="application/atom+xml" href="http://randomlyunique.com/feeds/all.atom.xml"><i class="fa fa-rss-square fa-4x" style="color:orange"></i></a>
+        </div>
+        <br>
+
+        <p><span style="font-weight: bold;">Professional Interests</span>: Data Analytics, Computational Modeling, Machine Learning, Optics</p>
         <p><span style="font-weight: bold;">Personal Interests</span>: Video & Board Games, Keyboard, Biking, Single Origin Esoteric Coffee</p>
         <p><span style="font-weight: bold;">General Disinterests</span>: Pursing a second PhD, Paying San Fransisco rent again, Endorsing pizza places outside of my homestate of New York</p>
         <p><span style="font-weight: bold;">Cookie Interests</span>: Chocolate Chip, Crackle, Gingersnap</p>
+
     </div>
 </div>
