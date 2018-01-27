@@ -12,7 +12,6 @@
 .header-clean .header-limiter a:hover {
     color: #0a7bff;
     text-decoration: none;
-    font-weight: bold;
 }
 
 /* Logo */
@@ -38,7 +37,7 @@
 	padding: 6px ;
 	opacity: 0.9;
 	text-decoration:none;
-	color: #5c616a;
+	color: #444444;
 	line-height:1;
 }
 
