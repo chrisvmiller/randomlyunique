@@ -2,7 +2,7 @@
 {% block title %}{{ category._name|title }} Archives - {{ SITENAME }}{% endblock %}
 
 {% block content %}
-    <section id="content">
+    <div class="entry-content">
         <h3 class="header-title text-center">{{ category._name|title }} Archives</h3>
 
         {% if (category._name == 'data') %}
@@ -12,15 +12,9 @@
         {% endif %}
         <br>
 
-        <div id="archives">
-            {% for article in articles %}
-                <p class="article-text">
-                    <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>:
-                    <span class="category-tag">{{ article.date.strftime("%b %d, %Y") }}</span>
-                    {{ article.summary|striptags }}
-                </p>
-            {% endfor %}
-        </div>
-    </section>
+        {% for article in articles %}
+            {% include 'includes/thumbnail_list.html'  %}
+        {% endfor %}
+    </div>
     <br><br>
 {% endblock %}

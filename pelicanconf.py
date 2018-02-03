@@ -26,4 +26,7 @@ TRANSLATION_FEED_ATOM = None
 DIRECT_TEMPLATES = ['index']
 
 PLUGIN_PATHS = ['cleanliness/plugins']
-PLUGINS = []
+PLUGINS = ['thumbnailer']
+
+IMAGE_PATH = 'assets/'
+THUMBNAIL_DIR = 'category/thumbnails'

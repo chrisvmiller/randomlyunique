@@ -15,8 +15,8 @@ and each edge is its similarity, then PageRanking to determine the 'best' senten
 
 The 'ok, these seems reasonable, I guess' results are shown below:
 
-![Photo]({attach}/assets/data/2016/a-token-of-tolkien_part1.png){.image_center_style}
+![Photo]({attach}/assets/data/2016/a-token-of-tolkien.png){.image_center_style}
 
 <span style="color:green; font-weight: bold;">Special Bonus:</span> When I apply this autosummary to sentences that contain the word "Sam" throughout The Lord of the Rings trilogy, I get: 
 
-![Photo]({attach}/assets/data/2016/a-token-of-tolkien_part2.png){.image_center_style}
+![Photo]({attach}/assets/data/2016/a-token-of-tolkien_sam.png){.image_center_style}

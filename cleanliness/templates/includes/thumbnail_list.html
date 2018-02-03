@@ -1,0 +1,16 @@
+<div class="row vertical-align">
+    <div class="col-sm-3 hidden-xs text-center">
+         <a href="{{ SITEURL }}/{{ article.url }}">
+            <img class="image_center_style" src="/category/thumbnails/{{ article.url[:-1]}}_thumbnail_tall.png">
+         </a>
+    </div>
+    <div class="col-sm-9 col-xs-12">
+        <p class="article-text">
+            <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>:
+            <span class="category-tag">
+                {{ article.date.strftime("%b %d, %Y") }}
+            </span>
+            {{ article.summary|striptags }}
+        </p>
+    </div>
+</div>

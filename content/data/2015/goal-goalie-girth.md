@@ -13,4 +13,4 @@ As a person who spent years studying physics, I can unequivocally state that onl
 dimensions of the goal and a depth of, let's say, 20 inches. Using the density of fat equal to 0.9 g/cm3, the chart below breaks down 
 the target weight for goaltender perfection for a few different sports:  
 
-![Photo]({attach}/assets/data/2015/overweight-goalie.png){.image_center_style}
+![Photo]({attach}/assets/data/2015/goal-goalie-girth.png){.image_center_style}
