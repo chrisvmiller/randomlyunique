@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>randomlyunique</title><link href="http://www.randomlyunique.com/" rel="alternate"></link><link href="http://www.randomlyunique.com/feeds/all.atom.xml" rel="self"></link><id>http://www.randomlyunique.com/</id><updated>2018-01-28T00:00:00-08:00</updated><entry><title>Public Key Cryptography</title><link href="http://www.randomlyunique.com/plancky/2018/public-key-crypto/" rel="alternate"></link><updated>2018-01-28T00:00:00-08:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2018-01-28:plancky/2018/public-key-crypto/</id><summary type="html">&lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/plancky/2018/public-key-crypto/public-key-crypto.png" /&gt;&lt;/p&gt;</summary></entry><entry><title>Seattle Heatmap</title><link href="http://www.randomlyunique.com/data/2017/seattle-heatmap/" rel="alternate"></link><updated>2017-12-31T00:00:00-08:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2017-12-31:data/2017/seattle-heatmap/</id><summary type="html">&lt;p&gt;Seattle is a wonderful city dotted with mediocre Starbucks coffee shops, Amazon construction&lt;br /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>randomlyunique</title><link href="http://www.randomlyunique.com/" rel="alternate"></link><link href="http://www.randomlyunique.com/feeds/all.atom.xml" rel="self"></link><id>http://www.randomlyunique.com/</id><updated>2018-02-22T00:00:00-08:00</updated><entry><title>Six Degrees of Captain America</title><link href="http://www.randomlyunique.com/data/2018/six-degrees-of-captain-america/" rel="alternate"></link><updated>2018-02-22T00:00:00-08:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2018-02-22:data/2018/six-degrees-of-captain-america/</id><summary type="html">&lt;p&gt;Acting has Kevin Bacon, mathematics has Paul Erdos, but who is the most prolific 
+Marvel character? Given a Marvel themed graph where each node is a superhero
+and each edge is a comic book, what is the best way to find the most connected character? &lt;/p&gt;
+&lt;p&gt;After dusting off my old Computer Science 101 textbook, I defined a character's
+connectedness as the average minimum distance (found via a breadth first search) to 
+every node within the graph. With this definition in hand, Marvel's top ten most connected 
+characters in order are:&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;/p&gt;
+&lt;p&gt;CAPTAIN AMERICA &lt;br&gt; 
+SPIDER-MAN    &lt;br /&gt;
+IRON MAN      &lt;br /&gt;
+THING         &lt;br /&gt;
+MR. FANTASTIC &lt;br /&gt;
+HUMAN TORCH   &lt;br /&gt;
+WOLVERINE     &lt;br /&gt;
+SCARLET WITCH &lt;br /&gt;
+BEAST         &lt;br /&gt;
+THOR            &lt;/p&gt;
+&lt;p&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;In fact, even Chris Miller - the powerful and all knowing Sheriff of Anchorage, Alaska - has 
+a close connection to Captain American!   &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/data/2018/six-degrees-of-captain-america/six-degrees-of-captain-america.png" /&gt;&lt;/p&gt;</summary></entry><entry><title>Public Key Cryptography</title><link href="http://www.randomlyunique.com/plancky/2018/public-key-crypto/" rel="alternate"></link><updated>2018-01-28T00:00:00-08:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2018-01-28:plancky/2018/public-key-crypto/</id><summary type="html">&lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/plancky/2018/public-key-crypto/public-key-crypto.png" /&gt;&lt;/p&gt;</summary></entry><entry><title>Seattle Heatmap</title><link href="http://www.randomlyunique.com/data/2017/seattle-heatmap/" rel="alternate"></link><updated>2017-12-31T00:00:00-08:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2017-12-31:data/2017/seattle-heatmap/</id><summary type="html">&lt;p&gt;Seattle is a wonderful city dotted with mediocre Starbucks coffee shops, Amazon construction&lt;br /&gt;
 sites and a beautiful coastal line obscured by the majestic Alaskan highway. After living downtown 
 for over a year, I aggregated my phones location data and plotted the logarithm of the 
 recorded location count: &lt;/p&gt;
@@ -33,11 +54,4 @@ bed (a surefire alien defense). The map below identifies statistically significa
 via the Getis-Ord Gi* statistic:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/data/2017/alien-outbreak/alien-outbreak.png" /&gt;&lt;/p&gt;
 &lt;p&gt;*These UFO observations, taken over the last 20 years, are sourced from &lt;a href=http://nuforc.org/&gt;nuforc.org&lt;/a&gt; 
-and assumed to be a 100% accurate depiction of extraterrestrial encounters.&lt;/p&gt;</summary></entry><entry><title>Data Compression</title><link href="http://www.randomlyunique.com/plancky/2017/data-compression/" rel="alternate"></link><updated>2017-04-18T00:00:00-07:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2017-04-18:plancky/2017/data-compression/</id><summary type="html">&lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/plancky/2017/data-compression/data-compression.png" /&gt;&lt;/p&gt;</summary></entry><entry><title>Glib Graphology</title><link href="http://www.randomlyunique.com/data/2017/glib-graphology/" rel="alternate"></link><updated>2017-03-17T00:00:00-07:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2017-03-17:data/2017/glib-graphology/</id><summary type="html">&lt;p&gt;Graphology, the act of evaluating personality characteristics from handwriting, isn't 
-too objective, but - hey - I'll still take a crack at it!  Using a set of 
-300 famous signatures, I'll attempt to compose my personality from various celebrities! &lt;/p&gt;
-&lt;p&gt;The algorithm in a nutshell involved calculating image keypoints via a Scale-Invariant 
-Feature Transform (SIFT), followed by a simple pixel-wise Manhattan distance comparison 
-between my keypoints (it's actually a small normalized neighbourhood around these keypoint) and each celeb. 
-The chart below is my purposed celebrity mixture: &lt;/p&gt;
-&lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/data/2017/glib-graphology/glib-graphology.png" /&gt;&lt;/p&gt;</summary></entry></feed>
+and assumed to be a 100% accurate depiction of extraterrestrial encounters.&lt;/p&gt;</summary></entry><entry><title>Data Compression</title><link href="http://www.randomlyunique.com/plancky/2017/data-compression/" rel="alternate"></link><updated>2017-04-18T00:00:00-07:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2017-04-18:plancky/2017/data-compression/</id><summary type="html">&lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/plancky/2017/data-compression/data-compression.png" /&gt;&lt;/p&gt;</summary></entry></feed>
