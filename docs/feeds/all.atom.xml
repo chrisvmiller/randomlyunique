@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>randomlyunique</title><link href="http://www.randomlyunique.com/" rel="alternate"></link><link href="http://www.randomlyunique.com/feeds/all.atom.xml" rel="self"></link><id>http://www.randomlyunique.com/</id><updated>2018-04-14T00:00:00-07:00</updated><entry><title>Measuring the Speed of Light with a Telescope</title><link href="http://www.randomlyunique.com/plancky/2018/measuring-the-speed-of-light-with-a-telescope/" rel="alternate"></link><updated>2018-04-14T00:00:00-07:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2018-04-14:plancky/2018/measuring-the-speed-of-light-with-a-telescope/</id><summary type="html">&lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/plancky/2018/measuring-the-speed-of-light-with-a-telescope/measuring-the-speed-of-light-with-a-telescope.png" /&gt;&lt;/p&gt;</summary></entry><entry><title>Six Degrees of Captain America</title><link href="http://www.randomlyunique.com/data/2018/six-degrees-of-captain-america/" rel="alternate"></link><updated>2018-02-22T00:00:00-08:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2018-02-22:data/2018/six-degrees-of-captain-america/</id><summary type="html">&lt;p&gt;Acting has Kevin Bacon, mathematics has Paul Erdos, but who is the most prolific 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>randomlyunique</title><link href="http://www.randomlyunique.com/" rel="alternate"></link><link href="http://www.randomlyunique.com/feeds/all.atom.xml" rel="self"></link><id>http://www.randomlyunique.com/</id><updated>2018-06-10T00:00:00-07:00</updated><entry><title>Yawnball</title><link href="http://www.randomlyunique.com/data/2018/yawnball/" rel="alternate"></link><updated>2018-06-10T00:00:00-07:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2018-06-10:data/2018/yawnball/</id><summary type="html">&lt;p&gt;Like the first season of Yuri!!! On ICE (sic), Baseball is a sport of pure adrenaline. 
+There is nothing more thrilling then watching a group of men loiter around for a 
+dog-less game of fetch. In each normalized score distributions below, Baseball's 
+nonboringtude clearly comes into focus. Unlike other professional sports, 
+Baseball's smooth and low-skewed score distribution with it's home-away winning 
+symmetry are direct indicators of this excitement. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/data/2018/yawnball/yawnball.png" /&gt;&lt;/p&gt;</summary></entry><entry><title>Millnotes</title><link href="http://www.randomlyunique.com/random/2018/millnotes/" rel="alternate"></link><updated>2018-05-25T00:00:00-07:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2018-05-25:random/2018/millnotes/</id><summary type="html">&lt;p&gt;As an undergraduate physics and mathematics student, I frequently needed to look up physical constants, trig identities,
+the curl in spherical coordinates and a bunch of other formulas. Eventually, I compiled all my notes together and created this handy-dandy reference 
+sheet! (&lt;a class="nounderline" href="https://github.com/chrisvmiller/analytics/blob/master/millnotes/millnotes.pdf"&gt;Download&lt;/a&gt;)
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/random/2018/millnotes/millnotes.jpg" /&gt;&lt;/p&gt;</summary></entry><entry><title>Measuring the Speed of Light with a Telescope</title><link href="http://www.randomlyunique.com/plancky/2018/measuring-the-speed-of-light-with-a-telescope/" rel="alternate"></link><updated>2018-04-14T00:00:00-07:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2018-04-14:plancky/2018/measuring-the-speed-of-light-with-a-telescope/</id><summary type="html">&lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/plancky/2018/measuring-the-speed-of-light-with-a-telescope/measuring-the-speed-of-light-with-a-telescope.png" /&gt;&lt;/p&gt;</summary></entry><entry><title>Six Degrees of Captain America</title><link href="http://www.randomlyunique.com/data/2018/six-degrees-of-captain-america/" rel="alternate"></link><updated>2018-02-22T00:00:00-08:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2018-02-22:data/2018/six-degrees-of-captain-america/</id><summary type="html">&lt;p&gt;Acting has Kevin Bacon, mathematics has Paul Erdos, but who is the most prolific 
 Marvel character? Given a Marvel themed graph where each node is a superhero
 and each edge is a comic book, what is the best way to find the most connected character? &lt;/p&gt;
 &lt;p&gt;After dusting off my old Computer Science 101 textbook, I defined a character's
 connectedness as the average minimum distance (found via a breadth first search) to 
-every node within the graph. With this definition in hand, Marvel's top ten most connected 
+every node within the graph. With this definition in hand, Marvel's top five most connected
 characters in order are:&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;&lt;/p&gt;
-&lt;p&gt;CAPTAIN AMERICA &lt;br&gt; 
+&lt;p&gt;CAPTAIN AMERICA &lt;br&gt;
 SPIDER-MAN    &lt;br /&gt;
 IRON MAN      &lt;br /&gt;
 THING         &lt;br /&gt;
-MR. FANTASTIC &lt;br /&gt;
-HUMAN TORCH   &lt;br /&gt;
-WOLVERINE     &lt;br /&gt;
-SCARLET WITCH &lt;br /&gt;
-BEAST         &lt;br /&gt;
-THOR            &lt;/p&gt;
+MR. FANTASTIC&lt;/p&gt;
 &lt;p&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;In fact, even Chris Miller - the powerful and all knowing Sheriff of Anchorage, Alaska - has 
 a close connection to Captain American!   &lt;/p&gt;
@@ -48,10 +53,4 @@ I compiled this following chart:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/data/2017/hobson-choice/hobson-choice.png" /&gt;&lt;/p&gt;
 &lt;p&gt;So, in order to assure your species survival, I would definitely recommend investing 
 in big-round-eye plastic surgery or (at the very least) make sure you taste good next 
-to a side of potatoes. &lt;/p&gt;</summary></entry><entry><title>Microcircuit Fabrication</title><link href="http://www.randomlyunique.com/plancky/2017/microcircuit-fabrication/" rel="alternate"></link><updated>2017-07-01T00:00:00-07:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2017-07-01:plancky/2017/microcircuit-fabrication/</id><summary type="html">&lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/plancky/2017/microcircuit-fabrication/microcircuit-fabrication.png" /&gt;&lt;/p&gt;</summary></entry><entry><title>Alien Outbreak</title><link href="http://www.randomlyunique.com/data/2017/alien-outbreak/" rel="alternate"></link><updated>2017-05-10T00:00:00-07:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2017-05-10:data/2017/alien-outbreak/</id><summary type="html">&lt;p&gt;Despite a constant stream of sightings, news outlets repeatedly fail to address the current UFO epidemic. Luckily, I created 
-a vital spatial autocorrelation for those wise individuals who always tuck their feet under the covers before
-bed (a surefire alien defense). The map below identifies statistically significant UFO hot spots (normalized per capita) 
-via the Getis-Ord Gi* statistic:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/data/2017/alien-outbreak/alien-outbreak.png" /&gt;&lt;/p&gt;
-&lt;p&gt;*These UFO observations, taken over the last 20 years, are sourced from &lt;a href=http://nuforc.org/&gt;nuforc.org&lt;/a&gt; 
-and assumed to be a 100% accurate depiction of extraterrestrial encounters.&lt;/p&gt;</summary></entry></feed>
+to a side of potatoes. &lt;/p&gt;</summary></entry></feed>
