@@ -144,8 +144,10 @@ def resize_thumbnails(pelican):
     resizers = dict((k, _resizer(k, v, in_path)) for k,v in sizes.items())
     logger.debug("Thumbnailer Started")
     for dirpath, _, filenames in os.walk(in_path):
-        # My addition
-        if ('plancky' in dirpath) or ('data' in dirpath):
+        '''
+        My addition
+        '''
+        if ('plancky' in dirpath) or ('data' in dirpath) or ('random' in dirpath):
             for filename in filenames:
                 if is_included(filename):
                     for name, resizer in resizers.items():

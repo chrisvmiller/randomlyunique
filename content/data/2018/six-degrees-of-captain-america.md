@@ -10,21 +10,16 @@ and each edge is a comic book, what is the best way to find the most connected c
 
 After dusting off my old Computer Science 101 textbook, I defined a character's
 connectedness as the average minimum distance (found via a breadth first search) to 
-every node within the graph. With this definition in hand, Marvel's top ten most connected 
+every node within the graph. With this definition in hand, Marvel's top five most connected
 characters in order are:
  
 <center>
 
-CAPTAIN AMERICA <br> 
+CAPTAIN AMERICA <br>
 SPIDER-MAN      
 IRON MAN        
 THING           
-MR. FANTASTIC   
-HUMAN TORCH     
-WOLVERINE       
-SCARLET WITCH   
-BEAST           
-THOR            
+MR. FANTASTIC
 
 </center>
 
