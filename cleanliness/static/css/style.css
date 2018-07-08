@@ -1,4 +1,9 @@
+html, body {
+  overflow-x: hidden;
+}
+
 body {
+    position: relative;
     padding-top: 0px;
     font-family: "Avenir", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial";
 }

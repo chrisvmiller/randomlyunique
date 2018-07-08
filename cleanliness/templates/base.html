@@ -7,11 +7,12 @@
     <meta name=”description” content="Random data analysis articles along with an educational web comic series by Chris Miller">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="{{ SITEURL }}/assets/favicon.ico">
+    <link rel="icon" href="{{ SITEURL }}/assets/common/favicon.ico">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.paper.min.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/header-clean.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments-manni.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css">
 </head>
 <body>
 <header class="header-clean">
@@ -38,6 +39,14 @@
 </body>
 
 <script src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
+<script>
+{# This Toggles Code Blocks #}
+$(document).ready(function () {
+   $("button.toggle-start-hidden").parent().next().hide();
+   $("button.toggle-start-hidden").click(function(){ $(this).parent().next().toggle(); });
+   $("button.toggle").click(function(){ $(this).parent().next().toggle(); });
+ });
+</script>
 
 </body>
 </html>

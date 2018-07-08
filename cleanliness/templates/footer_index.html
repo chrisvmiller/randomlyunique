@@ -1,10 +1,9 @@
 <div class="entry-content">
-    <hr>
-    <h2 class="header-title text-center">Recent Articles</h2>
+    <hr><br>
+    <h2 class="header-title text-center">Recent Articles <a class="nounderline" type="application/atom+xml" href="http://randomlyunique.com/feeds/all.atom.xml"><i class="fa fa-rss-square" style="color:orange"></i></a> </h2>
     {% for article in articles[1:6] %}
         {% include 'includes/thumbnail_list.html'  %}
     {% endfor %}
-
     <hr>
     <h2 class="header-title text-center">About</h2>
 
@@ -15,19 +14,12 @@
 
         <div class="col-sm-8 col-xs-12">
             <p>Hi, I'm Chris and I'm a Data Scientist living in Vancouver, BC with my wonderful wife and occasionally wonderful Shih Tzu, Bubba.
-            I'm always on the lookout for amazing new experiences, so feel free to send a message! </p>
-
-            <div class="text-center">
-            <a class="nounderline" href="http://linkedin.com/in/chrisvmiller/"><i class="fa fa-linkedin-square fa-4x" style="color:blue"></i></a>
-            <a class="nounderline" href="http://github.com/chrisvmiller"><i class="fa fa-github-square fa-4x" style="color:purple"></i></a>
-            <a class="nounderline" type="application/atom+xml" href="http://randomlyunique.com/feeds/all.atom.xml"><i class="fa fa-rss-square fa-4x" style="color:orange"></i></a>
-            </div>
-            <br>
+            I'm always on the lookout for amazing new experiences, so feel free to send a message! <a class="nounderline" href="mailto:donotbugchris@gmail.com"><i class="fa fa-envelope"></i></a></p>
             <div>
-            <p><span style="font-weight: bold">Professional Interests</span>: Data Analytics, Computational Modeling, Machine Learning, Optics</p>
-            <p><span style="font-weight: bold;">Personal Interests</span>: Video & Board Games, Biking, Environmentalism, Single Origin Esoteric Coffee</p>
-            <p><span style="font-weight: bold;">General Disinterests</span>: Pursing a second PhD, Paying San Fransisco rent again, Endorsing pizza places outside of my homestate of New York</p>
-            <p><span style="font-weight: bold;">Cookie Interests</span>: Chocolate Chip, Crackle, Gingersnap</p>
+                <p><span style="font-weight: bold">Professional Interests</span>: Computational Modeling, Data Analytics, Optics, Electronics</p>
+                <p><span style="font-weight: bold;">Personal Interests</span>: Video & Board Games, Biking, Environmentalism, Single Origin Esoteric Coffee</p>
+                <p><span style="font-weight: bold;">General Disinterests</span>: Pursing a second PhD, Paying San Fransisco rent again, Endorsing pizzerias outside of my homestate of New York</p>
+                <p><span style="font-weight: bold;">Cookie Interests</span>: Chocolate Chip, Crackle, Gingersnap</p>
             </div>
         </div>
     </div>

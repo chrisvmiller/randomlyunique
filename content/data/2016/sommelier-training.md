@@ -10,8 +10,7 @@ of wine I need to drink to achieve the same culinary genius as Robin Williams in
 
 After googling around for a few minutes, I was able to find a wine training set composed of a dozen wine features 
 (acidity, pH, alcohol, etc) and a ranked quality. I then proceeded to classify this wine quality (at different splits: good/bad, good/okay/bad, etc) 
-with a fancy-pants <a href=https://github.com/chrisvmiller/analytics/blob/master/sommelier_training/WineClassifier.ipynb>neural network</a>. 
-The converged prediction iteration count, after normalizing by the amount of wine it takes to blindfoldedly distinguish 
+with a fancy-pants neural network. The converged prediction iteration count, after normalizing by the amount of wine it takes to blindfoldedly distinguish 
 between red and white, is shown in the chart below: 
  
 ![Photo]({attach}/assets/data/2016/sommelier-training.png){.image_center_style}
