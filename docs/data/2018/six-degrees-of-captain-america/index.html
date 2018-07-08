@@ -7,11 +7,12 @@
     <meta name=”description” content="Random data analysis articles along with an educational web comic series by Chris Miller">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="http://www.randomlyunique.com/assets/favicon.ico">
+    <link rel="icon" href="http://www.randomlyunique.com/assets/common/favicon.ico">
     <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/bootstrap.paper.min.css">
     <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/style.css">
     <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/header-clean.css">
+    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/pygments-manni.css">
+    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/style.css">
 </head>
 <body>
 <header class="header-clean">
@@ -47,17 +48,9 @@ Marvel character? Given a Marvel themed graph where each node is a superhero
 and each edge is a comic book, what is the best way to find the most connected character? </p>
 <p>After dusting off my old Computer Science 101 textbook, I defined a character's
 connectedness as the average minimum distance (found via a breadth first search) to 
-every node within the graph. With this definition in hand, Marvel's top five most connected
-characters in order are:</p>
-<p><center></p>
-<p>CAPTAIN AMERICA <br>
-SPIDER-MAN    <br />
-IRON MAN      <br />
-THING         <br />
-MR. FANTASTIC</p>
-<p></center></p>
-<p>In fact, even Chris Miller - the powerful and all knowing Sheriff of Anchorage, Alaska - has 
-a close connection to Captain American!   </p>
+every node within the graph. With this definition in hand, Captain America won 
+Marvel's most connected character award! In fact, even Chris Miller - the powerful and 
+all knowing Sheriff of Anchorage, Alaska - has a close connection to Captain American!   </p>
 <p><img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/data/2018/six-degrees-of-captain-america/six-degrees-of-captain-america.png" /></p>
     </div>
 </article>
@@ -90,6 +83,13 @@ a close connection to Captain American!   </p>
 </script></body>
 
 <script src="http://www.randomlyunique.com/theme/js/jquery.min.js"></script>
+<script>
+$(document).ready(function () {
+   $("button.toggle-start-hidden").parent().next().hide();
+   $("button.toggle-start-hidden").click(function(){ $(this).parent().next().toggle(); });
+   $("button.toggle").click(function(){ $(this).parent().next().toggle(); });
+ });
+</script>
 
 </body>
 </html>

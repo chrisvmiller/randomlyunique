@@ -7,11 +7,12 @@
     <meta name=”description” content="Random data analysis articles along with an educational web comic series by Chris Miller">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="http://www.randomlyunique.com/assets/favicon.ico">
+    <link rel="icon" href="http://www.randomlyunique.com/assets/common/favicon.ico">
     <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/bootstrap.paper.min.css">
     <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/style.css">
     <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/header-clean.css">
+    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/pygments-manni.css">
+    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/style.css">
 </head>
 <body>
 <header class="header-clean">
@@ -44,10 +45,75 @@
         </h5>
         <p>The Hobbit and The Lord of the Rings are undeniably great books, with rich complex characters and a deep thoughtful story. 
 So, this seems like an ideal case to apply an autosummary algorithm!</p>
-<p>The <a href=https://github.com/chrisvmiller/analytics/blob/master/autosummarizer/summarize.py>method</a> I programmed is pretty straightforward,
+<p>The method I programmed <button class="btn btn-default btn-sm toggle-start-hidden">Show Code</button> is pretty straightforward,
 where I find the most representative sentence within a given blob of text. This is accomplished by tokenizing each sentence, converting to a 
 tf-idf matrix, multiplying this matrix by it's transpose to get a similarity between sentences, mapping to a graph where each node is a sentence
 and each edge is its similarity, then PageRanking to determine the 'best' sentence. </p>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">sent_tokenize</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">itemgetter</span>
+<span class="kn">from</span> <span class="nn">networkx</span> <span class="kn">import</span> <span class="n">from_numpy_matrix</span><span class="p">,</span> <span class="n">pagerank</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span><span class="p">,</span> <span class="n">TfidfTransformer</span>
+
+<span class="n">MIN_SENT_LENGTH</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">FILE_PATH</span> <span class="o">=</span> <span class="s">&#39;PATH_TO_LORD_OF_THE_RINGS_TEXT&#39;</span>
+
+<span class="n">STOPWORDS</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s">&quot;english&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">load_document</span><span class="p">():</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Opens up the Lord of the Rings file and cleans up the text</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">document</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">FILE_PATH</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">encoded_document</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">&#39;unicode_escape&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;ascii&#39;</span><span class="p">,</span> <span class="s">&#39;ignore&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">encoded_document</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">setup_sentences</span><span class="p">(</span><span class="n">document</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Tokenizes the document into sentences, then filters for short sentences</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">sentences</span> <span class="o">=</span> <span class="n">sent_tokenize</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
+    <span class="n">sentences</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">sent</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">sent</span><span class="o">.</span><span class="n">split</span><span class="p">())</span> <span class="o">&gt;</span> <span class="n">MIN_SENT_LENGTH</span><span class="p">,</span> <span class="n">sentences</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">sentences</span>
+
+<span class="k">def</span> <span class="nf">rank_sentences</span><span class="p">(</span><span class="n">sentences</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Ranks sentences using a page rank algorithm</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">word_counts</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">(</span>
+        <span class="n">min_df</span><span class="o">=</span><span class="mf">1E-3</span><span class="p">,</span>
+        <span class="n">stop_words</span><span class="o">=</span><span class="n">STOPWORDS</span><span class="p">,</span>
+        <span class="n">analyzer</span><span class="o">=</span><span class="s">&#39;word&#39;</span><span class="p">,</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">sentences</span><span class="p">))</span>
+
+    <span class="n">tfidf</span> <span class="o">=</span> <span class="n">TfidfTransformer</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">word_counts</span><span class="p">)</span>
+    <span class="n">pairwise_similarity</span> <span class="o">=</span> <span class="n">tfidf</span> <span class="o">*</span> <span class="n">tfidf</span><span class="o">.</span><span class="n">T</span>
+    <span class="n">graph</span> <span class="o">=</span> <span class="n">from_numpy_matrix</span><span class="p">(</span><span class="n">pairwise_similarity</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
+
+    <span class="n">ranked_sentences</span> <span class="o">=</span> <span class="n">pagerank</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
+    <span class="n">ranked_sorted</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">ranked_sentences</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">top_sentences</span> <span class="o">=</span> <span class="p">[</span><span class="n">sentences</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">ranked_sorted</span><span class="p">[:</span><span class="mi">10</span><span class="p">]]</span>
+
+    <span class="k">return</span> <span class="n">top_sentences</span>
+
+
+<span class="k">def</span> <span class="nf">print_results</span><span class="p">(</span><span class="n">sentences</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sentences</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">{0}: {1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">sentence</span><span class="o">.</span><span class="n">capitalize</span><span class="p">())</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">document</span> <span class="o">=</span> <span class="n">load_document</span><span class="p">()</span>
+    <span class="n">sentences</span> <span class="o">=</span> <span class="n">setup_sentences</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
+
+    <span class="n">best_sentences</span> <span class="o">=</span> <span class="n">rank_sentences</span><span class="p">(</span><span class="n">sentences</span><span class="p">)</span>
+    <span class="n">print_results</span><span class="p">(</span><span class="n">best_sentences</span><span class="p">)</span>
+</pre></div>
+
+
 <p>The 'ok, these seems reasonable, I guess' results are shown below:</p>
 <p><img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/data/2016/a-token-of-tolkien/a-token-of-tolkien.png" /></p>
 <p><span style="color:green; font-weight: bold;">Special Bonus:</span> When I apply this autosummary to sentences that contain the word "Sam" throughout The Lord of the Rings trilogy, I get: </p>
@@ -83,6 +149,13 @@ and each edge is its similarity, then PageRanking to determine the 'best' senten
 </script></body>
 
 <script src="http://www.randomlyunique.com/theme/js/jquery.min.js"></script>
+<script>
+$(document).ready(function () {
+   $("button.toggle-start-hidden").parent().next().hide();
+   $("button.toggle-start-hidden").click(function(){ $(this).parent().next().toggle(); });
+   $("button.toggle").click(function(){ $(this).parent().next().toggle(); });
+ });
+</script>
 
 </body>
 </html>

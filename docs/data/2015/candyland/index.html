@@ -7,11 +7,12 @@
     <meta name=”description” content="Random data analysis articles along with an educational web comic series by Chris Miller">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="http://www.randomlyunique.com/assets/favicon.ico">
+    <link rel="icon" href="http://www.randomlyunique.com/assets/common/favicon.ico">
     <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/bootstrap.paper.min.css">
     <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/style.css">
     <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/header-clean.css">
+    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/pygments-manni.css">
+    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/style.css">
 </head>
 <body>
 <header class="header-clean">
@@ -48,7 +49,113 @@ Vegatableland - where the Cookie Monster actively promotes carrots over cookies 
 I believe a happy medium would involve a quick closed-loop tour of Candyland that does NOT end at King Candy's suspicious 
 looking castle.</p>
 <p>So, what is the best route that visits all the wonders of Candyland while minimizing the total distance traveled. Well,
-this is just the famous traveling salesman problem! Using a <a href='https://github.com/chrisvmiller/analytics/blob/master/candyland_route/find_best_path.py'> simulated annealing approach</a>, my proposed path is:</p>
+this is just the famous traveling salesman problem! Using a simulated annealing approach <button class="btn btn-default btn-sm toggle-start-hidden">Show Code</button> my proposed path is:</p>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">exp</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+
+<span class="n">locations</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">&#39;entrance&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">198</span><span class="p">,</span> <span class="mi">265</span><span class="p">),</span>
+    <span class="s">&#39;gingerbread&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">324</span><span class="p">,</span> <span class="mi">271</span><span class="p">),</span>
+    <span class="s">&#39;peppermint&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">572</span><span class="p">,</span> <span class="mi">287</span><span class="p">),</span>
+    <span class="s">&#39;gumdrop&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">546</span><span class="p">,</span> <span class="mi">385</span><span class="p">),</span>
+    <span class="s">&#39;licorice&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">368</span><span class="p">,</span> <span class="mi">410</span><span class="p">),</span>
+    <span class="s">&#39;peanut&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">170</span><span class="p">,</span> <span class="mi">476</span><span class="p">),</span>
+    <span class="s">&#39;lollipip&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">480</span><span class="p">,</span> <span class="mi">508</span><span class="p">),</span>
+    <span class="s">&#39;icecream&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">613</span><span class="p">,</span> <span class="mi">553</span><span class="p">),</span>
+    <span class="s">&#39;molasses&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">226</span><span class="p">,</span> <span class="mi">594</span><span class="p">),</span>
+    <span class="s">&#39;candycastle&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">382</span><span class="p">,</span> <span class="mi">609</span><span class="p">)</span>
+<span class="p">}</span>
+
+
+<span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">loc1</span><span class="p">,</span> <span class="n">loc2</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Finds the Euclidean distance between two locations</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span> <span class="o">=</span> <span class="n">locations</span><span class="p">[</span><span class="n">loc1</span><span class="p">]</span>
+    <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span> <span class="o">=</span> <span class="n">locations</span><span class="p">[</span><span class="n">loc2</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">sqrt</span><span class="p">((</span><span class="n">x1</span> <span class="o">-</span> <span class="n">x2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">y1</span> <span class="o">-</span> <span class="n">y2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">cost</span><span class="p">(</span><span class="n">route</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Calculates the total distance of a route </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">total_distance</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">city</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">route</span><span class="p">):</span>
+        <span class="n">total_distance</span> <span class="o">+=</span> <span class="n">distance</span><span class="p">(</span><span class="n">city</span><span class="p">,</span> <span class="n">route</span><span class="p">[</span><span class="n">index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">total_distance</span>
+
+
+<span class="k">def</span> <span class="nf">neighbor</span><span class="p">(</span><span class="n">route</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Alters the route by swapping two locations</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">index1</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">route</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]))</span>
+    <span class="n">index2</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">route</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]))</span>
+
+    <span class="n">route</span><span class="p">[</span><span class="n">index1</span><span class="p">],</span> <span class="n">route</span><span class="p">[</span><span class="n">index2</span><span class="p">]</span> <span class="o">=</span> <span class="n">route</span><span class="p">[</span><span class="n">index2</span><span class="p">],</span> <span class="n">route</span><span class="p">[</span><span class="n">index1</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">route</span>
+
+
+<span class="k">def</span> <span class="nf">boltzmann_prob</span><span class="p">(</span><span class="n">old_cost</span><span class="p">,</span> <span class="n">new_cost</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Compares both routes via the Boltzmann factor at a </span>
+<span class="sd">    given &#39;temperature&#39; (T)</span>
+<span class="sd">    &#39;&#39;&#39;</span>    
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">new_cost</span> <span class="o">-</span> <span class="n">old_cost</span><span class="p">)</span> <span class="o">/</span> <span class="n">T</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">OverflowError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+
+
+<span class="k">def</span> <span class="nf">anneal</span><span class="p">(</span><span class="n">route</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Finds the best route by swapping locations continuously while the </span>
+<span class="sd">    probabiliy to switch routes gradually decreases</span>
+<span class="sd">    &#39;&#39;&#39;</span>    
+    <span class="n">old_cost</span> <span class="o">=</span> <span class="n">cost</span><span class="p">(</span><span class="n">route</span><span class="p">)</span>
+    <span class="n">T</span> <span class="o">=</span> <span class="mf">1E4</span>
+    <span class="n">T_min</span> <span class="o">=</span> <span class="mf">1E-3</span>
+    <span class="n">decay</span> <span class="o">=</span> <span class="mf">0.95</span>
+    <span class="k">while</span> <span class="n">T</span> <span class="o">&gt;</span> <span class="n">T_min</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+            <span class="n">new_route</span> <span class="o">=</span> <span class="n">neighbor</span><span class="p">(</span><span class="n">route</span><span class="p">)</span>
+            <span class="n">new_cost</span> <span class="o">=</span> <span class="n">cost</span><span class="p">(</span><span class="n">new_route</span><span class="p">)</span>
+
+            <span class="n">prob</span> <span class="o">=</span> <span class="n">boltzmann_prob</span><span class="p">(</span><span class="n">old_cost</span><span class="p">,</span> <span class="n">new_cost</span><span class="p">,</span> <span class="n">T</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">prob</span> <span class="o">&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">():</span>
+                <span class="n">route</span> <span class="o">=</span> <span class="n">new_route</span>
+                <span class="n">old_cost</span> <span class="o">=</span> <span class="n">new_cost</span>
+                <span class="n">ideal_route</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">route</span><span class="p">)</span>
+        <span class="n">T</span> <span class="o">=</span> <span class="n">T</span> <span class="o">*</span> <span class="n">decay</span>
+
+    <span class="k">return</span> <span class="n">ideal_route</span>
+
+
+<span class="k">def</span> <span class="nf">plot_tour</span><span class="p">(</span><span class="n">tour</span><span class="p">):</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="n">locations</span><span class="p">[</span><span class="n">point</span><span class="p">]</span> <span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">tour</span><span class="p">])</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s">&#39;scaled&#39;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">route</span> <span class="o">=</span> <span class="n">locations</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+    <span class="n">route</span> <span class="o">=</span> <span class="n">route</span> <span class="o">+</span> <span class="p">[</span><span class="n">route</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+    <span class="n">best_route</span> <span class="o">=</span> <span class="n">anneal</span><span class="p">(</span><span class="n">route</span><span class="p">)</span>
+
+    <span class="n">plot_tour</span><span class="p">(</span><span class="n">best_route</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+
 <p><img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/data/2015/candyland/candyland.png" /></p>
     </div>
 </article>
@@ -81,6 +188,13 @@ this is just the famous traveling salesman problem! Using a <a href='https://git
 </script></body>
 
 <script src="http://www.randomlyunique.com/theme/js/jquery.min.js"></script>
+<script>
+$(document).ready(function () {
+   $("button.toggle-start-hidden").parent().next().hide();
+   $("button.toggle-start-hidden").click(function(){ $(this).parent().next().toggle(); });
+   $("button.toggle").click(function(){ $(this).parent().next().toggle(); });
+ });
+</script>
 
 </body>
 </html>

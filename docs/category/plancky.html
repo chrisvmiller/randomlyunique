@@ -7,11 +7,12 @@
     <meta name=”description” content="Random data analysis articles along with an educational web comic series by Chris Miller">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="http://www.randomlyunique.com/assets/favicon.ico">
+    <link rel="icon" href="http://www.randomlyunique.com/assets/common/favicon.ico">
     <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/bootstrap.paper.min.css">
     <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/style.css">
     <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/header-clean.css">
+    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/pygments-manni.css">
+    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/style.css">
 </head>
 <body>
 <header class="header-clean">
@@ -42,17 +43,17 @@
 
 <div class="row vertical-align">
     <div class="col-sm-3 hidden-xs text-center">
-         <a href="http://www.randomlyunique.com/plancky/2018/measuring-the-speed-of-light-with-a-telescope/">
-            <img class="image_center_style" src="/category/thumbnails/plancky/2018/measuring-the-speed-of-light-with-a-telescope_thumbnail_tall.png">
+         <a href="http://www.randomlyunique.com/plancky/2018/roemers-speed-of-light-measurement/">
+            <img class="image_center_style" src="/category/thumbnails/plancky/2018/roemers-speed-of-light-measurement_thumbnail_tall.png">
          </a>
     </div>
     <div class="col-sm-9 col-xs-12">
         <p class="article-text">
-            <a href="http://www.randomlyunique.com/plancky/2018/measuring-the-speed-of-light-with-a-telescope/">Measuring the Speed of Light with a Telescope</a>:
+            <a href="http://www.randomlyunique.com/plancky/2018/roemers-speed-of-light-measurement/">Roemer's Speed of Light Measurement</a>:
             <span class="category-tag">
                 Apr 14, 2018
             </span>
-            Despite a lack of modern equipment, scientists in the 1600s impressively estimated the speed of light with a telescope, a quill, and a little bit of patience.
+            Despite a lack of modern equipment, Roemer in the 1600s impressively estimated the speed of light with a telescope, a quill, and a little bit of patience.
         </p>
     </div>
 </div><div class="row vertical-align">
@@ -175,6 +176,13 @@
 </script></body>
 
 <script src="http://www.randomlyunique.com/theme/js/jquery.min.js"></script>
+<script>
+$(document).ready(function () {
+   $("button.toggle-start-hidden").parent().next().hide();
+   $("button.toggle-start-hidden").click(function(){ $(this).parent().next().toggle(); });
+   $("button.toggle").click(function(){ $(this).parent().next().toggle(); });
+ });
+</script>
 
 </body>
 </html>

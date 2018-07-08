@@ -7,11 +7,12 @@
     <meta name=”description” content="Random data analysis articles along with an educational web comic series by Chris Miller">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="http://www.randomlyunique.com/assets/favicon.ico">
+    <link rel="icon" href="http://www.randomlyunique.com/assets/common/favicon.ico">
     <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/bootstrap.paper.min.css">
     <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/style.css">
     <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/header-clean.css">
+    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/pygments-manni.css">
+    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/style.css">
 </head>
 <body>
 <header class="header-clean">
@@ -44,7 +45,7 @@
         </h5>
         <p>As an undergraduate physics and mathematics student, I frequently needed to look up physical constants, trig identities,
 the curl in spherical coordinates and a bunch of other formulas. Eventually, I compiled all my notes together and created this handy-dandy reference 
-sheet! (<a class="nounderline" href="https://github.com/chrisvmiller/analytics/blob/master/millnotes/millnotes.pdf">Download</a>)
+sheet! <a class="nounderline" href="http://www.randomlyunique.com/random/2018/millnotes/millnotes.pdf">Download</a>
 <br><br></p>
 <p><img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/random/2018/millnotes/millnotes.jpg" /></p>
     </div>
@@ -56,6 +57,9 @@ sheet! (<a class="nounderline" href="https://github.com/chrisvmiller/analytics/b
             <div class="col-xs-6 text-center">
             </div>
             <div class="col-xs-6 text-center">
+                    <a href="http://www.randomlyunique.com/random/2018/steel-nameplate/">
+                        <i class="fa fa-caret-right fa-4x" aria-hidden="true"></i><br>Steel Nameplate
+                    </a>
             </div>
         </div>
         
@@ -72,6 +76,13 @@ sheet! (<a class="nounderline" href="https://github.com/chrisvmiller/analytics/b
 </script></body>
 
 <script src="http://www.randomlyunique.com/theme/js/jquery.min.js"></script>
+<script>
+$(document).ready(function () {
+   $("button.toggle-start-hidden").parent().next().hide();
+   $("button.toggle-start-hidden").click(function(){ $(this).parent().next().toggle(); });
+   $("button.toggle").click(function(){ $(this).parent().next().toggle(); });
+ });
+</script>
 
 </body>
 </html>

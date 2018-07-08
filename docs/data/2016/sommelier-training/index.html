@@ -7,11 +7,12 @@
     <meta name=”description” content="Random data analysis articles along with an educational web comic series by Chris Miller">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="http://www.randomlyunique.com/assets/favicon.ico">
+    <link rel="icon" href="http://www.randomlyunique.com/assets/common/favicon.ico">
     <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/bootstrap.paper.min.css">
     <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/style.css">
     <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/header-clean.css">
+    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/pygments-manni.css">
+    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/style.css">
 </head>
 <body>
 <header class="header-clean">
@@ -47,8 +48,7 @@ algorithmic approach and brute-force a solution: sampling lots and lots of wine!
 of wine I need to drink to achieve the same culinary genius as Robin Williams in Neverland!</p>
 <p>After googling around for a few minutes, I was able to find a wine training set composed of a dozen wine features 
 (acidity, pH, alcohol, etc) and a ranked quality. I then proceeded to classify this wine quality (at different splits: good/bad, good/okay/bad, etc) 
-with a fancy-pants <a href=https://github.com/chrisvmiller/analytics/blob/master/sommelier_training/WineClassifier.ipynb>neural network</a>. 
-The converged prediction iteration count, after normalizing by the amount of wine it takes to blindfoldedly distinguish 
+with a fancy-pants neural network. The converged prediction iteration count, after normalizing by the amount of wine it takes to blindfoldedly distinguish 
 between red and white, is shown in the chart below: </p>
 <p><img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/data/2016/sommelier-training/sommelier-training.png" /></p>
 <p>Now, I only need to convince my wife that purchasing 7 Balthazars of pink bubbly wine is intended for research 
@@ -84,6 +84,13 @@ and my life will be fantastic.</p>
 </script></body>
 
 <script src="http://www.randomlyunique.com/theme/js/jquery.min.js"></script>
+<script>
+$(document).ready(function () {
+   $("button.toggle-start-hidden").parent().next().hide();
+   $("button.toggle-start-hidden").click(function(){ $(this).parent().next().toggle(); });
+   $("button.toggle").click(function(){ $(this).parent().next().toggle(); });
+ });
+</script>
 
 </body>
 </html>
