@@ -11,10 +11,10 @@ But do you recall the most god-awful sort of all?
 </p>
 
 A Reinforcement Sort (a sort done through reinforcement(ish) learning) is the Nickelback of sorting 
-algorithms - a perfect superposition of horrible and awesome. This rockstar was developed using an 
+algorithms - a perfect horrible and awesome superposition. This rockstar was developed using an 
 epsilon greedy Q-learning approach with the aim of generating the best python sorting script. This mainly 
-involved combining code fragments together and giving rewards based on how well these scripts sort a list. The exact setup is 
-summarized as follows:
+involved combining code fragments together and giving rewards based on how well these scripts sort a list. 
+The exact setup is summarized as follows:
 
 1) <button class="btn btn-default btn-sm toggle-start-hidden">State</button> : A binary array chad-kroegered from a md5 hash of the python code string <br>
 

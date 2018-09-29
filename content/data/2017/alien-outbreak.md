@@ -6,8 +6,8 @@ Summary: If you dread a potential alien abduction, then grab that tinfoil hat an
 
 Despite a constant stream of sightings, news outlets repeatedly fail to address the current UFO epidemic. Luckily, I created 
 a vital spatial autocorrelation for those wise individuals who always tuck their feet under the covers before
-bed (a surefire alien defense). The map below identifies statistically significant UFO hot spots (normalized per capita) 
-via the Getis-Ord Gi* statistic:
+bed (a surefire alien defense). The map below identifies statistically significant UFO hot spots* (normalized per capita) 
+via the Getis-Ord Gi statistic:
 
 ![Photo]({attach}/assets/data/2017/alien-outbreak.png){.image_center_style}
 
