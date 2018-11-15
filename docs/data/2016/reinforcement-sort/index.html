@@ -55,7 +55,13 @@ epsilon greedy Q-learning approach with the aim of generating the best python so
 involved combining code fragments together and giving rewards based on how well these scripts sort a list. 
 The exact setup is summarized as follows:</p>
 <p>1) <button class="btn btn-default btn-sm toggle-start-hidden">State</button> : A binary array chad-kroegered from a md5 hash of the python code string <br></p>
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">oh_god_why</span><span class="p">(</span><span class="n">code</span><span class="p">):</span>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">hashlib</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="n">ARRAY_INPUT_SIZE</span> <span class="o">=</span> <span class="mi">128</span>
+
+
+<span class="k">def</span> <span class="nf">oh_god_why</span><span class="p">(</span><span class="n">code</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    This converts the code string (state) to a binary array (for the neural net)</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -72,11 +78,6 @@ The exact setup is summarized as follows:</p>
 
 <p>2) <button class="btn btn-default btn-sm toggle-start-hidden">Actions</button> : I figured sorting will require some looping, swapping and probably a conditional or two, so I made these actions on a state</p>
 <div class="highlight"><pre><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">product</span>
-<span class="kn">import</span> <span class="nn">hashlib</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-
-<span class="n">ARRAY_INPUT_SIZE</span> <span class="o">=</span> <span class="mi">128</span>
-
 
 <span class="k">class</span> <span class="nc">Action</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">code</span><span class="p">):</span>

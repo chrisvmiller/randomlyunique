@@ -19,6 +19,12 @@ The exact setup is summarized as follows:
 1) <button class="btn btn-default btn-sm toggle-start-hidden">State</button> : A binary array chad-kroegered from a md5 hash of the python code string <br>
 
     :::python
+    import hashlib
+    import numpy as np
+    
+    ARRAY_INPUT_SIZE = 128    
+    
+    
     def oh_god_why(code):
         '''
         This converts the code string (state) to a binary array (for the neural net)
@@ -34,12 +40,7 @@ The exact setup is summarized as follows:
 2) <button class="btn btn-default btn-sm toggle-start-hidden">Actions</button> : I figured sorting will require some looping, swapping and probably a conditional or two, so I made these actions on a state
     
     :::python
-    from itertools import product
-    import hashlib
-    import numpy as np
-    
-    ARRAY_INPUT_SIZE = 128
-    
+    from itertools import product    
     
     class Action(object):
         def __init__(self, code):
