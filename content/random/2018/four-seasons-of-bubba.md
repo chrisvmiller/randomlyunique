@@ -17,4 +17,4 @@ leitmotif:
 ![Photo]({attach}/assets/random/2018/four-seasons-of-bubba.jpg){.image_center_style}
 
 Now, all that's left is bestowing my wife a never-ending calendar reminder that 
-will unannoyingly prompt a photo rotation at the onset of each season!
+will unannoyingly prompt a photo rotation each season!
