@@ -2,7 +2,7 @@ Date: 2018-12-07
 Title: Video Game Resume
 Category: data
 Slug: video-game-resume
-Summary: After a lengthy video game hiatus, I reflect on my all my past video game excursions before diving into my recent Nintendo Switch purchase.  
+Summary: After a lengthy video game hiatus, I reflect on all my past video game excursions before diving into my recent Nintendo Switch purchase.  
    
 In the long, long, long ago - before work, my wife and grad school - my free time was a healthy mix 
 of video games, pizza and loneliness. As a testament to this incredibly social period of 
