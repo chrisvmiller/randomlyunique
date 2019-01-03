@@ -2,7 +2,7 @@ Date: 2018-09-08
 Title: Coffee Quintessence
 Category: data
 Slug: coffee-quintessence
-Summary: The human race is only one small infrastructure project away from the ideal redolent cup of coffee.
+Summary: The human race is only one small infrastructure project away from the perfect cup of coffee.
 
 A delicate and playful cup of coffee is one of life's greatest pleasures, but 
 even the distinguished 'Kopi Luwak' lacks a certain *je ne sais quoi*. Now, it 
