@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>randomlyunique</title><link href="http://www.randomlyunique.com/" rel="alternate"></link><link href="http://www.randomlyunique.com/feeds/all.atom.xml" rel="self"></link><id>http://www.randomlyunique.com/</id><updated>2019-01-02T00:00:00-08:00</updated><entry><title>Obligatory Twitter Sentiment Post</title><link href="http://www.randomlyunique.com/data/2019/obligatory-twitter-sentiment-post/" rel="alternate"></link><updated>2019-01-02T00:00:00-08:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2019-01-02:data/2019/obligatory-twitter-sentiment-post/</id><summary type="html">&lt;p&gt;The Twittersphere plays a completely unconcerning vital role in modern society. Now, 
-let's use Twitter to it's full potential and expose humanity's feelings towards my favorite 
+let's use Twitter to it's full potential and expose humanity's feelings towards popular 
 candies!&lt;/p&gt;
 &lt;p&gt;After pinging the Twitter API for over a week, I trained a Bayesian classifier to split 
 these candy tweets into positive and negative categories. I also extracted out the

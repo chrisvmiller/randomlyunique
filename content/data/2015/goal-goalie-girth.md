@@ -10,7 +10,7 @@ this ideal weight!
 
 As a person who spent years studying physics, I can unequivocally state that only three shapes exist in nature: 1) Cubes 
 2) Cylinders and 3) Spheres. So, it's safe to assume that a perfect goalie is just a cube with a height and width equal to the 
-dimensions of the goal and a depth of, let's say, 20 inches. Using the density of fat equal to 0.9 g/cm3, the chart below breaks down 
+dimensions of the goal and a depth of, let's say, 20 inches. Using the density of fat equal to 0.03 lb/in3, the chart below breaks down 
 the target weight for goaltender perfection for a few different sports:  
 
 ![Photo]({attach}/assets/data/2015/goal-goalie-girth.png){.image_center_style}
