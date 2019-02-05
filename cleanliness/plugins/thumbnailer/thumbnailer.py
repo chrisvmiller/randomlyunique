@@ -16,8 +16,6 @@ except ImportError:
 DEFAULT_IMAGE_DIR = "pictures"
 DEFAULT_THUMBNAIL_DIR = "thumbnails"
 DEFAULT_THUMBNAIL_SIZES = {
-    # 'thumbnail_square': '150',
-    # 'thumbnail_wide': '150x?',
     'thumbnail_tall': '?x150',
 }
 DEFAULT_TEMPLATE = """<a href="{url}" rel="shadowbox" title="{filename}"><img src="{thumbnail}" alt="{filename}"></a>"""

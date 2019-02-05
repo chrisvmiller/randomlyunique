@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>randomlyunique</title><link href="http://www.randomlyunique.com/" rel="alternate"></link><link href="http://www.randomlyunique.com/feeds/all.atom.xml" rel="self"></link><id>http://www.randomlyunique.com/</id><updated>2019-01-02T00:00:00-08:00</updated><entry><title>Obligatory Twitter Sentiment Post</title><link href="http://www.randomlyunique.com/data/2019/obligatory-twitter-sentiment-post/" rel="alternate"></link><updated>2019-01-02T00:00:00-08:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2019-01-02:data/2019/obligatory-twitter-sentiment-post/</id><summary type="html">&lt;p&gt;The Twittersphere plays a completely unconcerning vital role in modern society. Now, 
-let's use Twitter to it's full potential and expose humanity's feelings towards popular 
-candies!&lt;/p&gt;
-&lt;p&gt;After pinging the Twitter API for over a week, I trained a Bayesian classifier to split 
-these candy tweets into positive and negative categories. I also extracted out the
-most common emoji for each sentiment as shown in the (questionably useful) Sankey 
-diagram below:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/data/2019/obligatory-twitter-sentiment-post/obligatory-twitter-sentiment-post.jpg" /&gt;&lt;/p&gt;
-&lt;p&gt;Other than the unusual amount of death emoji laced candy tweets, I completely agree 
-with Twitter's candy assignment!&lt;/p&gt;</summary></entry><entry><title>Video Game Resume</title><link href="http://www.randomlyunique.com/data/2018/video-game-resume/" rel="alternate"></link><updated>2018-12-07T00:00:00-08:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2018-12-07:data/2018/video-game-resume/</id><summary type="html">&lt;p&gt;In the long, long, long ago - before work, my wife and grad school - my free time was a healthy mix 
+let's use Twitter to it's full potential and expose humanity's candy preferences!&lt;/p&gt;
+&lt;p&gt;After pinging the Twitter API for candy tweets over the course of a week, I piped 
+each tweet into a Multinomial Naive Bayes sentiment classification algorithm. The 
+average sentiment of each candy is shown in the bubbly bubble chart below:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/data/2019/obligatory-twitter-sentiment-post/obligatory-twitter-sentiment-post.png" /&gt;&lt;/p&gt;</summary></entry><entry><title>Video Game Resume</title><link href="http://www.randomlyunique.com/data/2018/video-game-resume/" rel="alternate"></link><updated>2018-12-07T00:00:00-08:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2018-12-07:data/2018/video-game-resume/</id><summary type="html">&lt;p&gt;In the long, long, long ago - before work, my wife and grad school - my free time was a healthy mix 
 of video games, pizza and loneliness. As a testament to this incredibly social period of 
 my life, I slogged through a dozen video game compilations on YouTube and recorded every video game 
 I've completed. The end result is easily the most awe-inspiring chart one can behold:&lt;/p&gt;
@@ -26,12 +22,11 @@ even the distinguished 'Kopi Luwak' lacks a certain &lt;em&gt;je ne sais quoi&lt
 seems I must turn to data science to unearth a coffee worthy of my palate.&lt;/p&gt;
 &lt;p&gt;After scraping a few hundred high-end coffee descriptions, I searched for the 
 maximally expensive coffee since price, as with all luxury items, is a direct 
-indicator of quality. My industry approved end result, using a gradient boosted tree 
-regression with trees so large it would make the California Redwoods jealous, 
-yields this lucrative* and paradigm shifting roast:&lt;/p&gt;
+indicator of quality. My end result, using a gradient boosted tree regression, 
+yields this lucrative and paradigm shifting roast:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/data/2018/coffee-quintessence/coffee-quintessence.jpg" /&gt;&lt;/p&gt;
-&lt;p&gt;*Ignores the minor cost of dredging up a 1574 meter high plateau in the middle 
-of the Indian Ocean. &lt;/p&gt;</summary></entry><entry><title>How Optical Disks Work</title><link href="http://www.randomlyunique.com/plancky/2018/how-optical-disks-work/" rel="alternate"></link><updated>2018-08-15T00:00:00-07:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2018-08-15:plancky/2018/how-optical-disks-work/</id><summary type="html">&lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/plancky/2018/how-optical-disks-work/how-optical-disks-work.png" /&gt;&lt;/p&gt;</summary></entry><entry><title>Steel Nameplate</title><link href="http://www.randomlyunique.com/random/2018/steel-nameplate/" rel="alternate"></link><updated>2018-07-07T00:00:00-07:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2018-07-07:random/2018/steel-nameplate/</id><summary type="html">&lt;p&gt;The nameplate on my desk is an amalgamation of milled and plasma-cutted letters MIG 
+&lt;p&gt;Remember folks, never dredge up a 1574 meter plateau in the middle of the Indian 
+Ocean for better bean water until sanity checking your machine learning model.&lt;/p&gt;</summary></entry><entry><title>How Optical Disks Work</title><link href="http://www.randomlyunique.com/plancky/2018/how-optical-disks-work/" rel="alternate"></link><updated>2018-08-15T00:00:00-07:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2018-08-15:plancky/2018/how-optical-disks-work/</id><summary type="html">&lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/plancky/2018/how-optical-disks-work/how-optical-disks-work.png" /&gt;&lt;/p&gt;</summary></entry><entry><title>Steel Nameplate</title><link href="http://www.randomlyunique.com/random/2018/steel-nameplate/" rel="alternate"></link><updated>2018-07-07T00:00:00-07:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2018-07-07:random/2018/steel-nameplate/</id><summary type="html">&lt;p&gt;The nameplate on my desk is an amalgamation of milled and plasma-cutted letters MIG 
 welded onto a steel L-shaped frame. And, as a self proclaimed master crocheter, I highlighted
 my self-built nameplate with a rainbow doily.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/random/2018/steel-nameplate/steel-nameplate.jpg" /&gt;&lt;/p&gt;</summary></entry><entry><title>Yawnball</title><link href="http://www.randomlyunique.com/data/2018/yawnball/" rel="alternate"></link><updated>2018-06-10T00:00:00-07:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2018-06-10:data/2018/yawnball/</id><summary type="html">&lt;p&gt;Like the first season of Yuri!!! On ICE [sic], Baseball is a sport of pure adrenaline. 
