@@ -15,5 +15,5 @@ yields this lucrative and paradigm shifting roast:
 
 ![Photo]({attach}/assets/data/2018/coffee-quintessence.jpg){.image_center_style}
 
-Remember folks, never dredge up a 1574 meter plateau in the middle of the Indian 
-Ocean for better bean water until sanity checking your machine learning model.
+Remember folks, always sanity check your machine learning model before dredging 
+up a 1574 meter plateau in the middle of the Indian Ocean.
