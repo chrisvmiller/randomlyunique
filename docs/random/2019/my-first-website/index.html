@@ -1,41 +1,78 @@
-Date: 2019-05-23
-Title: My First Website
-Category: random
-Slug: my-first-website
-Summary: As a wee lad in high school, my first foray into tech involved programming a science-themed javascript game.  
+<!DOCTYPE html>
+<html lang="en">
 
-During my high school internship at Brookhaven National Lab, I dipped my toes into the world of
+<head>
+    <title>My First Website - randomlyunique</title>
+    <meta charset="utf-8">
+    <meta name=”description” content="Random data analysis articles, an educational web comic series and personal projects by Chris Miller">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="http://www.randomlyunique.com/assets/common/favicon.ico">
+    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/bootstrap.paper.min.css">
+    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/header-clean.css">
+    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/pygments-manni.css">
+    <link rel="stylesheet" href="http://www.randomlyunique.com/theme/css/style.css">
+</head>
+<body>
+<header class="header-clean">
+    <div class="container">
+	<div class="header-limiter">
+		<h1> <a href="http://www.randomlyunique.com/">Randomly<span class="unique-color">Unique</span></a></h1>
+		<nav>
+                <a  href="http://www.randomlyunique.com/category/data.html">
+                    Data
+                </a>
+                <a  href="http://www.randomlyunique.com/category/plancky.html">
+                    Plancky
+                </a>
+                <a  class="selected"  href="http://www.randomlyunique.com/category/random.html">
+                    Random
+                </a>
+		</nav>
+	</div>
+    </div>
+</header>
+
+<div class="container">
+<article>
+    <h2 class="header-title text-center">My First Website</h2>
+
+    <div class="entry-content">
+        <h5 class="article-date text-center">
+                <time datetime="May 23, 2019"> May 23, 2019&nbsp;</time>
+            <span class="category-tag"> random </span>
+        </h5>
+        <p>During my high school internship at Brookhaven National Lab, I dipped my toes into the world of
 coding by creating a website for a high-energy physics experiment. The highlight of which was a
 javascript game that simulated the experiment's goal of searching for a super-rare particle 
-decay within a neverending stream of particles.
-
-A direct port of this game - including every novice mistake - is found below. After pressing the 
+decay within a neverending stream of particles.</p>
+<p>A direct port of this game - including every novice mistake - is found below. After pressing the 
 start button, you are given thirty seconds to click "NOW" every time the desired particle decay (the 
-starting image shown below) occurs. And, points will be lost if the wrong decay is triggered! 
-
+starting image shown below) occurs. And, points will be lost if the wrong decay is triggered! </p>
 <script>
-							
-	function finish(){		
-        final_score = document.getElementById("score").value;				
-				
+
+    function finish(){      
+        final_score = document.getElementById("score").value;               
+
         if (final_score<=-5){
-			message ="You're very sad score was " + final_score + ". Not too good, bro. What happened?" 
+            message ="You're very sad score was " + final_score + ". Not too good, bro. What happened?" 
         }
-        if(0>=final_score && final_score>=-4){	
+        if(0>=final_score && final_score>=-4){  
             message = "You're score was " + final_score + ". Ummm, better luck next time..."
         }
-        if(4>=final_score && final_score>=1){	
+        if(4>=final_score && final_score>=1){   
             message = "You're final score was " + final_score + ". You did pretty good, nice job."
         }
-        if(17>=final_score && final_score>=7){	
+        if(17>=final_score && final_score>=7){  
             message = "You're super-duper great score was " + final_score + ". Very nice, you're the ultimate physicist."
-        }				
-		if(final_score>=18){
-			message = "In real life, you wouldn't see that many decays. You lose, cheater!"
-		}	
-		return message
+        }               
+        if(final_score>=18){
+            message = "In real life, you wouldn't see that many decays. You lose, cheater!"
+        }   
+        return message
     }
- 
+
     KImg = new Array(6)
     KImg[0] = new Image();
     KImg[0].src="/assets/random/2019/decay_1.png";
@@ -57,7 +94,7 @@ starting image shown below) occurs. And, points will be lost if the wrong decay 
             document.getElementById("score").value--;
         }
     }   
-    
+
     function change_to_image(show_image_index){
         for (var i = 0, length = KImg.length; i < length; i++) {
             if (i == show_image_index) {
@@ -67,7 +104,7 @@ starting image shown below) occurs. And, points will be lost if the wrong decay 
             }
         }      
     }
-    
+
     imageTimer = null;
     countDownTimer= null;
     function stopCounters(){
@@ -77,36 +114,36 @@ starting image shown below) occurs. And, points will be lost if the wrong decay 
         if (countDownTimer !== null) {
             clearInterval(countDownTimer);
         }          
-       
+
         change_to_image(0);
         document.getElementById("correct_decay_arrow_down").style.visibility = "visible";
     }        
-        
+
     function imageCycler(){
         randomInt = Math.floor(Math.random() * 6);
         change_to_image(randomInt);      
         document.getElementById("score").innerHTML =  document.getElementById("score").value    
      }        
-        
+
     function setup_images() {
-	    var radios = document.getElementsByName('tic');
+        var radios = document.getElementsByName('tic');
             for (var i = 0, length = radios.length; i < length; i++) {
                 if (radios[i].checked) {
                     imageTimer = setInterval(imageCycler, radios[i].value);        
                 }
             }
     }
-    
+
     function countDownClock(){
         var currentTime = document.getElementById("countdown").value--;
         document.getElementById("countdown").innerHTML = currentTime;
-        
+
         if(currentTime <=0){
             document.getElementById("finalMessage").innerHTML = finish();
             stopCounters();
         }
     }        
-        
+
     function setup_counter() {
         stopCounters();
         document.getElementById("correct_decay_arrow_down").style.visibility = "hidden";
@@ -118,6 +155,7 @@ starting image shown below) occurs. And, points will be lost if the wrong decay 
     }
 
 </script>
+
 <form name=speed>
     <center>    
     <h2>Choose your Destiny...</h2>
@@ -128,23 +166,59 @@ starting image shown below) occurs. And, points will be lost if the wrong decay 
     </center>
 </form>
 
-<center>
-    <span id=correct_decay_arrow_down> &#8595; Find this Decay &#8595; </span>  
+<p><center>
+    <span id=correct_decay_arrow_down> &#8595; Find this Decay &#8595; </span><br />
     <img height=250 src="/assets/random/2019/decay_correct.png" width=350 border=0> 
     <img height=250 src="/assets/random/2019/decay_1.png" width=350 border=0 hidden> 
     <img height=250 src="/assets/random/2019/decay_2.png" width=350 border=0 hidden> 
     <img height=250 src="/assets/random/2019/decay_3.png" width=350 border=0 hidden> 
     <img height=250 src="/assets/random/2019/decay_4.png" width=350 border=0 hidden>
     <img height=250 src="/assets/random/2019/decay_5.png" width=350 border=0 hidden>
-</center>
-
-<center>
+</center></p>
+<p><center>
 Timer: <button id="countdown" style="width: 40px; height: 40px; background-color: white; color: black;">30</button>
-Score: <button id="score" style="width: 40px; height: 40px; background-color: white; color: black;">0</button>
-
+Score: <button id="score" style="width: 40px; height: 40px; background-color: white; color: black;">0</button></p>
 <p id="finalMessage" > </p>
 
-<button onClick="setup_counter();setup_images();" style="width: 75; height: 35px; background-color: black; color: white;">Start</button>
+<p><button onClick="setup_counter();setup_images();" style="width: 75; height: 35px; background-color: black; color: white;">Start</button>
 <button onClick="check_score()" style="width: 100px; height: 60px; background-color: #4CAF50; color: white;"> NOW !!! </button>
 <button onClick="stopCounters()" style="width: 75px; height: 35px; background-color: black; color: white;">Stop</button>
-</center>
+</center></p>
+    </div>
+</article>
+
+
+
+        <div class="row vertical-align">
+            <div class="col-xs-6 text-center">
+                    <a href="http://www.randomlyunique.com/random/2019/blokus-with-ai/">
+                        <i class="fa fa-caret-left fa-4x" aria-hidden="true"></i><br>Blokus with AI
+                    </a>
+            </div>
+            <div class="col-xs-6 text-center">
+            </div>
+        </div>
+        
+<br></div>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58124150-1', 'auto');
+    ga('send', 'pageview');
+</script></body>
+
+<script src="http://www.randomlyunique.com/theme/js/jquery.min.js"></script>
+<script>
+$(document).ready(function () {
+   $("button.toggle-start-hidden").parent().next().hide();
+   $("button.toggle-start-hidden").click(function(){ $(this).parent().next().toggle(); });
+   $("button.toggle").click(function(){ $(this).parent().next().toggle(); });
+ });
+</script>
+
+</body>
+</html>
