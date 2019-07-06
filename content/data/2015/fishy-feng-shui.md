@@ -6,7 +6,7 @@ Summary: What does my fish do all day while I'm at work?  Does he nap on the san
 
 As any sensible couple planning for a child, my wife and I are actively working up the evolutionary parenthood
 ladder. The first "taking care of something" stage involved a flower, which was an overwhelming success despite an
-accidental drop from our third story balcony. The obvious followup stage - a fish - is currently going swimmingly!
+accidental drop from our third story balcony. The obvious followup stage - a fish - has gone swimmingly so far!
 
 As a caring parent, I want to improve the living conditions of my fish, but his hopes, dreams, and interests
 currently elude me. So, taking a data-driven approach, I pointed my Macbook's webcam at the tank with the
