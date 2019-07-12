@@ -7,9 +7,6 @@
     <div class="col-sm-9 col-xs-12">
         <p class="article-text">
             <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>:
-            <span class="category-tag">
-                {{ article.date.strftime("%b %d, %Y") }}
-            </span>
             {{ article.summary|striptags }}
         </p>
     </div>
