@@ -9,6 +9,9 @@ frame with a book-like connector in Autodesk Fusion. This 180 degree connector
 permits a four picture rotation, as shown below:
 
 ![Photo]({attach}/assets/random/2018/bubba_frame.jpg){.image_center_style}
+<center>
+<a class="nounderline" href="{attach}/assets/random/2018/stack_frame.zip">Download 3D Printing Files</a>
+</center>
 
 After a few Shih Tzu photoshoots under the guise of hockey game outings (alibi 
 given to the wife), I filled the photoframe with a Bubba "across the seasons" 
