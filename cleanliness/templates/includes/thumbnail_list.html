@@ -6,6 +6,10 @@
     </div>
     <div class="col-sm-9 col-xs-12">
         <p class="article-text">
+            {% if 'category' not in page_name %}
+                <span class="category-tag"> {{ article.category|title }} </span>
+            {% endif %}
+
             <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>:
             {{ article.summary|striptags }}
         </p>

@@ -2,7 +2,7 @@ Date: 2017-11-05
 Title: Atten Arf
 Category: data
 Slug: atten-arf
-Summary: My little Shih Tzu is surprisingly well behaved and obedient despite his breed's notoriously stubborn reputation. Nevertheless, his responsiveness still seems somewhat situational, so let's dig in this article and retrieve an analysis.      
+Summary: My little Shih Tzu is surprisingly well behaved and obedient despite his breed's notoriously stubborn reputation. Nevertheless, his responsiveness still seems somewhat situational, so let's dig into this article and retrieve an analysis.      
 
 Bubba, the little pupper that chills in my apartment, is surprisingly intelligent for a Shih Tzu. In fact, there are few things more 
 satisfying than watching Bubba obey a command while a nearby German Shepherd completely ignores their owner.     

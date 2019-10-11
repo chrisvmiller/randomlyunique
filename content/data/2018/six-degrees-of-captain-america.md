@@ -11,7 +11,7 @@ and each edge is a comic book, what is the best way to find the most connected c
 After dusting off my old Computer Science 101 textbook, I defined a character's
 connectedness as the average minimum distance (found via a breadth first search) to 
 every node within the graph. With this definition in hand, Captain America won 
-Marvel's most connected character award! In fact, even Chris Miller - the powerful and 
+Marvel's most connected character award! In fact, even my namefellow (Chris Miller) - the powerful and 
 all knowing Sheriff of Anchorage, Alaska - has a close connection to Captain American!   
 
 ![Photo]({attach}/assets/data/2018/six-degrees-of-captain-america.png){.image_center_style}

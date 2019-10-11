@@ -4,7 +4,7 @@ Category: data
 Slug: starfeld
 Summary: A LSTM network beautifully smooshes the scripts from Star Trek: The Next Generation and Seinfeld together.
 
-Star Trek: The Next Generation is a master class of optimistic science fiction. Likewise, 
+Star Trek: The Next Generation is a masterclass of optimistic science fiction. Likewise, 
 Seinfeld sets the gold standard for comedic sitcoms. Now, logic obviously dictates a Star 
 Trek: The Next Generation and Seinfeld union - so say we all!
  

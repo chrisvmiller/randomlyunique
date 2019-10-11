@@ -2,7 +2,7 @@ Date: 2015-01-24
 Title: Goal Goalie Girth
 Category: data
 Slug: goal-goalie-girth
-Summary: Looking to be a star athlete even though you lack any physical talent? Stop going to the boring gym and slowly scooter to the nearest fast food joint to become the ideal goaltender. 
+Summary: Looking to be a star athlete even though you lack any physical talent? Stop going to the boring gym and make your way to the nearest fast food joint to become the ideal goaltender. 
 
 Everytime I watch hockey, I always wonder why every goaltender is in great shape.  Wouldn't a little extra weight make 
 saving goals easier? In fact, wouldn't the perfect goalie be fat enough to block the entire net? I think so, let's calculate 
