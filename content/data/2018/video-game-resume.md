@@ -1,4 +1,4 @@
-Date: 2018-12-07
+Date: 2018-09-08
 Title: Video Game Resume
 Category: data
 Slug: video-game-resume

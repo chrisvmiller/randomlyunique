@@ -8,7 +8,7 @@ The Twittersphere plays a completely unconcerning vital role in modern society. 
 let's use Twitter to it's full potential and expose humanity's candy preferences!
 
 After pinging the Twitter API for candy tweets over the course of a week, I piped 
-each tweet into a Multinomial Naive Bayes sentiment classification algorithm. The 
-average sentiment of each candy is shown in the bubbly bubble chart below:
+each tweet into a off-the-shelf pre-trained Naive Bayes sentiment classification 
+algorithm. The average sentiment of each candy is shown in the bubbly bubble chart below:
 
 ![Photo]({attach}/assets/data/2019/obligatory-twitter-sentiment-post.png){.image_center_style}
