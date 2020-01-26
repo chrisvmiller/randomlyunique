@@ -2,7 +2,7 @@ Date: 2019-05-23
 Title: Blokus with AI
 Category: random
 Slug: blokus-with-ai
-Summary: After reminiscing about playing Lode Runner on the Apple II in my Grandpa's garage, I decided to program a retro looking game!
+Summary: After reminiscing about my Lode Runner adventures on the Apple II in my Grandpa's garage, I decided to program a retro looking game!
 
 Blokus Duo is an awesome two player abstract strategy game with two simple rules:
 
