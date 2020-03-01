@@ -50,7 +50,7 @@
 <p>Below is my terminal implementation of Blokus Duo with a computer opponent using only 
 the python standard library.</p>
 <p><img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/random/2019/blokus-with-ai/blokus-with-ai.png" /></p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">curses</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">curses</span>
 <span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
 <span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">shuffle</span>
 
@@ -72,9 +72,9 @@ the python standard library.</p>
 <span class="sd">    A Pixel </span>
 <span class="sd">    &#39;&#39;&#39;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">box</span> <span class="o">=</span> <span class="s">u&quot;</span><span class="se">\u2588</span><span class="s">&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">box</span> <span class="o">=</span> <span class="sa">u</span><span class="s2">&quot;</span><span class="se">\u2588</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">):</span>
         <span class="n">color</span> <span class="o">=</span> <span class="n">curses</span><span class="o">.</span><span class="n">color_pair</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">color</span><span class="p">)</span>
@@ -87,11 +87,11 @@ the python standard library.</p>
 <span class="sd">    The Fundamenal Game Object  </span>
 <span class="sd">    &#39;&#39;&#39;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="n">initial_loc</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="n">initial_loc</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">initial_shape</span> <span class="o">=</span> <span class="n">shape</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">initial_loc</span> <span class="o">=</span> <span class="n">initial_loc</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="n">shape</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">selectable</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selectable</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">grid_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid_y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
 
     <span class="k">def</span> <span class="nf">set_board_location</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">screen</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">top</span><span class="p">):</span>
@@ -108,11 +108,11 @@ the python standard library.</p>
     <span class="k">def</span> <span class="nf">width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
-    <span class="c"># Horizontal board position to terminal coordinate transformation</span>
+    <span class="c1"># Horizontal board position to terminal coordinate transformation</span>
     <span class="k">def</span> <span class="nf">grid_to_xpos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">grid_x</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">board_left</span>
 
-    <span class="c"># Vertical board position to terminal coordinate transformation</span>
+    <span class="c1"># Vertical board position to terminal coordinate transformation</span>
     <span class="k">def</span> <span class="nf">grid_to_ypos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid_y</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">board_top</span>
 
@@ -126,7 +126,7 @@ the python standard library.</p>
                         <span class="n">c</span> <span class="o">=</span> <span class="n">Cell</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">color</span><span class="p">)</span>
                     <span class="n">c</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">draw_in_stockpile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">highlight</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">draw_in_stockpile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">highlight</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reset_shape</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">draw_piece</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">initial_loc</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
@@ -134,7 +134,7 @@ the python standard library.</p>
             <span class="n">highlight</span>
         <span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">draw_in_grid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">highlight</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">draw_in_grid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">highlight</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">draw_piece</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">grid_to_xpos</span><span class="p">(),</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">grid_to_ypos</span><span class="p">(),</span>
@@ -147,7 +147,7 @@ the python standard library.</p>
 
     <span class="k">def</span> <span class="nf">blackout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">colors</span><span class="o">.</span><span class="n">black</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">selectable</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selectable</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">draw_in_stockpile</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="nf">reset_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -155,7 +155,7 @@ the python standard library.</p>
 
     <span class="k">def</span> <span class="nf">place_on_board</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">grid_x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid_y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">draw_in_grid</span><span class="p">(</span><span class="n">highlight</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">draw_in_grid</span><span class="p">(</span><span class="n">highlight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">rotate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid_y</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">()</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">board_bottom</span><span class="p">:</span>
@@ -166,24 +166,24 @@ the python standard library.</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="p">[</span><span class="n">row</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">]</span>
 
     <span class="k">def</span> <span class="nf">player_move</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">move</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">move</span> <span class="o">==</span> <span class="s">&#39;UP&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">move</span> <span class="o">==</span> <span class="s1">&#39;UP&#39;</span><span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid_y</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">grid_y</span> <span class="o">-=</span> <span class="mi">2</span>
-        <span class="k">elif</span> <span class="n">move</span> <span class="o">==</span> <span class="s">&#39;DOWN&#39;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">move</span> <span class="o">==</span> <span class="s1">&#39;DOWN&#39;</span><span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid_y</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">board_bottom</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">():</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">grid_y</span> <span class="o">+=</span> <span class="mi">2</span>
-        <span class="k">elif</span> <span class="n">move</span> <span class="o">==</span> <span class="s">&#39;LEFT&#39;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">move</span> <span class="o">==</span> <span class="s1">&#39;LEFT&#39;</span><span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid_x</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">grid_x</span> <span class="o">-=</span> <span class="mi">2</span>
-        <span class="k">elif</span> <span class="n">move</span> <span class="o">==</span> <span class="s">&#39;RIGHT&#39;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">move</span> <span class="o">==</span> <span class="s1">&#39;RIGHT&#39;</span><span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid_x</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">board_right</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">():</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">grid_x</span> <span class="o">+=</span> <span class="mi">2</span>
-        <span class="k">elif</span> <span class="n">move</span> <span class="o">==</span> <span class="s">&#39;ROTATE&#39;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">move</span> <span class="o">==</span> <span class="s1">&#39;ROTATE&#39;</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">rotate</span><span class="p">()</span>
-        <span class="k">elif</span> <span class="n">move</span> <span class="o">==</span> <span class="s">&#39;FLIP&#39;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">move</span> <span class="o">==</span> <span class="s1">&#39;FLIP&#39;</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">draw_in_grid</span><span class="p">(</span><span class="n">highlight</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">draw_in_grid</span><span class="p">(</span><span class="n">highlight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 
 <span class="n">LONG_L</span> <span class="o">=</span> <span class="n">Piece</span><span class="p">(</span>
@@ -399,27 +399,27 @@ the python standard library.</p>
 <span class="sd">    Transforms Key Presses into Useful Names</span>
 <span class="sd">    &#39;&#39;&#39;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">screen</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">screen</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">screen</span> <span class="o">=</span> <span class="n">screen</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">moves</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="mi">259</span><span class="p">:</span> <span class="s">&#39;UP&#39;</span><span class="p">,</span>
-            <span class="mi">258</span><span class="p">:</span> <span class="s">&#39;DOWN&#39;</span><span class="p">,</span>
-            <span class="mi">260</span><span class="p">:</span> <span class="s">&#39;LEFT&#39;</span><span class="p">,</span>
-            <span class="mi">261</span><span class="p">:</span> <span class="s">&#39;RIGHT&#39;</span><span class="p">,</span>
-            <span class="mi">32</span><span class="p">:</span> <span class="s">&#39;ROTATE&#39;</span><span class="p">,</span>  <span class="c"># space</span>
-            <span class="mi">114</span><span class="p">:</span> <span class="s">&#39;ROTATE&#39;</span><span class="p">,</span>  <span class="c"># r</span>
-            <span class="mi">117</span><span class="p">:</span> <span class="s">&#39;UNSELECT&#39;</span><span class="p">,</span>  <span class="c"># u</span>
-            <span class="mi">102</span><span class="p">:</span> <span class="s">&#39;FLIP&#39;</span><span class="p">,</span>  <span class="c"># f</span>
-            <span class="mi">10</span><span class="p">:</span> <span class="s">&#39;SELECT&#39;</span><span class="p">,</span>  <span class="c"># enter</span>
-            <span class="mi">27</span><span class="p">:</span> <span class="s">&#39;QUIT&#39;</span><span class="p">,</span>  <span class="c"># esc</span>
-            <span class="mi">113</span><span class="p">:</span> <span class="s">&#39;QUIT&#39;</span><span class="p">,</span>  <span class="c"># q</span>
+            <span class="mi">259</span><span class="p">:</span> <span class="s1">&#39;UP&#39;</span><span class="p">,</span>
+            <span class="mi">258</span><span class="p">:</span> <span class="s1">&#39;DOWN&#39;</span><span class="p">,</span>
+            <span class="mi">260</span><span class="p">:</span> <span class="s1">&#39;LEFT&#39;</span><span class="p">,</span>
+            <span class="mi">261</span><span class="p">:</span> <span class="s1">&#39;RIGHT&#39;</span><span class="p">,</span>
+            <span class="mi">32</span><span class="p">:</span> <span class="s1">&#39;ROTATE&#39;</span><span class="p">,</span>  <span class="c1"># space</span>
+            <span class="mi">114</span><span class="p">:</span> <span class="s1">&#39;ROTATE&#39;</span><span class="p">,</span>  <span class="c1"># r</span>
+            <span class="mi">117</span><span class="p">:</span> <span class="s1">&#39;UNSELECT&#39;</span><span class="p">,</span>  <span class="c1"># u</span>
+            <span class="mi">102</span><span class="p">:</span> <span class="s1">&#39;FLIP&#39;</span><span class="p">,</span>  <span class="c1"># f</span>
+            <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;SELECT&#39;</span><span class="p">,</span>  <span class="c1"># enter</span>
+            <span class="mi">27</span><span class="p">:</span> <span class="s1">&#39;QUIT&#39;</span><span class="p">,</span>  <span class="c1"># esc</span>
+            <span class="mi">113</span><span class="p">:</span> <span class="s1">&#39;QUIT&#39;</span><span class="p">,</span>  <span class="c1"># q</span>
         <span class="p">}</span>
 
     <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">event</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">screen</span><span class="o">.</span><span class="n">getch</span><span class="p">()</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span>
 
 
@@ -428,7 +428,7 @@ the python standard library.</p>
 <span class="sd">    The Curses Library Handles the Graphics</span>
 <span class="sd">    &#39;&#39;&#39;</span>
 
-    <span class="k">def</span> <span class="nf">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">screen</span> <span class="o">=</span> <span class="n">curses</span><span class="o">.</span><span class="n">initscr</span><span class="p">()</span>
         <span class="n">screen</span><span class="o">.</span><span class="n">keypad</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
@@ -444,7 +444,7 @@ the python standard library.</p>
 
         <span class="k">return</span> <span class="n">screen</span>
 
-    <span class="k">def</span> <span class="nf">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
         <span class="n">curses</span><span class="o">.</span><span class="n">endwin</span><span class="p">()</span>
 
 
@@ -453,7 +453,7 @@ the python standard library.</p>
 <span class="sd">    Creates a Game Space and Sets Rules for the Game</span>
 <span class="sd">    &#39;&#39;&#39;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">screen</span><span class="p">,</span> <span class="n">screen_height</span><span class="p">,</span> <span class="n">screen_width</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">screen</span><span class="p">,</span> <span class="n">screen_height</span><span class="p">,</span> <span class="n">screen_width</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">screen</span> <span class="o">=</span> <span class="n">screen</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">top</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">screen_height</span> <span class="o">-</span> <span class="n">BOARD_HEIGHT</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">screen_width</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">BOARD_WIDTH</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
@@ -461,9 +461,9 @@ the python standard library.</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_title</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_help_menu</span><span class="p">()</span>
 
-        <span class="c"># The Blue player must start the game at this location</span>
+        <span class="c1"># The Blue player must start the game at this location</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">blue_start</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
-        <span class="c"># The Red player must start the game at this location</span>
+        <span class="c1"># The Red player must start the game at this location</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">red_start</span> <span class="o">=</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">18</span><span class="p">]</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">grid</span> <span class="o">=</span> <span class="p">[]</span>
@@ -479,24 +479,24 @@ the python standard library.</p>
 
     <span class="k">def</span> <span class="nf">add_title</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">title</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="s">&#39; ____  _       _&#39;</span><span class="p">,</span>
-            <span class="s">&#39;|  _ \| |     | | &#39;</span><span class="p">,</span>
-            <span class="s">&#39;| |_) | | ___ | | ___   _ ___ &#39;</span><span class="p">,</span>
-            <span class="s">&#39;|  _ &lt;| |/ _ \| |/ / | | / __| &#39;</span><span class="p">,</span>
-            <span class="s">&#39;| |_) | | (_) |   &lt;| |_| \__ \ &#39;</span><span class="p">,</span>
-            <span class="s">&#39;|____/|_|\___/|_|\_</span><span class="se">\\</span><span class="s">__,__|___/ &#39;</span><span class="p">,</span>
+            <span class="s1">&#39; ____  _       _&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;|  _ \| |     | | &#39;</span><span class="p">,</span>
+            <span class="s1">&#39;| |_) | | ___ | | ___   _ ___ &#39;</span><span class="p">,</span>
+            <span class="s1">&#39;|  _ &lt;| |/ _ \| |/ / | | / __| &#39;</span><span class="p">,</span>
+            <span class="s1">&#39;| |_) | | (_) |   &lt;| |_| \__ \ &#39;</span><span class="p">,</span>
+            <span class="s1">&#39;|____/|_|\___/|_|\_</span><span class="se">\\</span><span class="s1">__,__|___/ &#39;</span><span class="p">,</span>
         <span class="p">]</span>
         <span class="n">y_offset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">top</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">title</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">draw_text</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">y_offset</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">add_help_menu</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">help_menu</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="s">&quot;MOVE     = ARROW KEYS&quot;</span><span class="p">,</span>
-            <span class="s">&quot;SELECT   = ENTER&quot;</span><span class="p">,</span>
-            <span class="s">&quot;UNSELECT = U&quot;</span><span class="p">,</span>
-            <span class="s">&quot;ROTATE   = SPACE&quot;</span><span class="p">,</span>
-            <span class="s">&quot;FLIP     = F&quot;</span><span class="p">,</span>
-            <span class="s">&quot;QUIT     = Q&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;MOVE     = ARROW KEYS&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;SELECT   = ENTER&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;UNSELECT = U&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ROTATE   = SPACE&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;FLIP     = F&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;QUIT     = Q&quot;</span><span class="p">,</span>
         <span class="p">]</span>
         <span class="n">y_offset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">top</span> <span class="o">+</span> <span class="n">BOARD_HEIGHT</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">draw_text</span><span class="p">(</span><span class="n">help_menu</span><span class="p">,</span> <span class="n">y_offset</span><span class="p">)</span>
@@ -561,11 +561,11 @@ the python standard library.</p>
                 <span class="k">if</span> <span class="n">piece</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="n">col</span><span class="p">][</span><span class="n">row</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
                     <span class="n">grid_x</span><span class="p">,</span> <span class="n">grid_y</span> <span class="o">=</span> <span class="n">piece</span><span class="o">.</span><span class="n">grid_x</span> <span class="o">+</span> <span class="n">row</span><span class="p">,</span> <span class="n">piece</span><span class="o">.</span><span class="n">grid_y</span> <span class="o">+</span> <span class="n">col</span>
                     <span class="k">if</span> <span class="p">[</span><span class="n">grid_x</span><span class="p">,</span> <span class="n">grid_y</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="n">start_x</span><span class="p">,</span> <span class="n">start_y</span><span class="p">]:</span>
-                        <span class="k">return</span> <span class="bp">True</span>
-        <span class="k">return</span> <span class="bp">False</span>
+                        <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span>
 
     <span class="k">def</span> <span class="nf">confirm_valid_move</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">piece</span><span class="p">):</span>
-        <span class="n">is_valid</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="n">is_valid</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="n">blue_start_x</span><span class="p">,</span> <span class="n">blue_start_y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">blue_start</span>
         <span class="n">red_start_x</span><span class="p">,</span> <span class="n">red_start_y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">red_start</span>
 
@@ -603,7 +603,7 @@ the python standard library.</p>
 <span class="sd">    A Simple Minimax algorithm with Alpha Beta Pruning Controls the Red Player</span>
 <span class="sd">    &#39;&#39;&#39;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">board</span><span class="p">,</span> <span class="n">player_pieces</span><span class="p">,</span> <span class="n">opponent_pieces</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">board</span><span class="p">,</span> <span class="n">player_pieces</span><span class="p">,</span> <span class="n">opponent_pieces</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">board</span> <span class="o">=</span> <span class="n">board</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span> <span class="o">=</span> <span class="n">player_pieces</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">opponent_pieces</span> <span class="o">=</span> <span class="n">opponent_pieces</span>
@@ -612,7 +612,7 @@ the python standard library.</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">beta</span> <span class="o">=</span> <span class="mi">10000</span>
 
     <span class="k">def</span> <span class="nf">save_and_record_piece_on_grid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">piece</span><span class="p">):</span>
-        <span class="n">piece</span><span class="o">.</span><span class="n">selectable</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="n">piece</span><span class="o">.</span><span class="n">selectable</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="n">move_locations</span> <span class="o">=</span> <span class="p">[]</span>
 
         <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">piece</span><span class="o">.</span><span class="n">height</span><span class="p">()):</span>
@@ -620,17 +620,17 @@ the python standard library.</p>
                 <span class="k">if</span> <span class="n">piece</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="n">col</span><span class="p">][</span><span class="n">row</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
                     <span class="n">grid_x</span><span class="p">,</span> <span class="n">grid_y</span> <span class="o">=</span> <span class="n">piece</span><span class="o">.</span><span class="n">grid_x</span> <span class="o">+</span> <span class="n">row</span><span class="p">,</span> <span class="n">piece</span><span class="o">.</span><span class="n">grid_y</span> <span class="o">+</span> <span class="n">col</span>
 
-                    <span class="c"># Record grid colors before the piece was placed</span>
+                    <span class="c1"># Record grid colors before the piece was placed</span>
                     <span class="n">previous_color</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="o">.</span><span class="n">grid</span><span class="p">[</span><span class="n">grid_x</span><span class="p">][</span><span class="n">grid_y</span><span class="p">]</span><span class="o">.</span><span class="n">color</span>
                     <span class="n">move_locations</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">grid_x</span><span class="p">,</span> <span class="n">grid_y</span><span class="p">,</span> <span class="n">previous_color</span><span class="p">])</span>
 
-                    <span class="c"># Place the piece</span>
+                    <span class="c1"># Place the piece</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="o">.</span><span class="n">grid</span><span class="p">[</span><span class="n">grid_x</span><span class="p">][</span><span class="n">grid_y</span><span class="p">]</span> <span class="o">=</span> <span class="n">Cell</span><span class="p">(</span><span class="n">piece</span><span class="o">.</span><span class="n">color</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="n">move_locations</span>
 
     <span class="k">def</span> <span class="nf">undo_last_move</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">piece</span><span class="p">,</span> <span class="n">move_locations</span><span class="p">):</span>
-        <span class="n">piece</span><span class="o">.</span><span class="n">selectable</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="n">piece</span><span class="o">.</span><span class="n">selectable</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="n">piece</span><span class="o">.</span><span class="n">reset_shape</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">grid_x</span><span class="p">,</span> <span class="n">grid_y</span><span class="p">,</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">move_locations</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="o">.</span><span class="n">grid</span><span class="p">[</span><span class="n">grid_x</span><span class="p">][</span><span class="n">grid_y</span><span class="p">]</span> <span class="o">=</span> <span class="n">Cell</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
@@ -641,7 +641,7 @@ the python standard library.</p>
 
         <span class="k">for</span> <span class="n">piece_index</span> <span class="ow">in</span> <span class="n">piece_indexes</span><span class="p">:</span>
             <span class="n">piece</span> <span class="o">=</span> <span class="n">all_pieces</span><span class="p">[</span><span class="n">piece_index</span><span class="p">]</span>
-            <span class="k">if</span> <span class="n">piece</span><span class="o">.</span><span class="n">selectable</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">piece</span><span class="o">.</span><span class="n">selectable</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
                 <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
                     <span class="n">piece</span><span class="o">.</span><span class="n">rotate</span><span class="p">()</span>
                     <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
@@ -654,7 +654,7 @@ the python standard library.</p>
                                         <span class="k">return</span> <span class="n">piece</span>
 
     <span class="k">def</span> <span class="nf">minimax</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tree_depth</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">isMaximisingPlayer</span><span class="p">):</span>
-        <span class="c"># Larger pieces closer to the center are high scoring moves</span>
+        <span class="c1"># Larger pieces closer to the center are high scoring moves</span>
         <span class="k">if</span> <span class="n">tree_depth</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">def</span> <span class="nf">distance_to_center</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
                 <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">BOARD_WIDTH</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">BOARD_HEIGHT</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
@@ -673,7 +673,7 @@ the python standard library.</p>
             <span class="n">pieces_to_try</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">opponent_pieces</span><span class="p">)</span>
             <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">pieces_to_try</span><span class="p">):</span>
                 <span class="n">piece</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_random_move</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">opponent_pieces</span><span class="p">)</span>
-                <span class="k">if</span> <span class="n">piece</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">piece</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                     <span class="k">return</span> <span class="n">best_move</span>
 
                 <span class="n">move_locations</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">save_and_record_piece_on_grid</span><span class="p">(</span><span class="n">piece</span><span class="p">)</span>
@@ -694,7 +694,7 @@ the python standard library.</p>
             <span class="n">pieces_to_try</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span><span class="p">)</span>
             <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">pieces_to_try</span><span class="p">):</span>
                 <span class="n">piece</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_random_move</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span><span class="p">)</span>
-                <span class="k">if</span> <span class="n">piece</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">piece</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                     <span class="k">return</span> <span class="n">best_move</span>
 
                 <span class="n">move_locations</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">save_and_record_piece_on_grid</span><span class="p">(</span><span class="n">piece</span><span class="p">)</span>
@@ -715,7 +715,7 @@ the python standard library.</p>
         <span class="n">pieces_to_try</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">opponent_pieces</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">pieces_to_try</span><span class="p">):</span>
             <span class="n">piece</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_random_move</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">opponent_pieces</span><span class="p">)</span>
-            <span class="k">if</span> <span class="n">piece</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">piece</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="k">return</span>
 
             <span class="n">move_locations</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">save_and_record_piece_on_grid</span><span class="p">(</span><span class="n">piece</span><span class="p">)</span>
@@ -724,7 +724,7 @@ the python standard library.</p>
                 <span class="bp">self</span><span class="o">.</span><span class="n">tree_depth</span><span class="p">,</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span><span class="p">,</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">beta</span><span class="p">,</span>
-                <span class="n">isMaximisingPlayer</span><span class="o">=</span><span class="bp">True</span>
+                <span class="n">isMaximisingPlayer</span><span class="o">=</span><span class="kc">True</span>
             <span class="p">)</span>
 
             <span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="n">best_move</span><span class="p">:</span>
@@ -745,19 +745,19 @@ the python standard library.</p>
 <span class="sd">    Sets up the game, defines the flow, and links the user and AI actions </span>
 <span class="sd">    &#39;&#39;&#39;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">screen</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">is_playing</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">screen</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_playing</span> <span class="o">=</span> <span class="kc">True</span>
 
         <span class="n">screen_height</span><span class="p">,</span> <span class="n">screen_width</span> <span class="o">=</span> <span class="n">screen</span><span class="o">.</span><span class="n">getmaxyx</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">screen_height</span> <span class="o">&lt;</span> <span class="mi">45</span> <span class="ow">or</span> <span class="n">screen_width</span> <span class="o">&lt;</span> <span class="mi">115</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s">&#39;Increase size of Terminal&#39;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;Increase size of Terminal&#39;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">board</span> <span class="o">=</span> <span class="n">Board</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">screen_height</span><span class="p">,</span> <span class="n">screen_width</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="o">.</span><span class="n">draw_board</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">input_generator</span> <span class="o">=</span> <span class="n">Input</span><span class="p">(</span><span class="n">screen</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">piece_index</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">selected_piece</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selected_piece</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">setup_player_pieces</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setup_opponent_pieces</span><span class="p">()</span>
@@ -770,7 +770,7 @@ the python standard library.</p>
             <span class="n">piece</span><span class="o">.</span><span class="n">initial_loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="n">piece</span><span class="o">.</span><span class="n">board_top</span>
             <span class="n">piece</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="n">colors</span><span class="o">.</span><span class="n">blue</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="n">piece</span><span class="o">.</span><span class="n">draw_in_stockpile</span><span class="p">(</span><span class="n">highlight</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+                <span class="n">piece</span><span class="o">.</span><span class="n">draw_in_stockpile</span><span class="p">(</span><span class="n">highlight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">piece</span><span class="o">.</span><span class="n">draw_in_stockpile</span><span class="p">()</span>
 
@@ -784,41 +784,41 @@ the python standard library.</p>
             <span class="n">piece</span><span class="o">.</span><span class="n">draw_in_stockpile</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="nf">select_game_piece</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">move</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">move</span> <span class="o">==</span> <span class="s">&#39;RIGHT&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">move</span> <span class="o">==</span> <span class="s1">&#39;RIGHT&#39;</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">piece_index</span> <span class="o">+=</span> <span class="mi">1</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">piece_index</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">piece_index</span> <span class="o">=</span> <span class="mi">0</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">draw_in_stockpile</span><span class="p">(</span><span class="n">highlight</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">draw_in_stockpile</span><span class="p">(</span><span class="n">highlight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">draw_in_stockpile</span><span class="p">()</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">piece_index</span><span class="p">]</span><span class="o">.</span><span class="n">draw_in_stockpile</span><span class="p">(</span><span class="n">highlight</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">piece_index</span><span class="p">]</span><span class="o">.</span><span class="n">draw_in_stockpile</span><span class="p">(</span><span class="n">highlight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">piece_index</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">draw_in_stockpile</span><span class="p">()</span>
-        <span class="k">elif</span> <span class="n">move</span> <span class="o">==</span> <span class="s">&#39;LEFT&#39;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">move</span> <span class="o">==</span> <span class="s1">&#39;LEFT&#39;</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">piece_index</span> <span class="o">-=</span> <span class="mi">1</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">piece_index</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">piece_index</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">draw_in_stockpile</span><span class="p">(</span><span class="n">highlight</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">draw_in_stockpile</span><span class="p">(</span><span class="n">highlight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">draw_in_stockpile</span><span class="p">()</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">piece_index</span><span class="p">]</span><span class="o">.</span><span class="n">draw_in_stockpile</span><span class="p">(</span><span class="n">highlight</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">piece_index</span><span class="p">]</span><span class="o">.</span><span class="n">draw_in_stockpile</span><span class="p">(</span><span class="n">highlight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">piece_index</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">draw_in_stockpile</span><span class="p">()</span>
 
-        <span class="k">if</span> <span class="n">move</span> <span class="o">==</span> <span class="s">&#39;SELECT&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">move</span> <span class="o">==</span> <span class="s1">&#39;SELECT&#39;</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">selected_piece</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">piece_index</span><span class="p">]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">selected_piece</span><span class="o">.</span><span class="n">place_on_board</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="nf">cleanup_selected_piece</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">selected_piece</span><span class="o">.</span><span class="n">blackout</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">selected_piece</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">selected_piece</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">selectable</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">piece_index</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">draw_in_stockpile</span><span class="p">(</span><span class="n">highlight</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">draw_in_stockpile</span><span class="p">(</span><span class="n">highlight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-    <span class="c"># Checks if the Blue Player is able to place a single piece</span>
+    <span class="c1"># Checks if the Blue Player is able to place a single piece</span>
     <span class="k">def</span> <span class="nf">endgame_check</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">piece</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">piece</span><span class="o">.</span><span class="n">selectable</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">piece</span><span class="o">.</span><span class="n">selectable</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
                 <span class="k">for</span> <span class="n">rotation_count</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
                     <span class="n">piece</span><span class="o">.</span><span class="n">rotate</span><span class="p">()</span>
                     <span class="k">for</span> <span class="n">flip_count</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
@@ -828,8 +828,8 @@ the python standard library.</p>
                                 <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="o">.</span><span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">color</span> <span class="o">==</span> <span class="n">colors</span><span class="o">.</span><span class="n">yellow</span><span class="p">:</span>
                                     <span class="n">piece</span><span class="o">.</span><span class="n">grid_x</span><span class="p">,</span> <span class="n">piece</span><span class="o">.</span><span class="n">grid_y</span> <span class="o">=</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span>
                                     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="o">.</span><span class="n">count_corner_touches</span><span class="p">(</span><span class="n">piece</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-                                        <span class="k">return</span> <span class="bp">False</span>
-        <span class="k">return</span> <span class="bp">True</span>
+                                        <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">True</span>
 
     <span class="k">def</span> <span class="nf">opponent_turn</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">game_ai</span> <span class="o">=</span> <span class="n">GameAI</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">player_pieces</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">opponent_pieces</span><span class="p">)</span>
@@ -839,35 +839,35 @@ the python standard library.</p>
             <span class="n">best_piece</span><span class="o">.</span><span class="n">blackout</span><span class="p">()</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">opponent_pieces</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">opponent_pieces</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">selectable</span><span class="p">]</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">is_playing</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">is_playing</span> <span class="o">=</span> <span class="kc">False</span>
 
     <span class="k">def</span> <span class="nf">game_loop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
             <span class="n">move</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_generator</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
 
-            <span class="k">if</span> <span class="n">move</span> <span class="o">==</span> <span class="s">&#39;QUIT&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">move</span> <span class="o">==</span> <span class="s1">&#39;QUIT&#39;</span><span class="p">:</span>
                 <span class="k">break</span>
 
             <span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="o">.</span><span class="n">draw_board</span><span class="p">()</span>
 
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_playing</span><span class="p">:</span>
-                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_piece</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_piece</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">select_game_piece</span><span class="p">(</span><span class="n">move</span><span class="p">)</span>
                 <span class="k">else</span><span class="p">:</span>
-                    <span class="k">if</span> <span class="n">move</span> <span class="o">==</span> <span class="s">&#39;UNSELECT&#39;</span><span class="p">:</span>
-                        <span class="bp">self</span><span class="o">.</span><span class="n">selected_piece</span> <span class="o">=</span> <span class="bp">None</span>
-                    <span class="k">elif</span> <span class="n">move</span> <span class="o">==</span> <span class="s">&#39;SELECT&#39;</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">move</span> <span class="o">==</span> <span class="s1">&#39;UNSELECT&#39;</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">selected_piece</span> <span class="o">=</span> <span class="kc">None</span>
+                    <span class="k">elif</span> <span class="n">move</span> <span class="o">==</span> <span class="s1">&#39;SELECT&#39;</span><span class="p">:</span>
                         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="o">.</span><span class="n">confirm_valid_move</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_piece</span><span class="p">):</span>
                             <span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="o">.</span><span class="n">save_piece_on_grid</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_piece</span><span class="p">)</span>
                             <span class="bp">self</span><span class="o">.</span><span class="n">cleanup_selected_piece</span><span class="p">()</span>
 
                             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">endgame_check</span><span class="p">():</span>
-                                <span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="o">.</span><span class="n">draw_endgame_score</span><span class="p">(</span><span class="s">&#39;Red Won&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">.</span><span class="n">red</span><span class="p">)</span>
-                                <span class="bp">self</span><span class="o">.</span><span class="n">is_playing</span> <span class="o">=</span> <span class="bp">False</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="o">.</span><span class="n">draw_endgame_score</span><span class="p">(</span><span class="s1">&#39;Red Won&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">.</span><span class="n">red</span><span class="p">)</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">is_playing</span> <span class="o">=</span> <span class="kc">False</span>
                             <span class="k">else</span><span class="p">:</span>
                                 <span class="bp">self</span><span class="o">.</span><span class="n">opponent_turn</span><span class="p">()</span>
-                                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_playing</span> <span class="ow">is</span> <span class="bp">False</span><span class="p">:</span>
-                                    <span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="o">.</span><span class="n">draw_endgame_score</span><span class="p">(</span><span class="s">&#39;Blue Won&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">.</span><span class="n">blue</span><span class="p">)</span>
+                                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_playing</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="o">.</span><span class="n">draw_endgame_score</span><span class="p">(</span><span class="s1">&#39;Blue Won&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">.</span><span class="n">blue</span><span class="p">)</span>
                     <span class="k">else</span><span class="p">:</span>
                         <span class="bp">self</span><span class="o">.</span><span class="n">selected_piece</span><span class="o">.</span><span class="n">player_move</span><span class="p">(</span><span class="n">move</span><span class="p">)</span>
 
@@ -875,13 +875,13 @@ the python standard library.</p>
         <span class="k">try</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">game_loop</span><span class="p">()</span>
         <span class="k">except</span><span class="p">:</span>
-            <span class="nb">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>    
-    <span class="c"># If python2, use locale.LC_ALL for a solid pixel box</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>    
+    <span class="c1"># If python2, use locale.LC_ALL for a solid pixel box</span>
     <span class="kn">import</span> <span class="nn">locale</span>
-    <span class="n">locale</span><span class="o">.</span><span class="n">setlocale</span><span class="p">(</span><span class="n">locale</span><span class="o">.</span><span class="n">LC_ALL</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">)</span>
+    <span class="n">locale</span><span class="o">.</span><span class="n">setlocale</span><span class="p">(</span><span class="n">locale</span><span class="o">.</span><span class="n">LC_ALL</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
 
     <span class="k">with</span> <span class="n">Curses</span><span class="p">()</span> <span class="k">as</span> <span class="n">screen</span><span class="p">:</span>
         <span class="n">game</span> <span class="o">=</span> <span class="n">Game</span><span class="p">(</span><span class="n">screen</span><span class="p">)</span>
