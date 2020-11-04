@@ -1,7 +1,7 @@
 <div class="row vertical-align">
     <div class="col-sm-3 hidden-xs text-center">
          <a href="{{ SITEURL }}/{{ article.url }}">
-            <img class="image_center_style" src="/category/thumbnails/{{ article.url[:-1]}}_thumbnail_tall.png">
+            <img class="image_center_style" src="{{ SITEURL }}/category/thumbnails/{{article.url.split('index.html')[0][:-1]}}_thumbnail_tall.png">
          </a>
     </div>
     <div class="col-sm-9 col-xs-12">

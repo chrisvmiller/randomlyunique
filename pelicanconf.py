@@ -13,7 +13,7 @@ PATH = u'content'
 
 STATIC_PATHS = [u'assets']
 
-ARTICLE_URL = u'{category}/{date:%Y}/{slug}/'
+ARTICLE_URL = u'{category}/{date:%Y}/{slug}/index.html'
 ARTICLE_SAVE_AS = u'{category}/{date:%Y}/{slug}/index.html'
 
 DEFAULT_PAGINATION = False

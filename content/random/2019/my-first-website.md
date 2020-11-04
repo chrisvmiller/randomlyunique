@@ -130,12 +130,12 @@ starting image shown below) occurs. And, points will be lost if the wrong decay 
 
 <center>
     <span id=correct_decay_arrow_down> &#8595; Find this Decay &#8595; </span>  
-    <img height=250 src="/assets/random/2019/decay_correct.png" width=350 border=0> 
-    <img height=250 src="/assets/random/2019/decay_1.png" width=350 border=0 hidden> 
-    <img height=250 src="/assets/random/2019/decay_2.png" width=350 border=0 hidden> 
-    <img height=250 src="/assets/random/2019/decay_3.png" width=350 border=0 hidden> 
-    <img height=250 src="/assets/random/2019/decay_4.png" width=350 border=0 hidden>
-    <img height=250 src="/assets/random/2019/decay_5.png" width=350 border=0 hidden>
+    ![Photo]({attach}/assets/random/2019/decay_correct.png){height=250 width=350 border=0}
+    ![Photo]({attach}/assets/random/2019/decay_1.png){hidden height=250 width=350 border=0}
+    ![Photo]({attach}/assets/random/2019/decay_2.png){hidden height=250 width=350 border=0}
+    ![Photo]({attach}/assets/random/2019/decay_3.png){hidden height=250 width=350 border=0}
+    ![Photo]({attach}/assets/random/2019/decay_4.png){hidden height=250 width=350 border=0}
+    ![Photo]({attach}/assets/random/2019/decay_5.png){hidden height=250 width=350 border=0}
 </center>
 
 <center>
