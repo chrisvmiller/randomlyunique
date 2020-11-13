@@ -853,5 +853,5 @@ the python standard library.
             game.play()
 
 <p align="center">
-    <a class="nounderline" href="/assets/random/2019/play_blokus.py">Download</a>
+    <a class="nounderline" href="{attach}/assets/random/2019/play_blokus.py">Download</a>
 </p>
