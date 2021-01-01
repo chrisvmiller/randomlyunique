@@ -37,189 +37,16 @@
 <div class="container">
     <section id="content">
 <article>
-    <h2 class="header-title text-center">Scrabble Art Generator</h2>
+    <h2 class="header-title text-center">Customized Multideck</h2>
 
     <div class="entry-content">
         <h5 class="article-date text-center">
                 <span class="category-newtag"> new </span>
                 <span class="category-tag"> random </span>
         </h5>
-        <p>In my humble opinion, art is incredibly personal and displaying a purchased canvas of "A Starry Night" - although beautiful - totally misses the mark. With this in mind, I acquired a used copy of Scrabble for some board game themed wall art! My goal: scrabbly connecting a bunch of adjectives to my name. </p>
-<p>Instead of manually finding a hodgepodge of properly connected adjectives, I decided to automate this search. In a nutshell, this super naive algorithm boils down to a 2 dimensional regex solver that randomly samples adjectives from Wordnet.</p>
-<p><img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/random/2020/scrabble-art-generator/scrabble-art-generator.png" /></p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">argparse</span>
-<span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">wordnet</span> <span class="k">as</span> <span class="n">wn</span>
-
-
-<span class="k">class</span> <span class="nc">Scrabbler</span><span class="p">():</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">my_name</span><span class="p">,</span> <span class="n">board_size</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">my_name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">board_size</span> <span class="o">=</span> <span class="n">board_size</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">board</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">([</span><span class="n">board_size</span><span class="p">,</span> <span class="n">board_size</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">[:]</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;.?&#39;</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">used_words</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">look_at_rows</span> <span class="o">=</span> <span class="kc">False</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">read_clean_word_list</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">place_name_on_board</span><span class="p">()</span>
-
-    <span class="k">def</span> <span class="nf">read_clean_word_list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">all_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-        <span class="k">for</span> <span class="n">adjective</span> <span class="ow">in</span> <span class="n">wn</span><span class="o">.</span><span class="n">all_synsets</span><span class="p">(</span><span class="n">wn</span><span class="o">.</span><span class="n">ADJ</span><span class="p">):</span>
-            <span class="c1"># Remove Roman Numerals</span>
-            <span class="k">if</span> <span class="s1">&#39;more than&#39;</span> <span class="ow">in</span> <span class="n">adjective</span><span class="o">.</span><span class="n">definition</span><span class="p">():</span>
-                <span class="k">continue</span>
-            <span class="k">for</span> <span class="n">lemma</span> <span class="ow">in</span> <span class="n">adjective</span><span class="o">.</span><span class="n">lemma_names</span><span class="p">():</span>
-                <span class="k">if</span> <span class="n">lemma</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">lemma</span><span class="p">)</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">board_size</span><span class="p">:</span>
-                    <span class="n">all_words</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">lemma</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">all_words</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">all_words</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">]</span>
-
-    <span class="k">def</span> <span class="nf">place_name_on_board</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">starting_loc</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board_size</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">))</span> <span class="o">//</span> <span class="mi">2</span>
-        <span class="n">end_loc</span> <span class="o">=</span> <span class="n">starting_loc</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-        <span class="n">center_row</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">board_size</span> <span class="o">//</span> <span class="mi">2</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">[</span><span class="n">center_row</span><span class="p">][</span><span class="n">starting_loc</span><span class="p">:</span><span class="n">end_loc</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-
-    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">try_to_place</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">word</span><span class="p">):</span>
-        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">characters</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="k">for</span> <span class="n">characters</span> <span class="ow">in</span> <span class="n">line</span><span class="p">):</span>
-            <span class="n">smushed_line</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;^</span><span class="si">{</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">line</span><span class="p">)</span><span class="si">}</span><span class="s1">$&#39;</span>
-            <span class="n">smushed_line_regrex</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">smushed_line</span><span class="p">)</span>
-
-            <span class="k">if</span> <span class="n">smushed_line_regrex</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
-                <span class="n">num_characters_in_line</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span>
-                    <span class="n">characters</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="k">for</span> <span class="n">characters</span> <span class="ow">in</span> <span class="n">line</span>
-                <span class="p">)</span>
-                <span class="n">word_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
-
-                <span class="k">for</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">-</span> <span class="n">word_length</span><span class="p">):</span>
-                    <span class="n">new_line</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39; &#39;</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-                    <span class="n">new_line</span><span class="p">[</span><span class="n">position</span><span class="p">:</span><span class="n">position</span><span class="o">+</span><span class="n">word_length</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
-
-                    <span class="n">total_in_common</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span>
-                        <span class="mi">1</span> <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span> <span class="k">else</span> <span class="mi">0</span> <span class="k">for</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">new_line</span><span class="p">)</span>
-                    <span class="p">)</span>
-
-                    <span class="k">if</span> <span class="n">total_in_common</span> <span class="o">==</span> <span class="n">num_characters_in_line</span><span class="p">:</span>
-                        <span class="n">revert_back_to_regex</span> <span class="o">=</span> <span class="p">[</span>
-                            <span class="s1">&#39;.?&#39;</span> <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span> <span class="k">else</span> <span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">new_line</span>
-                        <span class="p">]</span>
-                        <span class="k">return</span> <span class="n">revert_back_to_regex</span>
-
-    <span class="k">def</span> <span class="nf">placeWord</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">board</span><span class="p">,</span> <span class="n">word</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">temp_board</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="n">copied_board</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">board</span><span class="p">)</span>
-
-        <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">board</span><span class="p">):</span>
-            <span class="n">letters_in_common</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">line</span><span class="p">)</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
-            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">letters_in_common</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="n">new_word</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">try_to_place</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span>
-                <span class="k">if</span> <span class="n">new_word</span><span class="p">:</span>
-                    <span class="n">copied_board</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_word</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">temp_board</span> <span class="o">=</span> <span class="n">copied_board</span>
-                    <span class="k">break</span>
-
-    <span class="k">def</span> <span class="nf">check_for_valid_lines</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">temp_board</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">False</span>
-
-        <span class="k">for</span> <span class="n">temp_board_orientation</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">temp_board</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">temp_board</span><span class="o">.</span><span class="n">T</span><span class="p">]:</span>
-            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">temp_board_orientation</span><span class="p">:</span>
-                <span class="n">words</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.?&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-                <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
-                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-                        <span class="k">if</span> <span class="ow">not</span> <span class="n">word</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">all_words</span><span class="p">:</span>
-                            <span class="k">return</span> <span class="kc">False</span>
-
-        <span class="k">return</span> <span class="kc">True</span>
-
-    <span class="k">def</span> <span class="nf">add_valid_word_to_board</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">all_words</span><span class="p">)</span>
-
-        <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">all_words</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">used_words</span><span class="p">:</span>
-                <span class="k">continue</span>
-
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">look_at_rows</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">placeWord</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">placeWord</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span>
-
-            <span class="n">is_valid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">check_for_valid_lines</span><span class="p">()</span>
-            <span class="k">if</span> <span class="n">is_valid</span><span class="p">:</span>
-                <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">look_at_rows</span><span class="p">:</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">temp_board</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temp_board</span><span class="o">.</span><span class="n">T</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">temp_board</span>
-                <span class="k">return</span> <span class="n">word</span>
-
-    <span class="k">def</span> <span class="nf">print_board</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">:</span>
-            <span class="n">clean_row</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.?&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">clean_row</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-            <span class="n">valid_word</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_valid_word_to_board</span><span class="p">()</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="n">valid_word</span><span class="p">:</span>
-                <span class="k">break</span>
-
-            <span class="bp">self</span><span class="o">.</span><span class="n">look_at_rows</span> <span class="o">=</span> <span class="o">~</span><span class="bp">self</span><span class="o">.</span><span class="n">look_at_rows</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">used_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">valid_word</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">print_board</span><span class="p">()</span>
-
-
-<span class="k">def</span> <span class="nf">check_wordnet_exists</span><span class="p">():</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">wn</span><span class="o">.</span><span class="n">fileids</span><span class="p">()</span>
-    <span class="k">except</span> <span class="ne">LookupError</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Downloading wordnet, is this okay? (y/n)&#39;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="nb">input</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span>
-            <span class="kn">import</span> <span class="nn">nltk</span>
-            <span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;wordnet&#39;</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">exit</span><span class="p">()</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--name&#39;</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Sets your name&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--size&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span>
-                        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Sets the size of the board&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--iter&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-                        <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Sets the number of boards generated&#39;</span><span class="p">)</span>
-    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
-
-    <span class="n">my_name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-    <span class="n">board_size</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">size</span>
-    <span class="n">number_of_iterations</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">iter</span>
-
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">my_name</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Missing `--name &lt;My Name&gt;` argument&quot;</span><span class="p">)</span>
-        <span class="n">exit</span><span class="p">()</span>
-    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">my_name</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">board_size</span><span class="p">:</span>
-        <span class="n">board_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">my_name</span><span class="p">)</span>
-
-    <span class="n">check_wordnet_exists</span><span class="p">()</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Running Scrabbler</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number_of_iterations</span><span class="p">):</span>
-        <span class="n">scrabbler</span> <span class="o">=</span> <span class="n">Scrabbler</span><span class="p">(</span><span class="n">my_name</span><span class="p">,</span> <span class="n">board_size</span><span class="p">)</span>
-        <span class="n">scrabbler</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-</pre></div>
-
-
-<p align="center">
-    <a class="nounderline" href="http://www.randomlyunique.com/random/2020/scrabble-art-generator/scrabbler.py">Download</a>
-</p>
+        <p>There are hundreds of amazing games you can play with a standard French deck of 52 cards. Nevertheless, a number of really fun card games cannot be mapped onto four suits in two colors. Below is my multideck design that incorporates some of my favorite card games:</p>
+<p><img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/random/2021/customized-multideck/customized-multideck.jpg" /></p>
+<p><img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/random/2021/customized-multideck/card-mapping.jpg" /></p>
     </div>
 </article>
 
@@ -257,16 +84,16 @@
     </div>
 </div><div class="row vertical-align">
     <div class="col-sm-3 hidden-xs text-center">
-         <a href="http://www.randomlyunique.com/random/2020/violet-bear-documentary/index.html">
-            <img class="image_center_style" src="http://www.randomlyunique.com/category/thumbnails/random/2020/violet-bear-documentary_thumbnail_tall.png">
+         <a href="http://www.randomlyunique.com/random/2020/scrabble-art-generator/index.html">
+            <img class="image_center_style" src="http://www.randomlyunique.com/category/thumbnails/random/2020/scrabble-art-generator_thumbnail_tall.png">
          </a>
     </div>
     <div class="col-sm-9 col-xs-12">
         <p class="article-text">
                 <span class="category-tag"> Random </span>
 
-            <a href="http://www.randomlyunique.com/random/2020/violet-bear-documentary/index.html">Purple Violet Bear Documentary</a>:
-            Art Clokey inspired my most rebellious teenage outburst.
+            <a href="http://www.randomlyunique.com/random/2020/scrabble-art-generator/index.html">Scrabble Art Generator</a>:
+            Nothing says respectable bourgeoisie home decor more than a used Scrabble board nailed to your wall.
         </p>
     </div>
 </div>

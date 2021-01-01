@@ -4,7 +4,7 @@ Category: random
 Slug: scrabble-art-generator
 Summary: Nothing says respectable bourgeoisie home decor more than a used Scrabble board nailed to your wall.
 
-In my humble opinion, art is incredibly personal and displaying a purchased canvas of "A Starry Night" - although beautiful - totally misses the mark. With this in mind, I acquired a used copy of Scrabble for some board game themed wall art! My goal: scrabbly connecting a bunch of adjectives to my name. 
+I completely believe that displaying a purchased canvas of "A Starry Night" - although beautiful - totally misses the inherit personal nature of art. With this in mind, I acquired a used copy of Scrabble for some board game themed wall art! My goal: scrabbly connecting a bunch of adjectives to my name. 
 
 Instead of manually finding a hodgepodge of properly connected adjectives, I decided to automate this search. In a nutshell, this super naive algorithm boils down to a 2 dimensional regex solver that randomly samples adjectives from Wordnet.
 
