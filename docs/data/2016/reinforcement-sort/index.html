@@ -54,7 +54,7 @@ epsilon greedy Q-learning approach with the aim of generating the best python so
 involved combining code fragments together and giving rewards based on how well these scripts sort a list. 
 The exact setup is summarized as follows:</p>
 <p>1) <button class="btn btn-default btn-sm toggle-start-hidden">State</button> : A binary array chad-kroegered from a md5 hash of the python code string <br></p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">hashlib</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">hashlib</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">ARRAY_INPUT_SIZE</span> <span class="o">=</span> <span class="mi">128</span>
@@ -72,11 +72,10 @@ The exact setup is summarized as follows:</p>
     <span class="n">state_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">state_str</span><span class="p">))</span>
 
     <span class="k">return</span> <span class="n">state_array</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">ARRAY_INPUT_SIZE</span><span class="p">)</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>2) <button class="btn btn-default btn-sm toggle-start-hidden">Actions</button> : I figured sorting will require some looping, swapping and probably a conditional or two, so I made these actions on a state</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">product</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">product</span>
 
 <span class="k">class</span> <span class="nc">Action</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">code</span><span class="p">):</span>
@@ -126,11 +125,10 @@ The exact setup is summarized as follows:</p>
     <span class="n">a</span> <span class="o">=</span> <span class="n">Action</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
     <span class="nb">getattr</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">action</span><span class="p">[</span><span class="mi">0</span><span class="p">])(</span><span class="o">*</span><span class="n">action</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
     <span class="k">return</span> <span class="n">a</span><span class="o">.</span><span class="n">code</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>3) <button class="btn btn-default btn-sm toggle-start-hidden">Rewards</button> : The state receives a score of -1 if the python code doesn't run, -10 is the code is over 300 characters or +1000 if the list is correctly sorted.</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
 
 <span class="n">LIST_LENGTH</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="n">START_LIST</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">LIST_LENGTH</span><span class="p">)</span>
@@ -173,12 +171,11 @@ The exact setup is summarized as follows:</p>
         <span class="n">score</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 
     <span class="k">return</span> <span class="n">score</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>After <button class="btn btn-default btn-sm toggle-start-hidden">training</button> up a neural net, 
 I received this optimal sort: </p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
 <span class="kn">from</span> <span class="nn">keras.layers.core</span> <span class="kn">import</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Activation</span>
@@ -257,10 +254,9 @@ I received this optimal sort: </p>
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">actions</span> <span class="o">=</span> <span class="n">generate_actions</span><span class="p">()</span>
     <span class="n">learn_best_sort</span><span class="p">(</span><span class="n">actions</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 
-
-<p><img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/data/2016/reinforcement-sort/reinforcement-sort.png" /></p>
+<p><img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/data/2016/reinforcement-sort/reinforcement-sort.png"></p>
 <p>Now you may be telling yourself that this looks exactly like a Bubble Sort, but I assure you it's not. 
 A Bubble Sort has a reasonable time complexity of O(n^2), but a Reinforcement Sort 
 runs in O(oh god, why am I doing this).</p>

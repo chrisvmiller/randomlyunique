@@ -48,7 +48,7 @@ So, this seems like an ideal case to apply an autosummary algorithm!</p>
 where I find the most representative sentence within a given blob of text. This is accomplished by tokenizing each sentence, converting to a 
 tf-idf matrix, multiplying this matrix by it's transpose to get a similarity between sentences, mapping to a graph where each node is a sentence
 and each edge is its similarity, then PageRanking to determine the 'best' sentence. </p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">sent_tokenize</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">sent_tokenize</span>
 <span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
 <span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">itemgetter</span>
 <span class="kn">from</span> <span class="nn">networkx</span> <span class="kn">import</span> <span class="n">from_numpy_matrix</span><span class="p">,</span> <span class="n">pagerank</span>
@@ -110,13 +110,12 @@ and each edge is its similarity, then PageRanking to determine the 'best' senten
 
     <span class="n">best_sentences</span> <span class="o">=</span> <span class="n">rank_sentences</span><span class="p">(</span><span class="n">sentences</span><span class="p">)</span>
     <span class="n">print_results</span><span class="p">(</span><span class="n">best_sentences</span><span class="p">)</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>The 'ok, these seems reasonable, I guess' results are shown below:</p>
-<p><img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/data/2016/a-token-of-tolkien/a-token-of-tolkien.png" /></p>
+<p><img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/data/2016/a-token-of-tolkien/a-token-of-tolkien.png"></p>
 <p><span style="color:green; font-weight: bold;">Special Bonus:</span> When I apply this autosummary to sentences that contain the word "Sam" throughout The Lord of the Rings trilogy, I get: </p>
-<p><img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/data/2016/a-token-of-tolkien/a-token-of-tolkien_sam.png" /></p>
+<p><img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/data/2016/a-token-of-tolkien/a-token-of-tolkien_sam.png"></p>
     </div>
 </article>
 

@@ -47,7 +47,7 @@ quickly as possible, but I'm currently experiencing some inner turmoil. Should I
 more time-efficient to remain stationary and wait until she walks by? Do two confined random-walks meet quicker
 than a single random-walk finding a stationary point? Wait a second, I can write a script 
 <button class="btn btn-default btn-sm toggle-start-hidden">Show Code</button> that simulates finding my lost and (presumingly) scared wife!  </p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 
@@ -118,8 +118,7 @@ than a single random-walk finding a stationary point? Wait a second, I can write
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>In order to keep things simple, I'll assume this mall is a bounded square grid where my wife and I are initially assigned 
 to a random location. Then, during each iteration, a non-stationary person walks a single square in any 
@@ -127,7 +126,7 @@ horizontal, vertical or diagonal direction. Whenever my wife and I are in the sa
 traveled and reset the simulation. This process repeats for two scenarios: 1) We're both randomly moving 
 around 2) One person remains stationary, until representative total-distance averages are reached.     </p>
 <p>The diagram below shows a typical example for each scenario:</p>
-<p><img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/data/2015/mate-locate/mate-locate.png" /></p>
+<p><img alt="Photo" class="image_center_style" src="http://www.randomlyunique.com/data/2015/mate-locate/mate-locate.png"></p>
 <p>After running this simulation for a few different sized grids, I confirmed that two people randomly walking around is 
 approximately 1.6x faster! Now, I would typically follow this result, but my wife already found me like 45 minutes ago and 
 she's been patiently waiting for me to finish this blog post.</p>
