@@ -95,6 +95,6 @@ The diagram below shows a typical example for each scenario:
 ![Photo]({attach}/assets/data/2015/mate-locate.png){.image_center_style}
 
 After running this simulation for a few different sized grids, I confirmed that two people randomly walking around is 
-approximately 1.6x faster! Now, I would typically follow this result, but my wife already found me like 45 minutes ago and 
+approximately 1.5x faster! Now, I would typically follow this result, but my wife already found me like 45 minutes ago and 
 she's been patiently waiting for me to finish this blog post.
  
