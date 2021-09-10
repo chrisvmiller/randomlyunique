@@ -1,4 +1,4 @@
-Date: 2021-06-01
+Date: 2021-07-01
 Title: Slide Rules
 Category: plancky
 Slug: slide-rules

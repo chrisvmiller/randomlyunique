@@ -1,4 +1,4 @@
-Date: 2020-11-12
+Date: 2021-01-01
 Title: Scrabble Art Generator
 Category: random
 Slug: scrabble-art-generator
@@ -9,7 +9,7 @@ I completely believe that displaying a purchased canvas of "A Starry Night" - al
 Instead of manually finding a hodgepodge of properly connected adjectives, I decided to automate this search. In a nutshell, this super naive algorithm boils down to a 2 dimensional regex solver that randomly samples adjectives from Wordnet.
 
 
-![Photo]({attach}/assets/random/2020/scrabble-art-generator.png){.image_center_style}
+![Photo]({attach}/assets/random/2021/scrabble-art-generator.png){.image_center_style}
 
     :::python
     import argparse
@@ -182,5 +182,5 @@ Instead of manually finding a hodgepodge of properly connected adjectives, I dec
 
 
 <p align="center">
-    <a class="nounderline" href="{attach}/assets/random/2020/scrabbler.py">Download</a>
+    <a class="nounderline" href="{attach}/assets/random/2021/scrabbler.py">Download</a>
 </p>
