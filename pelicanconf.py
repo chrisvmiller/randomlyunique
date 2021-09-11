@@ -1,7 +1,7 @@
 THEME = u'cleanliness'
 
 SITENAME = u'randomlyunique'
-SITEURL = u'http://www.randomlyunique.com'
+SITEURL = u'https://www.randomlyunique.com'
 
 TIMEZONE = u'US/Pacific'
 DEFAULT_LANG = u'en'
