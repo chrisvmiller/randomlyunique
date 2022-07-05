@@ -7,7 +7,7 @@ TIMEZONE = u'US/Pacific'
 DEFAULT_LANG = u'en'
 
 RELATIVE_URLS = True
-FEED_MAX_ITEMS = 10
+FEED_MAX_ITEMS = 25
 
 PATH = u'content'
 STATIC_PATHS = [u'assets']
