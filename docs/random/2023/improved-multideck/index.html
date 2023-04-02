@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Improved Multideck - randomlyunique</title>
+    <meta charset="utf-8">
+    <meta name=”description” content="Random data analysis articles, an educational web comic series and personal projects by Chris Miller">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="https://www.randomlyunique.com/assets/common/favicon.ico">
+    <link rel="stylesheet" href="https://www.randomlyunique.com/theme/css/bootstrap.paper.min.css">
+    <link rel="stylesheet" href="https://www.randomlyunique.com/theme/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.randomlyunique.com/theme/css/header-clean.css">
+    <link rel="stylesheet" href="https://www.randomlyunique.com/theme/css/pygments-manni.css">
+    <link rel="stylesheet" href="https://www.randomlyunique.com/theme/css/style.css">
+</head>
+<body>
+<header class="header-clean">
+    <div class="container">
+	<div class="header-limiter">
+		<h1> <a href="https://www.randomlyunique.com/">Randomly<span class="unique-color">Unique</span></a></h1>
+		<nav>
+                <a  href="https://www.randomlyunique.com/category/data.html">
+                    Data
+                </a>
+                <a  href="https://www.randomlyunique.com/category/plancky.html">
+                    Plancky
+                </a>
+                <a  class="selected"  href="https://www.randomlyunique.com/category/random.html">
+                    Random
+                </a>
+		</nav>
+	</div>
+    </div>
+</header>
+
+<div class="container">
+<article>
+    <h2 class="header-title text-center">Improved Multideck</h2>
+
+    <div class="entry-content">
+        <h5 class="article-date text-center">
+                <time datetime="Apr 02, 2023"> Apr 02, 2023&nbsp;</time>
+        </h5>
+        <p>My last attempt at a multideck was ill-designed. The card layout was cluttered, the iconography inconsistent, and the overall useability left much to be desired. Luckily, over the last year and a half since my previous blog post, I have grown as a person who designs multidecks. Below is my updated and improved custom deck of cards:</p>
+<p><img alt="Photo" class="image_center_style" src="https://www.randomlyunique.com/random/2023/improved-multideck/improved-multideck.png"> </p>
+<p align="center">
+    <a class="nounderline" href="https://www.randomlyunique.com/random/2023/improved-multideck/multideck_cards.svg">Download SVG File</a>
+</p>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Cut a single image into multiple individual card images</span>
+convert card_image.png -crop 16x6@ -background none -gravity center card-%d.png
+</code></pre></div>
+    </div>
+</article>
+
+
+
+        <div class="row vertical-align">
+            <div class="col-xs-6 text-center">
+                    <a href="https://www.randomlyunique.com/random/2023/goache/index.html">
+                        <i class="fa fa-caret-left fa-4x" aria-hidden="true"></i><br>Goache
+                    </a>
+            </div>
+            <div class="col-xs-6 text-center">
+            </div>
+        </div>
+        
+<br></div>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58124150-1', 'auto');
+    ga('send', 'pageview');
+</script></body>
+
+<script src="https://www.randomlyunique.com/theme/js/jquery.min.js"></script>
+<script>
+$(document).ready(function () {
+   $("button.toggle-start-hidden").parent().next().hide();
+   $("button.toggle-start-hidden").click(function(){ $(this).parent().next().toggle(); });
+   $("button.toggle").click(function(){ $(this).parent().next().toggle(); });
+ });
+</script>
+
+</body>
+</html>
