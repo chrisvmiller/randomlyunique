@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>randomlyunique</title><link href="https://www.randomlyunique.com/" rel="alternate"></link><link href="https://www.randomlyunique.com/feeds/all.atom.xml" rel="self"></link><id>https://www.randomlyunique.com/</id><updated>2023-07-04T00:00:00-07:00</updated><entry><title>Cirrus Business</title><link href="https://www.randomlyunique.com/random/2023/cirrus-business/index.html" rel="alternate"></link><published>2023-07-04T00:00:00-07:00</published><updated>2023-07-04T00:00:00-07:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2023-07-04:/random/2023/cirrus-business/index.html</id><summary type="html">&lt;p&gt;Help Cloudi and his friends restore their home in this story-driven farming video game!&lt;/p&gt;</summary><content type="html">&lt;p&gt;For the past few years, my wife and I have spent a rather significant amount of time working on our unique twist on a farming video game. Unlike most games in this genre, the goal isn't to amass money or achieve "friendship" via gift-giving. Instead, the player and a menagerie of oddball NPCs work together to cleanup the in-game environment by growing an assortment of magical crops. Be sure to check it out on Steam!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>randomlyunique</title><link href="https://www.randomlyunique.com/" rel="alternate"></link><link href="https://www.randomlyunique.com/feeds/all.atom.xml" rel="self"></link><id>https://www.randomlyunique.com/</id><updated>2024-01-31T00:00:00-08:00</updated><entry><title>Euler's Formula</title><link href="https://www.randomlyunique.com/plancky/2024/eulers-formula/index.html" rel="alternate"></link><published>2024-01-31T00:00:00-08:00</published><updated>2024-01-31T00:00:00-08:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2024-01-31:/plancky/2024/eulers-formula/index.html</id><summary type="html">&lt;p&gt;Plancky derives arguably the most beautiful formula in mathematics.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="https://www.randomlyunique.com/plancky/2024/eulers-formula/eulers-formula.png"&gt;&lt;/p&gt;</content><category term="plancky"></category></entry><entry><title>Cirrus Business</title><link href="https://www.randomlyunique.com/random/2023/cirrus-business/index.html" rel="alternate"></link><published>2023-07-04T00:00:00-07:00</published><updated>2023-07-04T00:00:00-07:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2023-07-04:/random/2023/cirrus-business/index.html</id><summary type="html">&lt;p&gt;Help Cloudi and his friends restore their home in this story-driven farming video game!&lt;/p&gt;</summary><content type="html">&lt;p&gt;For the past few years, my wife and I have spent a rather significant amount of time working on our unique twist on a farming video game. Unlike most games in this genre, the goal isn't to amass money or achieve "friendship" via gift-giving. Instead, the player and a menagerie of oddball NPCs work together to cleanup the in-game environment by growing an assortment of magical crops. Be sure to check it out on Steam!&lt;/p&gt;
 &lt;p align="center"&gt;
     &lt;a class="nounderline" href="https://store.steampowered.com/app/2381040/Cirrus_Business/"&gt;Steam Page&lt;/a&gt;
 &lt;/p&gt;
@@ -11,7 +11,7 @@
 &lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Cut a single image into multiple individual card images&lt;/span&gt;
-convert card_image.png -crop 16x6@ -background none -gravity center card-%d.png
+convert&lt;span class="w"&gt; &lt;/span&gt;card_image.png&lt;span class="w"&gt; &lt;/span&gt;-crop&lt;span class="w"&gt; &lt;/span&gt;16x6@&lt;span class="w"&gt; &lt;/span&gt;-background&lt;span class="w"&gt; &lt;/span&gt;none&lt;span class="w"&gt; &lt;/span&gt;-gravity&lt;span class="w"&gt; &lt;/span&gt;center&lt;span class="w"&gt; &lt;/span&gt;card-%d.png
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="random"></category></entry><entry><title>Goache</title><link href="https://www.randomlyunique.com/random/2023/goache/index.html" rel="alternate"></link><published>2023-01-22T00:00:00-08:00</published><updated>2023-01-22T00:00:00-08:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2023-01-22:/random/2023/goache/index.html</id><summary type="html">&lt;p&gt;I present the star of my preteen Dragon Ball/Final Fantasy/Myst mashup masterpiece.&lt;/p&gt;</summary><content type="html">&lt;p&gt;In elementary school, my teachers replaced my precious recess period with a remedial writing class. So, like any sensible child with the need to play outside, I decided to dive headfirst into the art of fanfic to levelup my lackluster writing ability. After a half a dozen months and 150 or so pages, I crafted a story that followed my original character 'Goache' in search of the magical dragon cupcake. Here's an old drawing of him:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="https://www.randomlyunique.com/random/2023/goache/goache.jpg"&gt; &lt;/p&gt;
 &lt;p&gt;And thanks to Goache, I tallied up enough writing practice to successfully escape my lunch-time purgatory.&lt;/p&gt;</content><category term="random"></category></entry><entry><title>Rainbows</title><link href="https://www.randomlyunique.com/plancky/2022/rainbows/index.html" rel="alternate"></link><published>2022-10-21T00:00:00-07:00</published><updated>2022-10-21T00:00:00-07:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2022-10-21:/plancky/2022/rainbows/index.html</id><summary type="html">&lt;p&gt;Plancky delves into the magic of rainbows.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="https://www.randomlyunique.com/plancky/2022/rainbows/rainbows.png"&gt;&lt;/p&gt;</content><category term="plancky"></category></entry><entry><title>Relationship Analytics Part Deux</title><link href="https://www.randomlyunique.com/data/2022/relationship-analytics-part-deux/index.html" rel="alternate"></link><published>2022-07-04T00:00:00-07:00</published><updated>2022-07-04T00:00:00-07:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2022-07-04:/data/2022/relationship-analytics-part-deux/index.html</id><summary type="html">&lt;p&gt;How does my wife's love for num nums compare with her husband?&lt;/p&gt;</summary><content type="html">&lt;p&gt;It's been over eight years since I started this blog by analyzing my wife's affectionate text messages. So, has our love blossomed into reaches beyond the upper plane of Arcadia or diminished into the burning volcanoes of Gehenna? Let's find out by diving into our text message history once again:&lt;/p&gt;
@@ -238,7 +238,7 @@ the python standard library.&lt;/p&gt;
 
 
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Cell&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 &lt;span class="sd"&gt;    A Pixel &lt;/span&gt;
 &lt;span class="sd"&gt;    &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 
@@ -253,7 +253,7 @@ the python standard library.&lt;/p&gt;
 
 
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Piece&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 &lt;span class="sd"&gt;    The Fundamenal Game Object  &lt;/span&gt;
 &lt;span class="sd"&gt;    &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 
@@ -565,7 +565,7 @@ the python standard library.&lt;/p&gt;
 
 
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Input&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 &lt;span class="sd"&gt;    Transforms Key Presses into Useful Names&lt;/span&gt;
 &lt;span class="sd"&gt;    &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 
@@ -594,7 +594,7 @@ the python standard library.&lt;/p&gt;
 
 
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Curses&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 &lt;span class="sd"&gt;    The Curses Library Handles the Graphics&lt;/span&gt;
 &lt;span class="sd"&gt;    &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 
@@ -619,7 +619,7 @@ the python standard library.&lt;/p&gt;
 
 
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Board&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 &lt;span class="sd"&gt;    Creates a Game Space and Sets Rules for the Game&lt;/span&gt;
 &lt;span class="sd"&gt;    &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 
@@ -769,7 +769,7 @@ the python standard library.&lt;/p&gt;
 
 
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;GameAI&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 &lt;span class="sd"&gt;    A Simple Minimax algorithm with Alpha Beta Pruning Controls the Red Player&lt;/span&gt;
 &lt;span class="sd"&gt;    &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 
@@ -911,7 +911,7 @@ the python standard library.&lt;/p&gt;
 
 
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Game&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 &lt;span class="sd"&gt;    Sets up the game, defines the flow, and links the user and AI actions &lt;/span&gt;
 &lt;span class="sd"&gt;    &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 
@@ -1199,9 +1199,4 @@ Score: &lt;button id="score" style="width: 40px; height: 40px; background-color:
 &lt;p&gt;&lt;button onClick="setup_counter();setup_images();" style="width: 75; height: 35px; background-color: black; color: white;"&gt;Start&lt;/button&gt;
 &lt;button onClick="check_score()" style="width: 100px; height: 60px; background-color: #4CAF50; color: white;"&gt; NOW !!! &lt;/button&gt;
 &lt;button onClick="stopCounters()" style="width: 75px; height: 35px; background-color: black; color: white;"&gt;Stop&lt;/button&gt;
-&lt;/center&gt;&lt;/p&gt;</content><category term="random"></category></entry><entry><title>Obligatory Twitter Sentiment Post</title><link href="https://www.randomlyunique.com/data/2019/obligatory-twitter-sentiment-post/index.html" rel="alternate"></link><published>2019-01-02T00:00:00-08:00</published><updated>2019-01-02T00:00:00-08:00</updated><author><name></name></author><id>tag:www.randomlyunique.com,2019-01-02:/data/2019/obligatory-twitter-sentiment-post/index.html</id><summary type="html">&lt;p&gt;What kind of slacker has a data science blog for over four years and forgets a sentiment analysis of Twitter data. Let's fix this!&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Twittersphere plays a completely unconcerning vital role in modern society. Now, 
-let's use Twitter to it's full potential and expose humanity's candy preferences!&lt;/p&gt;
-&lt;p&gt;After pinging the Twitter API for candy tweets over the course of a week, I piped 
-each tweet into a off-the-shelf pre-trained Naive Bayes sentiment classification 
-algorithm. The average sentiment of each candy is shown in the bubbly bubble chart below:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Photo" class="image_center_style" src="https://www.randomlyunique.com/data/2019/obligatory-twitter-sentiment-post/obligatory-twitter-sentiment-post.png"&gt;&lt;/p&gt;</content><category term="data"></category></entry></feed>
+&lt;/center&gt;&lt;/p&gt;</content><category term="random"></category></entry></feed>

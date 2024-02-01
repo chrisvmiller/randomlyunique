@@ -61,7 +61,7 @@ The exact setup is summarized as follows:</p>
 
 
 <span class="k">def</span> <span class="nf">oh_god_why</span><span class="p">(</span><span class="n">code</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    This converts the code string (state) to a binary array (for the neural net)</span>
 <span class="sd">    &#39;&#39;&#39;</span>
 
@@ -108,7 +108,7 @@ The exact setup is summarized as follows:</p>
 
 
 <span class="k">def</span> <span class="nf">generate_actions</span><span class="p">():</span>
-    <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Gives all the unhidden methods (possible actions) from the Action class</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">actions</span> <span class="o">=</span> <span class="n">Action</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
@@ -119,7 +119,7 @@ The exact setup is summarized as follows:</p>
     <span class="k">return</span> <span class="n">possible_actions</span>
 
 <span class="k">def</span> <span class="nf">performAction</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Takes the current state (the code string) and applies an action</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">Action</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
@@ -136,21 +136,21 @@ The exact setup is summarized as follows:</p>
 
 <span class="n">TEMPLATE</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
 <span class="s1">def sort(unsorted_list):</span>
-<span class="s1">    </span><span class="si">{0}</span><span class="s1"></span>
+<span class="s1">    </span><span class="si">{0}</span>
 <span class="s1">    return unsorted_list</span>
 <span class="s1">sorted_list = sort(</span><span class="si">{1}</span><span class="s1">)</span>
 <span class="s1">&#39;&#39;&#39;</span>
 
 
 <span class="k">def</span> <span class="nf">append_definition</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">start_list</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This takes the above TEMPLATE string and wraps it around the code string</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">start_list</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">calc_reward</span><span class="p">(</span><span class="n">code</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Rewards based on the current code state:</span>
 <span class="sd">        1) Code correctly sorts the list: 1000</span>
 <span class="sd">        2) Code runs: 0</span>
@@ -188,7 +188,7 @@ I received this optimal sort: </p>
 
 
 <span class="k">def</span> <span class="nf">setup_network</span><span class="p">(</span><span class="n">num_actions</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    This defines a neural net since that&#39;s the cool thing to do nowadays</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
@@ -208,7 +208,7 @@ I received this optimal sort: </p>
 
 
 <span class="k">def</span> <span class="nf">learn_best_sort</span><span class="p">(</span><span class="n">actions</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Reinforcement learning via an epsilon greedy strategy</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">model</span> <span class="o">=</span> <span class="n">setup_network</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">actions</span><span class="p">))</span>

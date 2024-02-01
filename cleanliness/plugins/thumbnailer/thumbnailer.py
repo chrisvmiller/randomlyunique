@@ -41,7 +41,7 @@ class _resizer(object):
 
     def _aspect_resize(self, w, h, image):
         retval = image.copy()
-        retval.thumbnail((w, h), Image.ANTIALIAS)
+        retval.thumbnail((w, h), Image.Resampling.LANCZOS)
 
         return retval
 

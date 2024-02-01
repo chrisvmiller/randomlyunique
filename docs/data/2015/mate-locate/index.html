@@ -56,14 +56,14 @@ than a single random-walk finding a stationary point? Wait a second, I can write
 
 
 <span class="k">def</span> <span class="nf">initial_location</span><span class="p">():</span>
-    <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Creates a random starting point on a ARRAY_SIZE by ARRAY_SIZE grid</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="k">return</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ARRAY_SIZE</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ARRAY_SIZE</span><span class="p">)]</span>
 
 
 <span class="k">def</span> <span class="nf">get_possible_directions</span><span class="p">(</span><span class="n">location</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    This ensures the person stays within the grid, the bottom left is [0,0]</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">possible_vertical</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -86,7 +86,7 @@ than a single random-walk finding a stationary point? Wait a second, I can write
 
 
 <span class="k">def</span> <span class="nf">update_location</span><span class="p">(</span><span class="n">initial_location</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Selects a random direction and move there</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">selected_location</span> <span class="o">=</span> <span class="n">get_possible_directions</span><span class="p">(</span><span class="n">initial_location</span><span class="p">)</span>

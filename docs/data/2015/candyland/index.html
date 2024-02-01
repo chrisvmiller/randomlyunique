@@ -71,7 +71,7 @@ this is just the famous traveling salesman problem! Using a simulated annealing 
 
 
 <span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">loc1</span><span class="p">,</span> <span class="n">loc2</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Finds the Euclidean distance between two locations</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span> <span class="o">=</span> <span class="n">locations</span><span class="p">[</span><span class="n">loc1</span><span class="p">]</span>
@@ -81,7 +81,7 @@ this is just the famous traveling salesman problem! Using a simulated annealing 
 
 
 <span class="k">def</span> <span class="nf">cost</span><span class="p">(</span><span class="n">route</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Calculates the total distance of a route </span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">total_distance</span> <span class="o">=</span> <span class="mi">0</span>
@@ -92,7 +92,7 @@ this is just the famous traveling salesman problem! Using a simulated annealing 
 
 
 <span class="k">def</span> <span class="nf">neighbor</span><span class="p">(</span><span class="n">route</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Alters the route by swapping two locations</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">index1</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">route</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]))</span>
@@ -104,7 +104,7 @@ this is just the famous traveling salesman problem! Using a simulated annealing 
 
 
 <span class="k">def</span> <span class="nf">boltzmann_prob</span><span class="p">(</span><span class="n">old_cost</span><span class="p">,</span> <span class="n">new_cost</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Compares both routes via the Boltzmann factor at a </span>
 <span class="sd">    given &#39;temperature&#39; (T)</span>
 <span class="sd">    &#39;&#39;&#39;</span>    
@@ -115,7 +115,7 @@ this is just the famous traveling salesman problem! Using a simulated annealing 
 
 
 <span class="k">def</span> <span class="nf">anneal</span><span class="p">(</span><span class="n">route</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Finds the best route by swapping locations continuously while the </span>
 <span class="sd">    probabiliy to switch routes gradually decreases</span>
 <span class="sd">    &#39;&#39;&#39;</span>    
