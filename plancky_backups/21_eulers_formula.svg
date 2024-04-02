@@ -5768,9 +5768,9 @@
      showgrid="false"
      inkscape:current-layer="layer2"
      inkscape:document-units="px"
-     inkscape:cy="1026.0655"
-     inkscape:cx="623.71495"
-     inkscape:zoom="1.7459899"
+     inkscape:cy="1051.959"
+     inkscape:cx="672.07932"
+     inkscape:zoom="2.4692026"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -8102,9 +8102,9 @@
        id="text307"
        y="1155.7194"
        x="635.1037"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#0066ff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#0066ff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#ff0000;fill-opacity:1"
          y="1155.7194"
          x="635.1037"
          sodipodi:role="line"
@@ -8138,9 +8138,9 @@
        id="text322"
        y="1155.7194"
        x="723.90417"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#0066ff;fill-opacity:0.7764706;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#ff0000;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#0066ff;fill-opacity:0.7764706"
          y="1155.7194"
          x="723.90417"
          sodipodi:role="line"
@@ -8533,255 +8533,251 @@
          x="194.52612"
          sodipodi:role="line"
          id="tspan18">1!</tspan></text>
-    <g
-       id="g19"
-       transform="translate(-6.9778672)">
-      <text
-         transform="scale(0.99240472,1.0076534)"
-         id="text287"
+    <text
+       transform="scale(0.99240472,1.0076534)"
+       id="text287"
+       y="1063.2279"
+       x="523.76251"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue'"
          y="1063.2279"
-         x="530.79376"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue'"
-           y="1063.2279"
-           x="530.79376"
-           sodipodi:role="line"
-           id="tspan287">e<tspan
+         x="523.76251"
+         sodipodi:role="line"
+         id="tspan287">e<tspan
    style="font-size:65%;baseline-shift:super"
    id="tspan286">ix</tspan></tspan></text>
-      <text
-         transform="scale(0.99240472,1.0076534)"
-         id="text288"
+    <text
+       transform="scale(0.99240472,1.0076534)"
+       id="text288"
+       y="1062.8873"
+       x="683.26117"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue'"
          y="1062.8873"
-         x="690.29242"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue'"
-           y="1062.8873"
-           x="690.29242"
-           sodipodi:role="line"
-           id="tspan288">+</tspan></text>
-      <text
-         transform="scale(0.99240472,1.0076534)"
-         id="text289"
+         x="683.26117"
+         sodipodi:role="line"
+         id="tspan288">+</tspan></text>
+    <text
+       transform="scale(0.99240472,1.0076534)"
+       id="text289"
+       y="1062.9727"
+       x="591.19391"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#ff0000;fill-opacity:1"
          y="1062.9727"
-         x="598.22516"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#0066ff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#0066ff;fill-opacity:1"
-           y="1062.9727"
-           x="598.22516"
-           sodipodi:role="line"
-           id="tspan289">-</tspan></text>
-      <text
-         transform="scale(0.99240472,1.0076534)"
-         id="text290"
+         x="591.19391"
+         sodipodi:role="line"
+         id="tspan289">-</tspan></text>
+    <text
+       transform="scale(0.99240472,1.0076534)"
+       id="text290"
+       y="1062.9052"
+       x="795.56488"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#0066ff;fill-opacity:0.7764706;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#0066ff;fill-opacity:0.7764706"
          y="1062.9052"
-         x="802.59613"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#ff0000;fill-opacity:1"
-           y="1062.9052"
-           x="802.59613"
-           sodipodi:role="line"
-           id="tspan290">+ ...</tspan></text>
-      <text
-         transform="scale(0.99240472,1.0076534)"
-         id="text291"
+         x="795.56488"
+         sodipodi:role="line"
+         id="tspan290">+ ...</tspan></text>
+    <text
+       transform="scale(0.99240472,1.0076534)"
+       id="text291"
+       y="1064.8927"
+       x="578.18732"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#ff0000;fill-opacity:1"
          y="1064.8927"
-         x="585.21857"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#0066ff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#0066ff;fill-opacity:1"
-           y="1064.8927"
-           x="585.21857"
-           sodipodi:role="line"
-           id="tspan291">1</tspan></text>
-      <text
-         transform="scale(0.99240472,1.0076534)"
-         id="text292"
+         x="578.18732"
+         sodipodi:role="line"
+         id="tspan291">1</tspan></text>
+    <text
+       transform="scale(0.99240472,1.0076534)"
+       id="text292"
+       y="1078.7272"
+       x="613.2077"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#ff0000;fill-opacity:1"
          y="1078.7272"
-         x="620.23895"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#0066ff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#0066ff;fill-opacity:1"
-           y="1078.7272"
-           x="620.23895"
-           sodipodi:role="line"
-           id="tspan292">2!</tspan></text>
-      <text
-         transform="scale(0.99240472,1.0076534)"
-         id="text293"
+         x="613.2077"
+         sodipodi:role="line"
+         id="tspan292">2!</tspan></text>
+    <text
+       transform="scale(0.99240472,1.0076534)"
+       id="text293"
+       y="1053.1115"
+       x="724.14752"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#0066ff;fill-opacity:0.7764706;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#0066ff;fill-opacity:0.7764706"
          y="1053.1115"
-         x="731.17877"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#ff0000;fill-opacity:1"
-           y="1053.1115"
-           x="731.17877"
-           sodipodi:role="line"
-           id="tspan293">x</tspan></text>
-      <text
-         transform="scale(0.99240472,1.0076534)"
-         id="text295"
+         x="724.14752"
+         sodipodi:role="line"
+         id="tspan293">x</tspan></text>
+    <text
+       transform="scale(0.99240472,1.0076534)"
+       id="text295"
+       y="1052.2308"
+       x="614.08649"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#ff0000;fill-opacity:1"
          y="1052.2308"
-         x="621.11774"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#0066ff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#0066ff;fill-opacity:1"
-           y="1052.2308"
-           x="621.11774"
-           sodipodi:role="line"
-           id="tspan295">x<tspan
-   style="font-size:65%;baseline-shift:super;fill:#0066ff;fill-opacity:1"
-   id="tspan294">2</tspan></tspan></text>
-      <text
-         transform="scale(0.99240472,1.0076534)"
-         id="text296"
-         y="1079.5439"
-         x="775.61243"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#ff0000;fill-opacity:1"
-           y="1079.5439"
-           x="775.61243"
-           sodipodi:role="line"
-           id="tspan296">3!</tspan></text>
-      <text
-         transform="scale(0.99240472,1.0076534)"
-         id="text297"
-         y="1063.7992"
-         x="707.18311"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue'"
-           y="1063.7992"
-           x="707.18311"
-           sodipodi:role="line"
-           id="tspan297">i</tspan></text>
-      <text
-         transform="scale(0.99240472,1.0076534)"
-         id="text298"
-         y="1062.9727"
-         x="754.97797"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#ff0000;fill-opacity:1"
-           y="1062.9727"
-           x="754.97797"
-           sodipodi:role="line"
-           id="tspan298">-</tspan></text>
-      <text
-         transform="scale(0.99240472,1.0076534)"
-         id="text300"
-         y="1053.1115"
-         x="776.65601"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#ff0000;fill-opacity:1"
-           y="1053.1115"
-           x="776.65601"
-           sodipodi:role="line"
-           id="tspan300">x<tspan
+         x="614.08649"
+         sodipodi:role="line"
+         id="tspan295">x<tspan
    style="font-size:65%;baseline-shift:super;fill:#ff0000;fill-opacity:1"
+   id="tspan294">2</tspan></tspan></text>
+    <text
+       transform="scale(0.99240472,1.0076534)"
+       id="text296"
+       y="1079.5439"
+       x="768.58118"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#0066ff;fill-opacity:0.7764706;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#0066ff;fill-opacity:0.7764706"
+         y="1079.5439"
+         x="768.58118"
+         sodipodi:role="line"
+         id="tspan296">3!</tspan></text>
+    <text
+       transform="scale(0.99240472,1.0076534)"
+       id="text297"
+       y="1063.7992"
+       x="700.15186"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue'"
+         y="1063.7992"
+         x="700.15186"
+         sodipodi:role="line"
+         id="tspan297">i</tspan></text>
+    <text
+       transform="scale(0.99240472,1.0076534)"
+       id="text298"
+       y="1062.9727"
+       x="747.94672"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#0066ff;fill-opacity:0.7764706;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#0066ff;fill-opacity:0.7764706"
+         y="1062.9727"
+         x="747.94672"
+         sodipodi:role="line"
+         id="tspan298">-</tspan></text>
+    <text
+       transform="scale(0.99240472,1.0076534)"
+       id="text300"
+       y="1053.1115"
+       x="769.62476"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#0066ff;fill-opacity:0.7764706;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#0066ff;fill-opacity:0.7764706"
+         y="1053.1115"
+         x="769.62476"
+         sodipodi:role="line"
+         id="tspan300">x<tspan
+   style="font-size:65%;baseline-shift:super;fill:#0066ff;fill-opacity:0.7764706"
    id="tspan299">3</tspan></tspan></text>
-      <text
-         transform="scale(0.99240472,1.0076534)"
-         id="text301"
+    <text
+       transform="scale(0.99240472,1.0076534)"
+       id="text301"
+       y="1062.962"
+       x="549.51874"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue'"
          y="1062.962"
-         x="556.54999"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue'"
-           y="1062.962"
-           x="556.54999"
-           sodipodi:role="line"
-           id="tspan301">=</tspan></text>
-      <path
-         style="fill:#0066ff;fill-opacity:1;stroke:#0066ff;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-         d="m 609.9475,1065.7338 h 26.36253"
-         id="path301" />
-      <path
-         style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-         d="m 764.35224,1065.7339 h 26.36253"
-         id="path302" />
-      <text
-         transform="scale(0.99240472,1.0076534)"
-         id="text318"
+         x="549.51874"
+         sodipodi:role="line"
+         id="tspan301">=</tspan></text>
+    <path
+       style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 602.96963,1065.7338 h 26.36253"
+       id="path301" />
+    <path
+       style="fill:#0066ff;fill-opacity:0.7764706;stroke:#0066ff;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:0.7764706"
+       d="M 757.37437,1065.7339 H 783.7369"
+       id="path302" />
+    <text
+       transform="scale(0.99240472,1.0076534)"
+       id="text318"
+       y="1074.1273"
+       x="704.16193"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue'"
          y="1074.1273"
-         x="711.19318"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue'"
-           y="1074.1273"
-           x="711.19318"
-           sodipodi:role="line"
-           id="tspan318">(</tspan></text>
-      <text
-         transform="scale(0.99240472,1.0076534)"
-         id="text319"
+         x="704.16193"
+         sodipodi:role="line"
+         id="tspan318">(</tspan></text>
+    <text
+       transform="scale(0.99240472,1.0076534)"
+       id="text319"
+       y="1074.1273"
+       x="822.87994"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue'"
          y="1074.1273"
-         x="829.91119"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue'"
-           y="1074.1273"
-           x="829.91119"
-           sodipodi:role="line"
-           id="tspan319">)</tspan></text>
-      <text
-         transform="scale(0.99240472,1.0076534)"
-         id="text320"
+         x="822.87994"
+         sodipodi:role="line"
+         id="tspan319">)</tspan></text>
+    <text
+       transform="scale(0.99240472,1.0076534)"
+       id="text320"
+       y="1074.1273"
+       x="561.45251"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue'"
          y="1074.1273"
-         x="568.48376"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue'"
-           y="1074.1273"
-           x="568.48376"
-           sodipodi:role="line"
-           id="tspan320">(</tspan></text>
-      <text
-         transform="scale(0.99240472,1.0076534)"
-         id="text321"
+         x="561.45251"
+         sodipodi:role="line"
+         id="tspan320">(</tspan></text>
+    <text
+       transform="scale(0.99240472,1.0076534)"
+       id="text321"
+       y="1074.1273"
+       x="663.48895"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue'"
          y="1074.1273"
-         x="670.5202"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue'"
-           y="1074.1273"
-           x="670.5202"
-           sodipodi:role="line"
-           id="tspan321">)</tspan></text>
-      <text
-         transform="scale(0.99240472,1.0076534)"
-         id="text31"
+         x="663.48895"
+         sodipodi:role="line"
+         id="tspan321">)</tspan></text>
+    <text
+       transform="scale(0.99240472,1.0076534)"
+       id="text31"
+       y="1063.056"
+       x="638.41541"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#ff0000;fill-opacity:1"
          y="1063.056"
-         x="645.44666"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#0066ff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#0066ff;fill-opacity:1"
-           y="1063.056"
-           x="645.44666"
-           sodipodi:role="line"
-           id="tspan25">+ ...</tspan></text>
-      <text
-         transform="scale(0.99240472,1.0076534)"
-         id="text19"
+         x="638.41541"
+         sodipodi:role="line"
+         id="tspan25">+ ...</tspan></text>
+    <text
+       transform="scale(0.99240472,1.0076534)"
+       id="text19"
+       y="1079.6079"
+       x="725.28821"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#0066ff;fill-opacity:0.7764706;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#0066ff;fill-opacity:0.7764706"
          y="1079.6079"
-         x="732.31946"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:1.25;font-family:'Comic Neue';-inkscape-font-specification:'Comic Neue';fill:#ff0000;fill-opacity:1"
-           y="1079.6079"
-           x="732.31946"
-           sodipodi:role="line"
-           id="tspan19">1!</tspan></text>
-      <path
-         style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-         d="m 717.84268,1065.7339 h 26.36253"
-         id="path19" />
-    </g>
+         x="725.28821"
+         sodipodi:role="line"
+         id="tspan19">1!</tspan></text>
+    <path
+       style="fill:#0066ff;fill-opacity:0.7764706;stroke:#0066ff;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:0.7764706"
+       d="m 710.86481,1065.7339 h 26.36253"
+       id="path19" />
   </g>
 </svg>
