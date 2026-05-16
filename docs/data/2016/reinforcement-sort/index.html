@@ -54,13 +54,13 @@ epsilon greedy Q-learning approach with the aim of generating the best python so
 involved combining code fragments together and giving rewards based on how well these scripts sort a list. 
 The exact setup is summarized as follows:</p>
 <p>1) <button class="btn btn-default btn-sm toggle-start-hidden">State</button> : A binary array chad-kroegered from a md5 hash of the python code string <br></p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">hashlib</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">ARRAY_INPUT_SIZE</span> <span class="o">=</span> <span class="mi">128</span>
 
 
-<span class="k">def</span> <span class="nf">oh_god_why</span><span class="p">(</span><span class="n">code</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">oh_god_why</span><span class="p">(</span><span class="n">code</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    This converts the code string (state) to a binary array (for the neural net)</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -75,39 +75,39 @@ The exact setup is summarized as follows:</p>
 </code></pre></div>
 
 <p>2) <button class="btn btn-default btn-sm toggle-start-hidden">Actions</button> : I figured sorting will require some looping, swapping and probably a conditional or two, so I made these actions on a state</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">product</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">product</span>
 
-<span class="k">class</span> <span class="nc">Action</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">code</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Action</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">code</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">code</span> <span class="o">=</span> <span class="n">code</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">start_list</span> <span class="o">=</span> <span class="s1">&#39;unsorted_list&#39;</span>
 
-    <span class="k">def</span> <span class="nf">_lookup_element</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">var</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_lookup_element</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">var</span><span class="p">):</span>
         <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{list}</span><span class="s2">[</span><span class="si">{var}</span><span class="s2">]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="p">{</span>
             <span class="s1">&#39;list&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_list</span><span class="p">,</span>
             <span class="s1">&#39;var&#39;</span><span class="p">:</span> <span class="n">var</span>
         <span class="p">})</span>
 
-    <span class="k">def</span> <span class="nf">loop_through_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">loop_through_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">code</span> <span class="o">+=</span> <span class="s2">&quot;for </span><span class="si">{var}</span><span class="s2">, _ in enumerate(</span><span class="si">{list}</span><span class="s2">):</span><span class="se">\n\t</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="p">{</span>
             <span class="s1">&#39;list&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_list</span><span class="p">,</span>
             <span class="s1">&#39;var&#39;</span><span class="p">:</span> <span class="n">var</span><span class="p">,</span>
         <span class="p">})</span>
 
-    <span class="k">def</span> <span class="nf">swap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">var1</span><span class="p">,</span> <span class="n">var2</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">swap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">var1</span><span class="p">,</span> <span class="n">var2</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">code</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="si">{ele1}</span><span class="s2">, </span><span class="si">{ele2}</span><span class="s2"> = </span><span class="si">{ele2}</span><span class="s2">, </span><span class="si">{ele1}</span><span class="s2">;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="p">{</span>
             <span class="s1">&#39;ele1&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lookup_element</span><span class="p">(</span><span class="n">var1</span><span class="p">),</span>
             <span class="s1">&#39;ele2&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lookup_element</span><span class="p">(</span><span class="n">var2</span><span class="p">)</span>
         <span class="p">})</span>
 
-    <span class="k">def</span> <span class="nf">compare_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">var1</span><span class="p">,</span> <span class="n">var2</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">compare_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">var1</span><span class="p">,</span> <span class="n">var2</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">code</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">if( </span><span class="si">{ele1}</span><span class="s2"> &lt; </span><span class="si">{ele2}</span><span class="s2"> ):&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="p">{</span>
             <span class="s1">&#39;ele1&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lookup_element</span><span class="p">(</span><span class="n">var1</span><span class="p">),</span>
             <span class="s1">&#39;ele2&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lookup_element</span><span class="p">(</span><span class="n">var2</span><span class="p">)</span>
         <span class="p">})</span>
 
 
-<span class="k">def</span> <span class="nf">generate_actions</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_actions</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Gives all the unhidden methods (possible actions) from the Action class</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -118,7 +118,7 @@ The exact setup is summarized as follows:</p>
 
     <span class="k">return</span> <span class="n">possible_actions</span>
 
-<span class="k">def</span> <span class="nf">performAction</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">performAction</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Takes the current state (the code string) and applies an action</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -128,7 +128,7 @@ The exact setup is summarized as follows:</p>
 </code></pre></div>
 
 <p>3) <button class="btn btn-default btn-sm toggle-start-hidden">Rewards</button> : The state receives a score of -1 if the python code doesn't run, -10 is the code is over 300 characters or +1000 if the list is correctly sorted.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
 
 <span class="n">LIST_LENGTH</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="n">START_LIST</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">LIST_LENGTH</span><span class="p">)</span>
@@ -142,14 +142,14 @@ The exact setup is summarized as follows:</p>
 <span class="s1">&#39;&#39;&#39;</span>
 
 
-<span class="k">def</span> <span class="nf">append_definition</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">start_list</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">append_definition</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">start_list</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This takes the above TEMPLATE string and wraps it around the code string</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">start_list</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">calc_reward</span><span class="p">(</span><span class="n">code</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calc_reward</span><span class="p">(</span><span class="n">code</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Rewards based on the current code state:</span>
 <span class="sd">        1) Code correctly sorts the list: 1000</span>
@@ -175,19 +175,19 @@ The exact setup is summarized as follows:</p>
 
 <p>After <button class="btn btn-default btn-sm toggle-start-hidden">training</button> up a neural net, 
 I received this optimal sort: </p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
-<span class="kn">from</span> <span class="nn">keras.layers.core</span> <span class="kn">import</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Activation</span>
-<span class="kn">from</span> <span class="nn">keras.optimizers</span> <span class="kn">import</span> <span class="n">RMSprop</span>
-<span class="kn">from</span> <span class="nn">action</span> <span class="kn">import</span> <span class="n">performAction</span><span class="p">,</span> <span class="n">oh_god_why</span><span class="p">,</span> <span class="n">generate_actions</span><span class="p">,</span> <span class="n">ARRAY_INPUT_SIZE</span>
-<span class="kn">from</span> <span class="nn">reward</span> <span class="kn">import</span> <span class="n">calc_reward</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">keras.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sequential</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">keras.layers.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Activation</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">keras.optimizers</span><span class="w"> </span><span class="kn">import</span> <span class="n">RMSprop</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">action</span><span class="w"> </span><span class="kn">import</span> <span class="n">performAction</span><span class="p">,</span> <span class="n">oh_god_why</span><span class="p">,</span> <span class="n">generate_actions</span><span class="p">,</span> <span class="n">ARRAY_INPUT_SIZE</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">reward</span><span class="w"> </span><span class="kn">import</span> <span class="n">calc_reward</span>
 
 <span class="n">EPOCHS</span> <span class="o">=</span> <span class="mi">20000</span>
 <span class="n">GAMMA</span> <span class="o">=</span> <span class="mf">0.9</span>
 
 
-<span class="k">def</span> <span class="nf">setup_network</span><span class="p">(</span><span class="n">num_actions</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">setup_network</span><span class="p">(</span><span class="n">num_actions</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    This defines a neural net since that&#39;s the cool thing to do nowadays</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -207,7 +207,7 @@ I received this optimal sort: </p>
     <span class="k">return</span> <span class="n">model</span>
 
 
-<span class="k">def</span> <span class="nf">learn_best_sort</span><span class="p">(</span><span class="n">actions</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">learn_best_sort</span><span class="p">(</span><span class="n">actions</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Reinforcement learning via an epsilon greedy strategy</span>
 <span class="sd">    &#39;&#39;&#39;</span>

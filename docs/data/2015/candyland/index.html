@@ -49,11 +49,11 @@ I believe a happy medium would involve a quick closed-loop tour of Candyland tha
 looking castle.</p>
 <p>So, what is the best route that visits all the wonders of Candyland while minimizing the total distance traveled. Well,
 this is just the famous traveling salesman problem! Using a simulated annealing approach <button class="btn btn-default btn-sm toggle-start-hidden">Show Code</button> my proposed path is:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">exp</span>
-<span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">import</span> <span class="nn">copy</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">exp</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">copy</span>
 
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 
 <span class="n">locations</span> <span class="o">=</span> <span class="p">{</span>
@@ -70,7 +70,7 @@ this is just the famous traveling salesman problem! Using a simulated annealing 
 <span class="p">}</span>
 
 
-<span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">loc1</span><span class="p">,</span> <span class="n">loc2</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">distance</span><span class="p">(</span><span class="n">loc1</span><span class="p">,</span> <span class="n">loc2</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Finds the Euclidean distance between two locations</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -80,7 +80,7 @@ this is just the famous traveling salesman problem! Using a simulated annealing 
     <span class="k">return</span> <span class="n">sqrt</span><span class="p">((</span><span class="n">x1</span> <span class="o">-</span> <span class="n">x2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">y1</span> <span class="o">-</span> <span class="n">y2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">cost</span><span class="p">(</span><span class="n">route</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">cost</span><span class="p">(</span><span class="n">route</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Calculates the total distance of a route </span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -91,7 +91,7 @@ this is just the famous traveling salesman problem! Using a simulated annealing 
     <span class="k">return</span> <span class="n">total_distance</span>
 
 
-<span class="k">def</span> <span class="nf">neighbor</span><span class="p">(</span><span class="n">route</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">neighbor</span><span class="p">(</span><span class="n">route</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Alters the route by swapping two locations</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -103,7 +103,7 @@ this is just the famous traveling salesman problem! Using a simulated annealing 
     <span class="k">return</span> <span class="n">route</span>
 
 
-<span class="k">def</span> <span class="nf">boltzmann_prob</span><span class="p">(</span><span class="n">old_cost</span><span class="p">,</span> <span class="n">new_cost</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">boltzmann_prob</span><span class="p">(</span><span class="n">old_cost</span><span class="p">,</span> <span class="n">new_cost</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Compares both routes via the Boltzmann factor at a </span>
 <span class="sd">    given &#39;temperature&#39; (T)</span>
@@ -114,7 +114,7 @@ this is just the famous traveling salesman problem! Using a simulated annealing 
         <span class="k">return</span> <span class="mi">1</span>
 
 
-<span class="k">def</span> <span class="nf">anneal</span><span class="p">(</span><span class="n">route</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">anneal</span><span class="p">(</span><span class="n">route</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Finds the best route by swapping locations continuously while the </span>
 <span class="sd">    probabiliy to switch routes gradually decreases</span>
@@ -138,7 +138,7 @@ this is just the famous traveling salesman problem! Using a simulated annealing 
     <span class="k">return</span> <span class="n">ideal_route</span>
 
 
-<span class="k">def</span> <span class="nf">plot_tour</span><span class="p">(</span><span class="n">tour</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_tour</span><span class="p">(</span><span class="n">tour</span><span class="p">):</span>
     <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="n">locations</span><span class="p">[</span><span class="n">point</span><span class="p">]</span> <span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">tour</span><span class="p">])</span>
 
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
