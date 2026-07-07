@@ -1,4 +1,4 @@
-Date: 2022-06-05
+Date: 2022-09-05
 Title: Lost Lagoon Solitaire
 Category: random
 Slug: lost-lagoon-solitaire
